@@ -8,6 +8,7 @@ using BaseConocimiento.Application.UseCases.Manuales.Queries.ObtenerManual;
 using BaseConocimiento.Application.UseCases.Manuales.Queries.ListarManuales;
 using BaseConocimiento.Application.UseCases.Manuales.Queries.ObtenerCategorias;
 using BaseConocimiento.Domain.Enums;
+using BaseConocimiento.API.DTOs.Manuales;
 
 namespace BaseConocimiento.WebApi.Controllers
 {
@@ -193,27 +194,5 @@ namespace BaseConocimiento.WebApi.Controllers
             var resultado = await _mediator.Send(query);
             return Ok(resultado);
         }
-    }
-
-    //DTOs
-    public class SubirManualRequest
-    {
-        public IFormFile Archivo { get; set; }
-        public string Titulo { get; set; }
-        public string Categoria { get; set; }
-        public string SubCategoria { get; set; }
-        public string Version { get; set; }
-        public string Descripcion { get; set; }
-    }
-
-    public class ActualizarEstadoRequest
-    {
-        public EstadoManual NuevoEstado { get; set; }
-    }
-
-    public class ActualizarManualRequest
-    {
-        public string Version { get; set; }
-        public string Descripcion { get; set; }
     }
 }

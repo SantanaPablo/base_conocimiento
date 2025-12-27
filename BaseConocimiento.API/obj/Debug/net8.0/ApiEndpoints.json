@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "BaseConocimiento.WebApi.Controllers.BuscarRequest",
+        "Type": "BaseConocimiento.API.DTOs.Consultas.BuscarRequest",
         "IsRequired": true
       }
     ],
@@ -54,7 +54,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "BaseConocimiento.WebApi.Controllers.PreguntaRequest",
+        "Type": "BaseConocimiento.API.DTOs.Consultas.PreguntaRequest",
         "IsRequired": true
       }
     ],

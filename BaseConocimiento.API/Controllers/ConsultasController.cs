@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using BaseConocimiento.Application.UseCases.Consultas.Queries.ConsultarBaseConocimiento;
 using BaseConocimiento.Application.UseCases.Consultas.Queries.BuscarEnManuales;
+using BaseConocimiento.API.DTOs.Consultas;
 
 namespace BaseConocimiento.WebApi.Controllers
 {
@@ -104,19 +105,5 @@ namespace BaseConocimiento.WebApi.Controllers
             });
         }
     }
-
-    //DTOs
-    public class PreguntaRequest
-    {
-        public string Pregunta { get; set; }
-        public string Categoria { get; set; }
-        public int TopK { get; set; } = 5;
-    }
-
-    public class BuscarRequest
-    {
-        public string TextoBusqueda { get; set; }
-        public string Categoria { get; set; }
-        public int TopK { get; set; } = 10;
-    }
+    
 }
