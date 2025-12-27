@@ -14,6 +14,8 @@
         public string TextoOriginal { get; set; }
         public int NumeroPagina { get; set; }
         public int NumeroChunk { get; set; }
+        public string Categoria { get; set; }
+        public string Titulo { get; set; }
     }
 
     public class ResultadoBusqueda

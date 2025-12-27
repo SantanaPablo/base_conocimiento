@@ -39,9 +39,5 @@ namespace BaseConocimiento.Infrastructure.Services.AI.Ollama
             return resultados;
         }
 
-        private class OllamaResponse
-        {
-            public double[]? embedding { get; set; }
-        }
     }
 }

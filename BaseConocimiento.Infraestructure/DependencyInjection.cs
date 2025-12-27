@@ -45,6 +45,7 @@ public static class DependencyInjection
 
         //PDF PROCESSING
         services.AddScoped<IPdfProcessingService, PdfProcessingService>();
+        services.AddScoped<ITextProcessingService, TextProcessingService>();
 
         //AI SERVICES
         var aiProvider = configuration["AI:Provider"]?.ToLower() ?? "gemini";

@@ -16,4 +16,11 @@ namespace BaseConocimiento.Application.Interfaces.Processing
         public string Texto { get; set; }
         public int NumeroPagina { get; set; }
     }
+
+    public interface ITextProcessingService
+    {
+        Task<List<TextoExtraido>> ExtraerTextoAsync(Stream textStream);
+    }
+
+
 }

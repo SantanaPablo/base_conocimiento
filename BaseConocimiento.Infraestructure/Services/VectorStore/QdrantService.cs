@@ -91,7 +91,9 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
                         { "manual_id", manualId.ToString() },
                         { "texto_original", chunk.TextoOriginal },
                         { "numero_pagina", chunk.NumeroPagina },
-                        { "numero_chunk", chunk.NumeroChunk }
+                        { "numero_chunk", chunk.NumeroChunk },
+                        { "categoria", chunk.Categoria ?? "" },
+                        { "titulo", chunk.Titulo ?? "" }
                     };
 
                     var point = new PointStruct

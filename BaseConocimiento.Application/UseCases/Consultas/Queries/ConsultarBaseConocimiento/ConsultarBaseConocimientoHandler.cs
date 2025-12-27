@@ -49,7 +49,7 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Queries.ConsultarBaseC
                 var resultados = await _qdrantService.BuscarSimilaresAsync(
                     preguntaEmbedding,
                     request.TopK > 0 ? request.TopK : 5,
-                    null // Buscamos en todos los manuales o poner categoria
+                    request.Categoria // Buscamos en todos los manuales o poner categoria
                 );
 
                 _logger.LogInformation("Qdrant devolvió {Count} resultados.", resultados.Count);

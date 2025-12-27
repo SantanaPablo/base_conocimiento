@@ -1,13 +1,10 @@
-﻿using BaseConocimiento.Application.Interfaces.Processing;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Infrastructure/Services/Processing/PdfProcessingService.cs
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Canvas.Parser;
 using iText.Kernel.Pdf.Canvas.Parser.Listener;
+using Microsoft.Extensions.Logging;
+using System.Text;
+using BaseConocimiento.Application.Interfaces.Processing;
 
 namespace BaseConocimiento.Infrastructure.Services.Processing
 {
@@ -15,6 +12,7 @@ namespace BaseConocimiento.Infrastructure.Services.Processing
     {
         private readonly ILogger<PdfProcessingService> _logger;
         private const int MAX_CHUNK_SIZE = 500;
+        private const int OVERLAP_SIZE = 100;
         private const int MIN_CHUNK_SIZE = 100;
 
         public PdfProcessingService(ILogger<PdfProcessingService> logger)
@@ -51,8 +49,7 @@ namespace BaseConocimiento.Infrastructure.Services.Processing
                                 _logger.LogWarning("Página {Pagina} tiene poco contenido, saltando", pagina);
                                 continue;
                             }
-
-                            var chunks = DividirEnChunks(texto, MAX_CHUNK_SIZE);
+                            var chunks = DividirEnChunksConOverlap(texto, MAX_CHUNK_SIZE, OVERLAP_SIZE);
 
                             foreach (var chunk in chunks)
                             {
@@ -88,128 +85,150 @@ namespace BaseConocimiento.Infrastructure.Services.Processing
                 return string.Empty;
 
             texto = System.Text.RegularExpressions.Regex.Replace(texto, @"\s+", " ");
-
             texto = texto.Replace("\r\n", " ")
                         .Replace("\n", " ")
                         .Replace("\r", " ")
                         .Replace("\t", " ");
-
             texto = texto.Trim();
 
             return texto;
         }
 
-        private List<string> DividirEnChunks(string texto, int tamañoMaximo)
-        {
-            var chunks = new List<string>();
-
-            if (string.IsNullOrWhiteSpace(texto))
-                return chunks;
-
-            var oraciones = DividirPorOraciones(texto);
-
-            var chunkActual = new StringBuilder();
-
-            foreach (var oracion in oraciones)
-            {
-                if (chunkActual.Length + oracion.Length + 1 > tamañoMaximo)
-                {
-                    if (chunkActual.Length > 0)
-                    {
-                        chunks.Add(chunkActual.ToString().Trim());
-                        chunkActual.Clear();
-                    }
-
-                    if (oracion.Length > tamañoMaximo)
-                    {
-                        var subChunks = DividirPorPalabras(oracion, tamañoMaximo);
-                        chunks.AddRange(subChunks);
-                    }
-                    else
-                    {
-                        chunkActual.Append(oracion).Append(' ');
-                    }
-                }
-                else
-                {
-                    chunkActual.Append(oracion).Append(' ');
-                }
-            }
-
-            if (chunkActual.Length > 0)
-            {
-                chunks.Add(chunkActual.ToString().Trim());
-            }
-
-            return chunks.Where(c => c.Length >= MIN_CHUNK_SIZE).ToList();
-        }
-
-        private List<string> DividirPorOraciones(string texto)
-        {
-            var delimitadores = new[] { ". ", "? ", "! ", ".\n", "?\n", "!\n" };
-            var oraciones = new List<string>();
-            var oracionActual = new StringBuilder();
-
-            for (int i = 0; i < texto.Length; i++)
-            {
-                oracionActual.Append(texto[i]);
-
-                bool esDelimitador = false;
-                foreach (var delim in delimitadores)
-                {
-                    if (i >= delim.Length - 1)
-                    {
-                        var substring = texto.Substring(i - delim.Length + 1, delim.Length);
-                        if (substring == delim)
-                        {
-                            esDelimitador = true;
-                            break;
-                        }
-                    }
-                }
-
-                if (esDelimitador)
-                {
-                    var oracion = oracionActual.ToString().Trim();
-                    if (oracion.Length > 0)
-                    {
-                        oraciones.Add(oracion);
-                    }
-                    oracionActual.Clear();
-                }
-            }
-
-            if (oracionActual.Length > 0)
-            {
-                oraciones.Add(oracionActual.ToString().Trim());
-            }
-
-            return oraciones;
-        }
-
-        private List<string> DividirPorPalabras(string texto, int tamañoMaximo)
+        // ✅ NUEVO: Dividir con overlap para mantener contexto
+        private List<string> DividirEnChunksConOverlap(string texto, int tamañoChunk, int overlap)
         {
             var chunks = new List<string>();
             var palabras = texto.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-            var chunkActual = new StringBuilder();
 
-            foreach (var palabra in palabras)
+            int inicio = 0;
+            while (inicio < palabras.Length)
             {
-                if (chunkActual.Length + palabra.Length + 1 > tamañoMaximo)
+                var chunkPalabras = new List<string>();
+                int longitudActual = 0;
+
+                // Tomar palabras hasta alcanzar el tamaño
+                for (int i = inicio; i < palabras.Length; i++)
                 {
-                    if (chunkActual.Length > 0)
-                    {
-                        chunks.Add(chunkActual.ToString().Trim());
-                        chunkActual.Clear();
-                    }
+                    var palabra = palabras[i];
+                    if (longitudActual + palabra.Length + 1 > tamañoChunk && chunkPalabras.Any())
+                        break;
+
+                    chunkPalabras.Add(palabra);
+                    longitudActual += palabra.Length + 1;
                 }
 
-                chunkActual.Append(palabra).Append(' ');
+                if (chunkPalabras.Any())
+                {
+                    var chunk = string.Join(" ", chunkPalabras);
+                    if (chunk.Length >= MIN_CHUNK_SIZE)
+                        chunks.Add(chunk);
+                }
+
+                // Calcular siguiente inicio con overlap
+                int palabrasUsadas = chunkPalabras.Count;
+                int palabrasOverlap = (int)(palabrasUsadas * ((double)overlap / tamañoChunk));
+                inicio += Math.Max(1, palabrasUsadas - palabrasOverlap);
             }
 
-            if (chunkActual.Length > 0)
+            return chunks;
+        }
+    }
+
+    public class TextProcessingService : ITextProcessingService
+    {
+        private readonly ILogger<TextProcessingService> _logger;
+        private const int MAX_CHUNK_SIZE = 500;
+        private const int OVERLAP_SIZE = 100;
+        private const int MIN_CHUNK_SIZE = 100;
+
+        public TextProcessingService(ILogger<TextProcessingService> logger)
+        {
+            _logger = logger;
+        }
+
+        public Task<List<TextoExtraido>> ExtraerTextoAsync(Stream textStream)
+        {
+            var textosExtraidos = new List<TextoExtraido>();
+
+            try
             {
-                chunks.Add(chunkActual.ToString().Trim());
+                using var reader = new StreamReader(textStream, Encoding.UTF8);
+                var textoCompleto = reader.ReadToEnd();
+
+                if (string.IsNullOrWhiteSpace(textoCompleto))
+                {
+                    _logger.LogWarning("El archivo de texto está vacío");
+                    return Task.FromResult(textosExtraidos);
+                }
+
+                // Limpiar
+                textoCompleto = LimpiarTexto(textoCompleto);
+
+                // Dividir con overlap
+                var chunks = DividirEnChunksConOverlap(textoCompleto, MAX_CHUNK_SIZE, OVERLAP_SIZE);
+
+                int numeroChunk = 1;
+                foreach (var chunk in chunks)
+                {
+                    textosExtraidos.Add(new TextoExtraido
+                    {
+                        Texto = chunk,
+                        NumeroPagina = 1 // Para TXT todo es "página 1"
+                    });
+                    numeroChunk++;
+                }
+
+                _logger.LogInformation("Texto procesado: {TotalChunks} chunks generados", textosExtraidos.Count);
+
+                return Task.FromResult(textosExtraidos);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al procesar archivo de texto");
+                throw;
+            }
+        }
+
+        private string LimpiarTexto(string texto)
+        {
+            if (string.IsNullOrWhiteSpace(texto))
+                return string.Empty;
+
+            texto = System.Text.RegularExpressions.Regex.Replace(texto, @"\s+", " ");
+            return texto.Trim();
+        }
+
+        private List<string> DividirEnChunksConOverlap(string texto, int tamañoChunk, int overlap)
+        {
+            var chunks = new List<string>();
+            var palabras = texto.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            int inicio = 0;
+            while (inicio < palabras.Length)
+            {
+                var chunkPalabras = new List<string>();
+                int longitudActual = 0;
+
+                for (int i = inicio; i < palabras.Length; i++)
+                {
+                    var palabra = palabras[i];
+                    if (longitudActual + palabra.Length + 1 > tamañoChunk && chunkPalabras.Any())
+                        break;
+
+                    chunkPalabras.Add(palabra);
+                    longitudActual += palabra.Length + 1;
+                }
+
+                if (chunkPalabras.Any())
+                {
+                    var chunk = string.Join(" ", chunkPalabras);
+                    if (chunk.Length >= MIN_CHUNK_SIZE)
+                        chunks.Add(chunk);
+                }
+
+                int palabrasUsadas = chunkPalabras.Count;
+                int palabrasOverlap = (int)(palabrasUsadas * ((double)overlap / tamañoChunk));
+                inicio += Math.Max(1, palabrasUsadas - palabrasOverlap);
             }
 
             return chunks;

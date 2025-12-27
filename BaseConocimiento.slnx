@@ -3,4 +3,8 @@
   <Project Path="BaseConocimiento.Application/BaseConocimiento.Application.csproj" />
   <Project Path="BaseConocimiento.Domain/BaseConocimiento.Domain.csproj" />
   <Project Path="BaseConocimiento.Infraestructure/BaseConocimiento.Infrastructure.csproj" />
+  <Project Path="BaseConocimientoFront/baseconocimientofront.esproj">
+    <Build />
+    <Deploy />
+  </Project>
 </Solution>

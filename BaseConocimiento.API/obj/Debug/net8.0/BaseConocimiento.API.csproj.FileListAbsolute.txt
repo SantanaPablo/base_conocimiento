@@ -87,3 +87,4 @@ D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\obj\De
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\obj\Debug\net8.0\ref\BaseConocimiento.API.dll
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Polly.dll
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Polly.Core.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\obj\Debug\net8.0\BaseConocimiento.API.sourcelink.json

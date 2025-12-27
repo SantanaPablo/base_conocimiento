@@ -15,3 +15,4 @@ D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Infraestru
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\refint\BaseConocimiento.Infrastructure.dll
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\BaseConocimiento.Infrastructure.pdb
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\ref\BaseConocimiento.Infrastructure.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\BaseConocimiento.Infrastructure.sourcelink.json

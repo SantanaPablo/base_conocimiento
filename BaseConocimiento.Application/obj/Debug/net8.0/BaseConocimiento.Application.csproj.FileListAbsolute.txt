@@ -13,3 +13,4 @@ D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Applicatio
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\refint\BaseConocimiento.Application.dll
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\BaseConocimiento.Application.pdb
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\ref\BaseConocimiento.Application.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\BaseConocimiento.Application.sourcelink.json
