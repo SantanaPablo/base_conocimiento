@@ -10,18 +10,6 @@
     "version": "v1"
   },
   "paths": {
-    "/health": {
-      "get": {
-        "tags": [
-          "BaseConocimiento.API"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Consultas/preguntar": {
       "post": {
         "tags": [
@@ -108,6 +96,18 @@
       "get": {
         "tags": [
           "Consultas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Infraestructura/estado": {
+      "get": {
+        "tags": [
+          "Infraestructura"
         ],
         "responses": {
           "200": {

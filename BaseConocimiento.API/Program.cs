@@ -1,6 +1,8 @@
 // WebApi/Program.cs
 using BaseConocimiento.Infrastructure;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using System.Reflection;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -63,6 +65,12 @@ builder.WebHost.ConfigureKestrel(options =>
     options.Limits.MaxRequestBodySize = 104857600;
 });
 
+builder.Services.AddHealthChecks()
+    .AddNpgSql(builder.Configuration.GetConnectionString("PostgreSQL"), name: "PostgreSQL")
+    .AddRedis(builder.Configuration.GetConnectionString("RedisConnection"), name: "Redis")
+    .AddUrlGroup(new Uri("http://localhost:6333/metrics"), name: "Qdrant")
+    .AddUrlGroup(new Uri("http://localhost:11434/api/tags"), name: "Ollama");
+
 var app = builder.Build();
 
 await app.Services.InitializeDatabaseAsync();
@@ -89,12 +97,25 @@ app.UseAuthorization();
 app.MapControllers();
 
 // Endpoint de salud
-app.MapGet("/health", () => Results.Ok(new
+app.MapHealthChecks("/health", new HealthCheckOptions
 {
-    Status = "Healthy",
-    Timestamp = DateTime.UtcNow,
-    Version = "1.0.0"
-}));
+    ResponseWriter = async (context, report) =>
+    {
+        context.Response.ContentType = "application/json";
+        var response = new
+        {
+            status = report.Status.ToString(),
+            timestamp = DateTime.UtcNow,
+            servicios = report.Entries.Select(e => new
+            {
+                nombre = e.Key,
+                estado = e.Value.Status.ToString(),
+                duracion = e.Value.Duration.TotalMilliseconds + "ms"
+            })
+        };
+        await context.Response.WriteAsJsonAsync(response);
+    }
+});
 
 Console.WriteLine("?? Base de Conocimiento API");
 Console.WriteLine($"? Entorno: {app.Environment.EnvironmentName}");

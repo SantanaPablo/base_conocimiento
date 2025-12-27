@@ -2,17 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilo para el scrollbar tipo futurista */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #020617;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
 }
+
 ::-webkit-scrollbar-track {
   background: #0f172a;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #334155;
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #3b82f6;
 }

@@ -88,3 +88,11 @@ D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\obj\De
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Polly.dll
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Polly.Core.dll
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\obj\Debug\net8.0\BaseConocimiento.API.sourcelink.json
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\HealthChecks.NpgSql.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\HealthChecks.Redis.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\HealthChecks.Uris.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\StackExchange.Redis.dll

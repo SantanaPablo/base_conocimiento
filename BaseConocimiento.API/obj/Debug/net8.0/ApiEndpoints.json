@@ -74,6 +74,16 @@
     ]
   },
   {
+    "ContainingType": "BaseConocimiento.WebApi.Controllers.InfraestructuraController",
+    "Method": "GetEstado",
+    "RelativePath": "api/Infraestructura/estado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BaseConocimiento.WebApi.Controllers.ManualesController",
     "Method": "SubirManual",
     "RelativePath": "api/Manuales",
@@ -301,22 +311,6 @@
     "RelativePath": "api/Manuales/categorias",
     "HttpMethod": "GET",
     "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_6",
-    "RelativePath": "health",
-    "HttpMethod": "GET",
-    "IsController": false,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
