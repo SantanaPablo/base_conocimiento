@@ -3,16 +3,104 @@
   "WorkspaceRootPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\controllers\\consultascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\consultascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.infraestructure\\services\\conversation\\redisconversationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\services\\conversation\\redisconversationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamaembeddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamaembeddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamachatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamachatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.application\\usecases\\consultas\\commands\\consultarconconversacion\\consultarconconversacionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\consultas\\commands\\consultarconconversacion\\consultarconconversacionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.application\\usecases\\consultas\\commands\\consultarconconversacion\\consultarconconversacioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\consultas\\commands\\consultarconconversacion\\consultarconconversacioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.application\\usecases\\consultas\\queries\\consultarbaseconocimiento\\consultarbaseconocimientohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\consultas\\queries\\consultarbaseconocimiento\\consultarbaseconocimientohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\controllers\\conversacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\conversacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.application\\interfaces\\ai\\ichatcompletionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\interfaces\\ai\\ichatcompletionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.application\\interfaces\\ai\\iembeddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\interfaces\\ai\\iembeddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.application\\interfaces\\conversation\\iconversationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\interfaces\\conversation\\iconversationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\controllers\\infraestructuracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\infraestructuracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\controllers\\manualescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\manualescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|solutionrelative:docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.infraestructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\dtos\\conversation\\crearconversacionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\dtos\\conversation\\crearconversacionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\dtos\\manuales\\actualizarestadorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\dtos\\manuales\\actualizarestadorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\dtos\\consultas\\preguntarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\dtos\\consultas\\preguntarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.domain\\entities\\conversacionmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|solutionrelative:baseconocimiento.domain\\entities\\conversacionmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.domain\\entities\\mensajeconversacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|solutionrelative:baseconocimiento.domain\\entities\\mensajeconversacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\controllers\\consultascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\consultascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\dtos\\manuales\\subirmanualrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\dtos\\manuales\\subirmanualrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\dtos\\manuales\\actualizarmanualrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\dtos\\manuales\\actualizarmanualrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,8 +109,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 331,
-          "SelectedChildIndex": 1,
+          "DockedHeight": 381,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,33 +118,240 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ConsultasController.cs",
-              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\ConsultasController.cs",
-              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\ConsultasController.cs",
-              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\ConsultasController.cs",
-              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\ConsultasController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "OllamaResponse.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaResponse.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaResponse.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaResponse.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaResponse.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T17:09:30.849Z",
+              "WhenOpened": "2025-12-28T02:14:11.136Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "OllamaChatService.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaChatService.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaChatService.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaChatService.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaChatService.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAAAGcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:26:35.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OllamaEmbeddingService.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaEmbeddingService.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaEmbeddingService.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaEmbeddingService.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaEmbeddingService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAqwCkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T02:14:16.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RedisConversationService.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\Services\\Conversation\\RedisConversationService.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\Conversation\\RedisConversationService.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\Services\\Conversation\\RedisConversationService.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Services\\Conversation\\RedisConversationService.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAYwJ4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:21:44.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConsultarConConversacionHandler.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionHandler.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionHandler.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAgwJ0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:33:12.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConsultarConConversacionCommand.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionCommand.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionCommand.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionCommand.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionCommand.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwB4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:32:47.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConsultarBaseConocimientoHandler.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ConsultarBaseConocimiento\\ConsultarBaseConocimientoHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ConsultarBaseConocimiento\\ConsultarBaseConocimientoHandler.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ConsultarBaseConocimiento\\ConsultarBaseConocimientoHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ConsultarBaseConocimiento\\ConsultarBaseConocimientoHandler.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAcwIkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T19:50:34.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ConversacionesController.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAwwHAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:34:26.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IChatCompletionService.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\Interfaces\\AI\\IChatCompletionService.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\Interfaces\\AI\\IChatCompletionService.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\Interfaces\\AI\\IChatCompletionService.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\Interfaces\\AI\\IChatCompletionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:14:22.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IEmbeddingService.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\Interfaces\\AI\\IEmbeddingService.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\Interfaces\\AI\\IEmbeddingService.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\Interfaces\\AI\\IEmbeddingService.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\Interfaces\\AI\\IEmbeddingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:15:41.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IConversationService.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\Interfaces\\Conversation\\IConversationService.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\Interfaces\\Conversation\\IConversationService.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\Interfaces\\Conversation\\IConversationService.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\Interfaces\\Conversation\\IConversationService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:19:10.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InfraestructuraController.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\InfraestructuraController.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\InfraestructuraController.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\InfraestructuraController.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\InfraestructuraController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:12:13.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ManualesController.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\ManualesController.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\ManualesController.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\ManualesController.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\ManualesController.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAiwAwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:11:28.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-12-27T18:21:19.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\appsettings.json",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\appsettings.json",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\appsettings.json",
+              "RelativeToolTip": "BaseConocimiento.API\\appsettings.json",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-27T17:11:43.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Program.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\Program.cs",
               "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Program.cs",
               "RelativeToolTip": "BaseConocimiento.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAowG8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-27T17:09:25.536Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 16,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\DependencyInjection.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\DependencyInjection.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\DependencyInjection.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAkwDIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T18:11:24.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CrearConversacionRequest.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\DTOs\\Conversation\\CrearConversacionRequest.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Conversation\\CrearConversacionRequest.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\DTOs\\Conversation\\CrearConversacionRequest.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\DTOs\\Conversation\\CrearConversacionRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:39:00.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "PreguntaRequest.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\DTOs\\Consultas\\PreguntaRequest.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Consultas\\PreguntaRequest.cs",
@@ -64,8 +359,90 @@
               "RelativeToolTip": "BaseConocimiento.API\\DTOs\\Consultas\\PreguntaRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T17:09:22.61Z",
+              "WhenOpened": "2025-12-27T17:09:22.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ActualizarEstadoRequest.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\DTOs\\Manuales\\ActualizarEstadoRequest.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Manuales\\ActualizarEstadoRequest.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\DTOs\\Manuales\\ActualizarEstadoRequest.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\DTOs\\Manuales\\ActualizarEstadoRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:11:42.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ConversacionMetadata.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\Entities\\ConversacionMetadata.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Domain\\Entities\\ConversacionMetadata.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\Entities\\ConversacionMetadata.cs",
+              "RelativeToolTip": "BaseConocimiento.Domain\\Entities\\ConversacionMetadata.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:20:15.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MensajeConversacion.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\Entities\\MensajeConversacion.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Domain\\Entities\\MensajeConversacion.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\Entities\\MensajeConversacion.cs",
+              "RelativeToolTip": "BaseConocimiento.Domain\\Entities\\MensajeConversacion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:18:07.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SubirManualRequest.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\DTOs\\Manuales\\SubirManualRequest.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Manuales\\SubirManualRequest.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\DTOs\\Manuales\\SubirManualRequest.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\DTOs\\Manuales\\SubirManualRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:11:45.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ActualizarManualRequest.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\DTOs\\Manuales\\ActualizarManualRequest.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Manuales\\ActualizarManualRequest.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\DTOs\\Manuales\\ActualizarManualRequest.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\DTOs\\Manuales\\ActualizarManualRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:11:43.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ConsultasController.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\ConsultasController.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\ConsultasController.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\ConsultasController.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\ConsultasController.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAqwGgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:09:30.849Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 19,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

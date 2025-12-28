@@ -104,6 +104,134 @@
         }
       }
     },
+    "/api/Conversaciones/crear": {
+      "post": {
+        "tags": [
+          "Conversaciones"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearConversacionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearConversacionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearConversacionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Conversaciones/preguntar": {
+      "post": {
+        "tags": [
+          "Conversaciones"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreguntarConversacionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreguntarConversacionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreguntarConversacionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Conversaciones/{conversacionId}/historial": {
+      "get": {
+        "tags": [
+          "Conversaciones"
+        ],
+        "parameters": [
+          {
+            "name": "conversacionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Conversaciones/{conversacionId}": {
+      "delete": {
+        "tags": [
+          "Conversaciones"
+        ],
+        "parameters": [
+          {
+            "name": "conversacionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Conversaciones/{conversacionId}/metadata": {
+      "get": {
+        "tags": [
+          "Conversaciones"
+        ],
+        "parameters": [
+          {
+            "name": "conversacionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Infraestructura/estado": {
       "get": {
         "tags": [
@@ -461,6 +589,16 @@
         },
         "additionalProperties": false
       },
+      "CrearConversacionRequest": {
+        "type": "object",
+        "properties": {
+          "usuarioId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "EstadoManual": {
         "enum": [
           1,
@@ -474,6 +612,32 @@
         "type": "object",
         "properties": {
           "pregunta": {
+            "type": "string",
+            "nullable": true
+          },
+          "categoria": {
+            "type": "string",
+            "nullable": true
+          },
+          "topK": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PreguntarConversacionRequest": {
+        "type": "object",
+        "properties": {
+          "pregunta": {
+            "type": "string",
+            "nullable": true
+          },
+          "conversacionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuarioId": {
             "type": "string",
             "nullable": true
           },

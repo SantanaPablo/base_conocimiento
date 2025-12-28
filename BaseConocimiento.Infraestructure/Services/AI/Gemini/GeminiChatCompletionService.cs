@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.Json;
 using Polly;
 using Polly.Retry;
+using BaseConocimiento.Domain.Entities;
 
 namespace BaseConocimiento.Infrastructure.Services.AI.Gemini
 {
@@ -118,6 +119,11 @@ namespace BaseConocimiento.Infrastructure.Services.AI.Gemini
                     throw;
                 }
             });
+        }
+
+        public Task<string> GenerarRespuestaConHistorialAsync(string prompt, List<MensajeConversacion> historial)
+        {
+            throw new NotImplementedException();
         }
 
         private class GeminiChatResponse

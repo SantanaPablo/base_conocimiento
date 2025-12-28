@@ -33,7 +33,7 @@
       "AspNetCore.HealthChecks.Redis/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.11",
-          "StackExchange.Redis": "2.7.4"
+          "StackExchange.Redis": "2.10.1"
         },
         "runtime": {
           "lib/net8.0/HealthChecks.Redis.dll": {
@@ -231,6 +231,19 @@
           "lib/net8.0/Microsoft.Extensions.Caching.Memory.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.1024.46610"
+          }
+        }
+      },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/8.0.22": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
+          "Microsoft.Extensions.Options": "8.0.2",
+          "StackExchange.Redis": "2.10.1"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "assemblyVersion": "8.0.22.0",
+            "fileVersion": "8.0.2225.52808"
           }
         }
       },
@@ -499,15 +512,16 @@
           }
         }
       },
-      "StackExchange.Redis/2.7.4": {
+      "StackExchange.Redis/2.10.1": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Pipelines.Sockets.Unofficial": "2.2.8"
+          "Pipelines.Sockets.Unofficial": "2.2.8",
+          "System.IO.Hashing": "9.0.10"
         },
         "runtime": {
-          "lib/net6.0/StackExchange.Redis.dll": {
+          "lib/net8.0/StackExchange.Redis.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.7.4.20928"
+            "fileVersion": "2.10.1.65101"
           }
         }
       },
@@ -553,6 +567,14 @@
           "lib/net8.0/System.Diagnostics.DiagnosticSource.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.25.52411"
+          }
+        }
+      },
+      "System.IO.Hashing/9.0.10": {
+        "runtime": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "assemblyVersion": "9.0.0.10",
+            "fileVersion": "9.0.1025.47515"
           }
         }
       },
@@ -618,10 +640,12 @@
           "BaseConocimiento.Application": "1.0.0",
           "BaseConocimiento.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.22",
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "8.0.22",
           "Microsoft.Extensions.Http": "8.0.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.11",
           "Polly": "8.6.5",
           "Qdrant.Client": "1.16.1",
+          "StackExchange.Redis": "2.10.1",
           "itext": "9.4.0"
         },
         "runtime": {
@@ -750,6 +774,13 @@
       "sha512": "sha512-HFDnhYLccngrzyGgHkjEDU5FMLn4MpOsr5ElgsBMC4yx6lJh4jeWO7fHS8+TXPq+dgxCmUa/Trl8svObmwW4QA==",
       "path": "microsoft.extensions.caching.memory/8.0.1",
       "hashPath": "microsoft.extensions.caching.memory.8.0.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.StackExchangeRedis/8.0.22": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FhkyCtYYww4+RWZdR6uutF4pEAShvRrNEwTj+EGQ9ZGbR7/kxNHQojyrIlCL+yeScq5IHKmLxvm0UHEPAidBzA==",
+      "path": "microsoft.extensions.caching.stackexchangeredis/8.0.22",
+      "hashPath": "microsoft.extensions.caching.stackexchangeredis.8.0.22.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/8.0.1": {
       "type": "package",
@@ -919,12 +950,12 @@
       "path": "qdrant.client/1.16.1",
       "hashPath": "qdrant.client.1.16.1.nupkg.sha512"
     },
-    "StackExchange.Redis/2.7.4": {
+    "StackExchange.Redis/2.10.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lD6a0lGOCyV9iuvObnzStL74EDWAyK31w6lS+Md9gIz1eP4U6KChDIflzTdtrktxlvVkeOvPtkaYOcm4qjbHSw==",
-      "path": "stackexchange.redis/2.7.4",
-      "hashPath": "stackexchange.redis.2.7.4.nupkg.sha512"
+      "sha512": "sha512-se08WZvD42H3bV4XBW07pupTiE2/72qStKyi/lRqqcijksFWfRtwLTuhFtZ4OX19f4+we/2qruFZBXYJBFc8PQ==",
+      "path": "stackexchange.redis/2.10.1",
+      "hashPath": "stackexchange.redis.2.10.1.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.6.2": {
       "type": "package",
@@ -960,6 +991,13 @@
       "sha512": "sha512-0KdBK+h7G13PuOSC2R/DalAoFMvdYMznvGRuICtkdcUMXgl/gYXsG6z4yUvTxHSMACorWgHCU1Faq0KUHU6yAQ==",
       "path": "system.diagnostics.diagnosticsource/10.0.0",
       "hashPath": "system.diagnostics.diagnosticsource.10.0.0.nupkg.sha512"
+    },
+    "System.IO.Hashing/9.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9gv5z71xaWWmcGEs4bXdreIhKp2kYLK2fvPK5gQkgnWMYvZ8ieaxKofDjxL3scZiEYfi/yW2nJTiKV2awcWEdA==",
+      "path": "system.io.hashing/9.0.10",
+      "hashPath": "system.io.hashing.9.0.10.nupkg.sha512"
     },
     "System.IO.Pipelines/9.0.4": {
       "type": "package",

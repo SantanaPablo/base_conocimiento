@@ -1,18 +1,21 @@
 ﻿using BaseConocimiento.Application.Interfaces.AI;
+using BaseConocimiento.Application.Interfaces.Conversation;
 using BaseConocimiento.Application.Interfaces.Persistence;
 using BaseConocimiento.Application.Interfaces.Processing;
 using BaseConocimiento.Application.Interfaces.Storage;
 using BaseConocimiento.Application.Interfaces.VectorStore;
-using BaseConocimiento.Infrastructure.Repositories;
 using BaseConocimiento.Infrastructure.Data;
-using BaseConocimiento.Infrastructure.Services.Storage;
-using BaseConocimiento.Infrastructure.Services.Processing;
+using BaseConocimiento.Infrastructure.Repositories;
 using BaseConocimiento.Infrastructure.Services.AI.Gemini;
 using BaseConocimiento.Infrastructure.Services.AI.Ollama;
+using BaseConocimiento.Infrastructure.Services.Conversation;
+using BaseConocimiento.Infrastructure.Services.Processing;
+using BaseConocimiento.Infrastructure.Services.Storage;
 using BaseConocimiento.Infrastructure.Services.VectorStore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using StackExchange.Redis;
 
 public static class DependencyInjection
 {
@@ -42,6 +45,24 @@ public static class DependencyInjection
 
         //VECTOR STORE (QDRANT)
         services.AddSingleton<IQdrantService, QdrantService>();
+
+        // ===== REDIS =====
+        services.AddStackExchangeRedisCache(options =>
+        {
+            options.Configuration = configuration["Redis:ConnectionString"] ?? "localhost:6379";
+            options.InstanceName = "BaseConocimiento:";
+        });
+
+        services.AddSingleton<IConnectionMultiplexer>(sp =>
+        {
+            var configurationOptions = ConfigurationOptions.Parse(
+                configuration["Redis:ConnectionString"] ?? "localhost:6379"
+            );
+            configurationOptions.AbortOnConnectFail = false;
+            return ConnectionMultiplexer.Connect(configurationOptions);
+        });
+
+        services.AddScoped<IConversationService, RedisConversationService>();
 
         //PDF PROCESSING
         services.AddScoped<IPdfProcessingService, PdfProcessingService>();

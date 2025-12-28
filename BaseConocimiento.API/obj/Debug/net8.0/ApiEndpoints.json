@@ -74,6 +74,86 @@
     ]
   },
   {
+    "ContainingType": "BaseConocimiento.API.Controllers.ConversacionesController",
+    "Method": "LimpiarConversacion",
+    "RelativePath": "api/Conversaciones/{conversacionId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "conversacionId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.ConversacionesController",
+    "Method": "ObtenerHistorial",
+    "RelativePath": "api/Conversaciones/{conversacionId}/historial",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "conversacionId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.ConversacionesController",
+    "Method": "ObtenerMetadata",
+    "RelativePath": "api/Conversaciones/{conversacionId}/metadata",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "conversacionId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.ConversacionesController",
+    "Method": "CrearConversacion",
+    "RelativePath": "api/Conversaciones/crear",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BaseConocimiento.API.DTOs.Conversation.CrearConversacionRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.ConversacionesController",
+    "Method": "PreguntarConConversacion",
+    "RelativePath": "api/Conversaciones/preguntar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BaseConocimiento.API.DTOs.Conversation.PreguntarConversacionRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BaseConocimiento.WebApi.Controllers.InfraestructuraController",
     "Method": "GetEstado",
     "RelativePath": "api/Infraestructura/estado",
@@ -252,7 +332,7 @@
       },
       {
         "Name": "request",
-        "Type": "BaseConocimiento.WebApi.Controllers.ActualizarManualRequest",
+        "Type": "BaseConocimiento.API.DTOs.Manuales.ActualizarManualRequest",
         "IsRequired": true
       }
     ],
@@ -286,7 +366,7 @@
       },
       {
         "Name": "request",
-        "Type": "BaseConocimiento.WebApi.Controllers.ActualizarEstadoRequest",
+        "Type": "BaseConocimiento.API.DTOs.Manuales.ActualizarEstadoRequest",
         "IsRequired": true
       }
     ],

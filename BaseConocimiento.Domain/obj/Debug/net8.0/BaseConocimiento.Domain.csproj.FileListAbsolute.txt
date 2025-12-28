@@ -9,3 +9,4 @@ D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj\Debug\net8.0\refint\BaseConocimiento.Domain.dll
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj\Debug\net8.0\BaseConocimiento.Domain.pdb
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj\Debug\net8.0\ref\BaseConocimiento.Domain.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj\Debug\net8.0\BaseConocimiento.Domain.sourcelink.json

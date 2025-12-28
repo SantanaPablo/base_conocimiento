@@ -96,3 +96,5 @@ D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\De
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\StackExchange.Redis.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\System.IO.Hashing.dll
