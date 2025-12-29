@@ -46,7 +46,7 @@ public static class DependencyInjection
         //VECTOR STORE (QDRANT)
         services.AddSingleton<IQdrantService, QdrantService>();
 
-        // ===== REDIS =====
+        //REDIS
         services.AddStackExchangeRedisCache(options =>
         {
             options.Configuration = configuration["Redis:ConnectionString"] ?? "localhost:6379";
@@ -81,9 +81,20 @@ public static class DependencyInjection
                 break;
 
             case "ollama":
-                services.AddHttpClient<IEmbeddingService, OllamaEmbeddingService>();
-                services.AddHttpClient<IChatCompletionService, OllamaChatService>();
-                Console.WriteLine("✓ Usando proveedor de IA Local: Ollama");
+                var ollamaUrl = configuration["AI:OllamaBaseUrl"];
+
+                services.AddHttpClient<IEmbeddingService, OllamaEmbeddingService>(client =>
+                {
+                    client.BaseAddress = new Uri(ollamaUrl);
+              
+                });
+
+                services.AddHttpClient<IChatCompletionService, OllamaChatService>(client =>
+                {
+                    client.BaseAddress = new Uri(ollamaUrl);
+                });
+
+                Console.WriteLine($"✓ Usando proveedor de IA Local (Vía Túnel): {ollamaUrl}");
                 break;
 
             default:

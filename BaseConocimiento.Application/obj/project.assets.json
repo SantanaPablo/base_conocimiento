@@ -468,23 +468,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pablo Santana\\.nuget\\packages\\": {},
+    "C:\\Users\\USUARIO\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj",
       "projectName": "BaseConocimiento.Application",
-      "projectPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj",
-      "packagesPath": "C:\\Users\\Pablo Santana\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\obj\\",
+      "projectPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj",
+      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Pablo Santana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -499,8 +499,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj": {
-              "projectPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj"
+            "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj"
             }
           }
         }
@@ -515,7 +515,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -546,7 +546,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

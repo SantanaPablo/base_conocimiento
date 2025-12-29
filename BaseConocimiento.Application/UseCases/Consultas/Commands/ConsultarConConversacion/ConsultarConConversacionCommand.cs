@@ -12,7 +12,7 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
         public string Pregunta { get; set; }
         public string ConversacionId { get; set; }
         public string UsuarioId { get; set; }
-        public string Categoria { get; set; }
+        public string? Categoria { get; set; }
         public int TopK { get; set; } = 5;
     }
 

@@ -1,16 +1,30 @@
 version: "3.9"
 
 services:
+  db:
+    image: postgres:15-alpine
+    container_name: inuzaru-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: amarazul77
+      POSTGRES_DB: base_conocimiento
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
   redis:
     image: redis:7-alpine
     container_name: inuzaru-redis
+    restart: always
     ports:
       - "6379:6379"
-    restart: always
 
   qdrant:
     image: qdrant/qdrant:latest
     container_name: inuzaru-qdrant
+    restart: always
     ports:
       - "6333:6333"
       - "6334:6334"
@@ -18,7 +32,7 @@ services:
       QDRANT__SERVICE__ENABLE_STATIC_CONTENT: "true"
     volumes:
       - qdrant_storage:/qdrant/storage
-    restart: always
 
 volumes:
+  postgres_data:
   qdrant_storage:

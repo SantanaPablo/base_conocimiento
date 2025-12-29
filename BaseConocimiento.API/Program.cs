@@ -69,7 +69,7 @@ builder.Services.AddHealthChecks()
     .AddNpgSql(builder.Configuration.GetConnectionString("PostgreSQL"), name: "PostgreSQL")
     .AddRedis(builder.Configuration["Redis:ConnectionString"] ?? "localhost:6379", name: "Redis")
     .AddUrlGroup(new Uri("http://localhost:6333/metrics"), name: "Qdrant")
-    .AddUrlGroup(new Uri("http://localhost:11434/api/tags"), name: "Ollama");
+    .AddUrlGroup(new Uri($"{builder.Configuration["AI:OllamaBaseUrl"]}/api/tags"), name: "Ollama");
 
 var app = builder.Build();
 

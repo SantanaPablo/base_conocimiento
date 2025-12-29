@@ -16,3 +16,21 @@ D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Infraestru
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\BaseConocimiento.Infrastructure.pdb
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\ref\BaseConocimiento.Infrastructure.dll
 D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\BaseConocimiento.Infrastructure.sourcelink.json
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\bin\Debug\net8.0\BaseConocimiento.Infrastructure.deps.json
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\bin\Debug\net8.0\BaseConocimiento.Infrastructure.dll
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\bin\Debug\net8.0\BaseConocimiento.Infrastructure.pdb
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\bin\Debug\net8.0\BaseConocimiento.Application.dll
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\bin\Debug\net8.0\BaseConocimiento.Domain.dll
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\bin\Debug\net8.0\BaseConocimiento.Application.pdb
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\bin\Debug\net8.0\BaseConocimiento.Domain.pdb
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\BaseConocimiento.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\BaseConocimiento.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\BaseConocimiento.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\BaseConocimiento.Infrastructure.AssemblyInfo.cs
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\BaseConocimiento.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\BaseConocimiento.Infrastructure.sourcelink.json
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\BaseCono.C04EB4E4.Up2Date
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\BaseConocimiento.Infrastructure.dll
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\refint\BaseConocimiento.Infrastructure.dll
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\BaseConocimiento.Infrastructure.pdb
+C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Infraestructure\obj\Debug\net8.0\ref\BaseConocimiento.Infrastructure.dll

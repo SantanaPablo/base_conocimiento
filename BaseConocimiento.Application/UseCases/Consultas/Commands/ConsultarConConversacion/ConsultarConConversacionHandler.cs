@@ -54,19 +54,19 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
                     !await _conversationService.ExisteConversacionAsync(conversacionId))
                 {
                     conversacionId = await _conversationService.CrearConversacionAsync(request.UsuarioId);
-                    _logger.LogInformation("🆕 Nueva conversación: {ConversacionId}", conversacionId);
+                    _logger.LogInformation("Nueva conversación: {ConversacionId}", conversacionId);
                 }
 
                 //Obtener historial
                 var historial = await _conversationService.ObtenerUltimosMensajesAsync(conversacionId, 10);
-                _logger.LogInformation("📖 Historial: {Count} mensajes", historial.Count);
+                _logger.LogInformation("Historial: {Count} mensajes", historial.Count);
 
                 //Generar embedding y buscar
                 var embedding = await _embeddingService.GenerarEmbeddingAsync(request.Pregunta);
                 var resultados = await _qdrantService.BuscarSimilaresAsync(
                     embedding,
                     request.TopK,
-                    request.Categoria
+                    string.IsNullOrEmpty(request.Categoria) ? null : request.Categoria
                 );
 
                 if (!resultados.Any())
@@ -80,19 +80,16 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
                     };
                 }
 
-                //Obtener títulos de manuales
                 var manualIds = resultados.Select(r => r.ManualId).Distinct();
-                var manualTasks = manualIds.Select(async id =>
+                var manuales = new Dictionary<Guid, string>();
+                foreach (var id in manualIds)
                 {
                     var manual = await _unitOfWork.Manuales.ObtenerPorIdAsync(id, cancellationToken);
-                    return (id, manual?.Titulo ?? "Desconocido");
-                });
-                var manuales = (await Task.WhenAll(manualTasks)).ToDictionary(x => x.id, x => x.Item2);
-
-                //Construir contexto
+                    manuales[id] = manual?.Titulo ?? "Desconocido";
+                }
                 var contexto = string.Join("\n\n", resultados.Select((r, i) =>
                 {
-                    var titulo = manuales[r.ManualId];
+                    var titulo = manuales.GetValueOrDefault(r.ManualId) ?? "Manual no encontrado";
                     return $"[Fuente {i + 1} - {titulo}, Pág. {r.NumeroPagina}]\n{r.TextoOriginal}";
                 }));
 
@@ -132,7 +129,7 @@ RESPUESTA:";
                 }).ToList();
 
                 sw.Stop();
-                _logger.LogInformation("✅ Consulta con conversación completada en {Ms}ms", sw.ElapsedMilliseconds);
+                _logger.LogInformation("Consulta con conversación completada en {Ms}ms", sw.ElapsedMilliseconds);
 
                 return new ConsultarConConversacionResponse
                 {

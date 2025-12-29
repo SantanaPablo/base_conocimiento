@@ -6,19 +6,19 @@ namespace BaseConocimiento.Infrastructure.Services.AI.Ollama
     public class OllamaEmbeddingService : IEmbeddingService
     {
         private readonly HttpClient _httpClient;
-        private const string MODEL = "nomic-embed-text";
+        private const string MODEL = "nomic-embed-text:latest";
 
         public OllamaEmbeddingService(HttpClient httpClient)
         {
             _httpClient = httpClient;
-            _httpClient.BaseAddress = new Uri("http://localhost:11434/api/");
+            _httpClient.Timeout = TimeSpan.FromSeconds(100);
         }
 
         public async Task<float[]> GenerarEmbeddingAsync(string texto)
         {
             var request = new { model = MODEL, prompt = texto };
 
-            var response = await _httpClient.PostAsJsonAsync("embeddings", request);
+            var response = await _httpClient.PostAsJsonAsync("api/embeddings", request);
             response.EnsureSuccessStatusCode();
 
             var result = await response.Content.ReadFromJsonAsync<OllamaResponse>();
