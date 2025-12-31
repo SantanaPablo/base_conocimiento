@@ -1,15 +1,3 @@
-D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj\Debug\net8.0\BaseConocimiento.Domain.GeneratedMSBuildEditorConfig.editorconfig
-D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj\Debug\net8.0\BaseConocimiento.Domain.AssemblyInfoInputs.cache
-D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj\Debug\net8.0\BaseConocimiento.Domain.AssemblyInfo.cs
-D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj\Debug\net8.0\BaseConocimiento.Domain.csproj.CoreCompileInputs.cache
-D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\bin\Debug\net8.0\BaseConocimiento.Domain.deps.json
-D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\bin\Debug\net8.0\BaseConocimiento.Domain.dll
-D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\bin\Debug\net8.0\BaseConocimiento.Domain.pdb
-D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj\Debug\net8.0\BaseConocimiento.Domain.dll
-D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj\Debug\net8.0\refint\BaseConocimiento.Domain.dll
-D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj\Debug\net8.0\BaseConocimiento.Domain.pdb
-D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj\Debug\net8.0\ref\BaseConocimiento.Domain.dll
-D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Domain\obj\Debug\net8.0\BaseConocimiento.Domain.sourcelink.json
 C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Domain\bin\Debug\net8.0\BaseConocimiento.Domain.deps.json
 C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Domain\bin\Debug\net8.0\BaseConocimiento.Domain.dll
 C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Domain\bin\Debug\net8.0\BaseConocimiento.Domain.pdb

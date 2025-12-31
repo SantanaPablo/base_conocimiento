@@ -1,10 +1,5 @@
 ﻿using BaseConocimiento.Application.Interfaces.Persistence;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BaseConocimiento.Application.UseCases.Manuales.Queries.ObtenerCategorias
 {
@@ -19,14 +14,20 @@ namespace BaseConocimiento.Application.UseCases.Manuales.Queries.ObtenerCategori
 
         public async Task<ObtenerCategoriasResponse> Handle(
             ObtenerCategoriasQuery request,
-            CancellationToken cancellationToken)
+            CancellationToken ct)
         {
-            var categoriasDict = await _unitOfWork.Manuales.ObtenerCategoriasYSubcategoriasAsync(cancellationToken);
 
-            var categorias = categoriasDict.Select(kvp => new CategoriaDto
+            var categoriasEntity = await _unitOfWork.Categorias.ObtenerTodasAsync(ct);
+
+            var categorias = categoriasEntity.Select(c => new CategoriaDto
             {
-                Categoria = kvp.Key,
-                SubCategorias = kvp.Value
+                Id = c.Id,
+                Nombre = c.Nombre,
+                Color = c.Color,
+                Icono = c.Icono,
+                
+                SubCategorias = c.SubCategorias?.Select(s => s.Nombre).ToList() ?? new List<string>(),
+                CantidadManuales = c.Manuales?.Count ?? 0
             }).ToList();
 
             return new ObtenerCategoriasResponse

@@ -2,11 +2,7 @@
 using BaseConocimiento.Application.Interfaces.Storage;
 using BaseConocimiento.Application.Interfaces.VectorStore;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace BaseConocimiento.Application.UseCases.Manuales.Commands.EliminarManual
 {
@@ -15,53 +11,49 @@ namespace BaseConocimiento.Application.UseCases.Manuales.Commands.EliminarManual
         private readonly IUnitOfWork _unitOfWork;
         private readonly IFileStorageService _fileStorage;
         private readonly IQdrantService _qdrantService;
+        private readonly ILogger<EliminarManualHandler> _logger;
 
         public EliminarManualHandler(
             IUnitOfWork unitOfWork,
             IFileStorageService fileStorage,
-            IQdrantService qdrantService)
+            IQdrantService qdrantService,
+            ILogger<EliminarManualHandler> logger)
         {
             _unitOfWork = unitOfWork;
             _fileStorage = fileStorage;
             _qdrantService = qdrantService;
+            _logger = logger;
         }
 
-        public async Task<EliminarManualResponse> Handle(
-            EliminarManualCommand request,
-            CancellationToken cancellationToken)
+        public async Task<EliminarManualResponse> Handle(EliminarManualCommand request, CancellationToken ct)
         {
             try
             {
-                var manual = await _unitOfWork.Manuales.ObtenerPorIdAsync(request.ManualId, cancellationToken);
+                var manual = await _unitOfWork.Manuales.ObtenerPorIdAsync(request.ManualId, ct);
 
                 if (manual == null)
                 {
-                    return new EliminarManualResponse
-                    {
-                        Exitoso = false,
-                        Mensaje = "Manual no encontrado"
-                    };
+                    return new EliminarManualResponse { Exitoso = false, Mensaje = "Manual no encontrado." };
                 }
 
-                await _unitOfWork.Manuales.EliminarAsync(manual, cancellationToken);
-                await _unitOfWork.SaveChangesAsync(cancellationToken);
+                //Borrar de SQL en cascada
+                await _unitOfWork.Manuales.EliminarAsync(manual, ct);
+                await _unitOfWork.SaveChangesAsync(ct);
 
+                //Borrar fisico
                 await _fileStorage.EliminarArchivoAsync(manual.Id);
+
+                //Borrar de Qdrant
                 await _qdrantService.EliminarVectoresAsync(manual.Id);
 
-                return new EliminarManualResponse
-                {
-                    Exitoso = true,
-                    Mensaje = "Manual eliminado exitosamente de los 3 sistemas"
-                };
+                _logger.LogInformation("Manual {Id} purgado del sistema", manual.Id);
+
+                return new EliminarManualResponse { Exitoso = true, Mensaje = "Manual eliminado de todos los repositorios." };
             }
             catch (Exception ex)
             {
-                return new EliminarManualResponse
-                {
-                    Exitoso = false,
-                    Mensaje = $"Error al eliminar manual: {ex.Message}"
-                };
+                _logger.LogError(ex, "Fallo al purgar manual {Id}", request.ManualId);
+                return new EliminarManualResponse { Exitoso = false, Mensaje = ex.Message };
             }
         }
     }

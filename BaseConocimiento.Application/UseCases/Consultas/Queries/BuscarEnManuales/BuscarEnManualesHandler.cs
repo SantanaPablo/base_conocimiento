@@ -2,11 +2,6 @@
 using BaseConocimiento.Application.Interfaces.Persistence;
 using BaseConocimiento.Application.Interfaces.VectorStore;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BaseConocimiento.Application.UseCases.Consultas.Queries.BuscarEnManuales
 {
@@ -16,88 +11,44 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Queries.BuscarEnManual
         private readonly IEmbeddingService _embeddingService;
         private readonly IQdrantService _qdrantService;
 
-        public BuscarEnManualesHandler(
-            IUnitOfWork unitOfWork,
-            IEmbeddingService embeddingService,
-            IQdrantService qdrantService)
+        public BuscarEnManualesHandler(IUnitOfWork unitOfWork, IEmbeddingService embeddingService, IQdrantService qdrantService)
         {
             _unitOfWork = unitOfWork;
             _embeddingService = embeddingService;
             _qdrantService = qdrantService;
         }
 
-        public async Task<BuscarEnManualesResponse> Handle(
-            BuscarEnManualesQuery request,
-            CancellationToken cancellationToken)
+        public async Task<BuscarEnManualesResponse> Handle(BuscarEnManualesQuery request, CancellationToken ct)
         {
-            try
+            var embedding = await _embeddingService.GenerarEmbeddingAsync(request.TextoBusqueda);
+
+            var resultadosQdrant = await _qdrantService.BuscarSimilaresAsync(
+                embedding,
+                request.TopK,
+                request.CategoriaId?.ToString()
+            );
+
+            var manualIds = resultadosQdrant.Select(r => r.ManualId).Distinct();
+            var manualesDict = new Dictionary<Guid, (string Titulo, string Categoria)>();
+
+            foreach (var id in manualIds)
             {
-                var embedding = await _embeddingService.GenerarEmbeddingAsync(request.TextoBusqueda);
-
-                var resultadosQdrant = await _qdrantService.BuscarSimilaresAsync(
-                    embedding,
-                    request.TopK,
-                    request.Categoria
-                );
-
-                if (!resultadosQdrant.Any())
-                {
-                    return new BuscarEnManualesResponse
-                    {
-                        Exitoso = true,
-                        Resultados = new List<ResultadoBusquedaDto>(),
-                        Mensaje = "No se encontraron resultados"
-                    };
-                }
-
-             
-                var manualIds = resultadosQdrant.Select(r => r.ManualId).Distinct();
-                var manualesDict = new Dictionary<Guid, (string Titulo, string Categoria)>();
-
-                foreach (var id in manualIds)
-                {
-                    var manual = await _unitOfWork.Manuales.ObtenerPorIdAsync(id, cancellationToken);
-                    if (manual != null)
-                    {
-                        manualesDict[id] = (manual.Titulo, manual.Categoria);
-                    }
-                }
-
-                var resultados = resultadosQdrant.Select(r =>
-                {
-                    var (titulo, categoria) = manualesDict.ContainsKey(r.ManualId)
-                        ? manualesDict[r.ManualId]
-                        : ("Desconocido", "N/A");
-
-                    return new ResultadoBusquedaDto
-                    {
-                        ManualId = r.ManualId,
-                        TituloManual = titulo,
-                        Categoria = categoria,
-                        NumeroPagina = r.NumeroPagina,
-                        TextoFragmento = r.TextoOriginal.Length > 300
-                            ? r.TextoOriginal.Substring(0, 300) + "..."
-                            : r.TextoOriginal,
-                        ScoreSimilitud = Math.Round(r.Score * 100, 2)
-                    };
-                }).ToList();
-
-                return new BuscarEnManualesResponse
-                {
-                    Exitoso = true,
-                    Resultados = resultados,
-                    Mensaje = $"Se encontraron {resultados.Count} resultados"
-                };
+                var manual = await _unitOfWork.Manuales.ObtenerConCategoriaAsync(id, ct);
+                if (manual != null)
+                    manualesDict[id] = (manual.Titulo, manual.Categoria?.Nombre ?? "N/A");
             }
-            catch (Exception ex)
+
+            var resultados = resultadosQdrant.Select(r => new ResultadoBusquedaDto
             {
-                return new BuscarEnManualesResponse
-                {
-                    Exitoso = false,
-                    Resultados = new List<ResultadoBusquedaDto>(),
-                    Mensaje = $"Error en la búsqueda: {ex.Message}"
-                };
-            }
+                ManualId = r.ManualId,
+                TituloManual = manualesDict.ContainsKey(r.ManualId) ? manualesDict[r.ManualId].Titulo : "Desconocido",
+                CategoriaNombre = manualesDict.ContainsKey(r.ManualId) ? manualesDict[r.ManualId].Categoria : "N/A",
+                NumeroPagina = r.NumeroPagina,
+                TextoFragmento = r.TextoOriginal,
+                ScoreSimilitud = Math.Round(r.Score * 100, 2)
+            }).ToList();
+
+            return new BuscarEnManualesResponse { Exitoso = true, Resultados = resultados };
         }
     }
 }

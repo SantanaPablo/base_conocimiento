@@ -40,25 +40,25 @@ namespace BaseConocimiento.API.Controllers
         /// <summary>
         /// Preguntar con contexto de conversación (RAG + Historial)
         /// </summary>
-        [HttpPost("preguntar")]
-        public async Task<IActionResult> PreguntarConConversacion([FromBody] PreguntarConversacionRequest request)
-        {
-            var command = new ConsultarConConversacionCommand
-            {
-                Pregunta = request.Pregunta,
-                ConversacionId = request.ConversacionId,
-                UsuarioId = User.Identity?.Name ?? request.UsuarioId ?? "anonimo",
-                Categoria = request.Categoria,
-                TopK = request.TopK > 0 ? request.TopK : 5
-            };
+        //[HttpPost("preguntar")]
+        //public async Task<IActionResult> PreguntarConConversacion([FromBody] PreguntarConversacionRequest request)
+        //{
+        //    var command = new ConsultarConConversacionCommand
+        //    {
+        //        Pregunta = request.Pregunta,
+        //        ConversacionId = request.ConversacionId,
+        //        UsuarioId = User.Identity?.Name ?? request.UsuarioId ?? "anonimo",
+        //        Categoria = request.Categoria,
+        //        TopK = request.TopK > 0 ? request.TopK : 5
+        //    };
 
-            var resultado = await _mediator.Send(command);
+        //    var resultado = await _mediator.Send(command);
 
-            if (resultado.Exitoso)
-                return Ok(resultado);
+        //    if (resultado.Exitoso)
+        //        return Ok(resultado);
 
-            return BadRequest(resultado);
-        }
+        //    return BadRequest(resultado);
+        //}
 
         /// <summary>
         /// Obtener historial de una conversación

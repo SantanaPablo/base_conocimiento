@@ -3,14 +3,14 @@
     public class PreguntaRequest
     {
         public string Pregunta { get; set; }
-        public string? Categoria { get; set; }
+        public Guid? CategoriaId { get; set; }
         public int TopK { get; set; } = 5;
     }
 
     public class BuscarRequest
     {
         public string TextoBusqueda { get; set; }
-        public string? Categoria { get; set; }
+        public Guid? CategoriaId { get; set; }
         public int TopK { get; set; } = 10;
     }
 }

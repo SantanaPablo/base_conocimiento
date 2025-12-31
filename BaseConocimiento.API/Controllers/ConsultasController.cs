@@ -1,14 +1,13 @@
-using Microsoft.AspNetCore.Mvc;
-using MediatR;
-using BaseConocimiento.Application.UseCases.Consultas.Queries.ConsultarBaseConocimiento;
+using BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConConversacion;
 using BaseConocimiento.Application.UseCases.Consultas.Queries.BuscarEnManuales;
-using BaseConocimiento.API.DTOs.Consultas;
+using BaseConocimiento.Application.UseCases.Consultas.Queries.ConsultarBaseConocimiento;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
-namespace BaseConocimiento.WebApi.Controllers
+namespace BaseConocimiento.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Produces("application/json")]
     public class ConsultasController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -21,89 +20,46 @@ namespace BaseConocimiento.WebApi.Controllers
         }
 
         /// <summary>
-        /// Hacer una pregunta a la base de conocimiento usando RAG
+        /// Consultar la base de conocimiento con conversación
         /// </summary>
-        /// <param name="request">Pregunta y filtros opcionales</param>
-        /// <returns>Respuesta generada por IA con fuentes citadas</returns>
-        [HttpPost("preguntar")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> HacerPregunta([FromBody] PreguntaRequest request)
+        [HttpPost("consultar-con-conversacion")]
+        public async Task<IActionResult> ConsultarConConversacion([FromBody] ConsultarConConversacionCommand command)
         {
-            if (string.IsNullOrWhiteSpace(request.Pregunta))
-                return BadRequest(new { Mensaje = "La pregunta no puede estar vacía" });
+            var response = await _mediator.Send(command);
 
-            _logger.LogInformation("Pregunta recibida: {Pregunta}", request.Pregunta);
+            if (!response.Exitoso)
+                return BadRequest(response);
 
-            var query = new ConsultarBaseConocimientoQuery
-            {
-                Pregunta = request.Pregunta,
-                Categoria = request.Categoria,
-                TopK = request.TopK > 0 ? Math.Min(request.TopK, 10) : 5 // Máximo 10
-            };
-
-            var resultado = await _mediator.Send(query);
-
-            if (resultado.Exitoso)
-            {
-                _logger.LogInformation("Respuesta generada para pregunta con {Count} fuentes",
-                    resultado.Fuentes?.Count ?? 0);
-                return Ok(resultado);
-            }
-
-            _logger.LogWarning("Error al generar respuesta: {Mensaje}", resultado.Mensaje);
-            return BadRequest(resultado);
+            return Ok(response);
         }
 
         /// <summary>
-        /// Buscar fragmentos similares en los manuales sin generar respuesta
+        /// Consulta simple sin historial
         /// </summary>
-        /// <param name="request">Texto de búsqueda y filtros</param>
-        /// <returns>Lista de fragmentos relevantes ordenados por similitud</returns>
+        [HttpPost("consultar")]
+        public async Task<IActionResult> Consultar([FromBody] ConsultarBaseConocimientoQuery query)
+        {
+            var response = await _mediator.Send(query);
+
+            if (!response.Exitoso)
+                return BadRequest(response);
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Buscar en manuales (solo resultados, sin respuesta generada)
+        /// </summary>
         [HttpPost("buscar")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> BuscarEnManuales([FromBody] BuscarRequest request)
+        public async Task<IActionResult> BuscarEnManuales([FromBody] BuscarEnManualesQuery query)
         {
-            if (string.IsNullOrWhiteSpace(request.TextoBusqueda))
-                return BadRequest(new { Mensaje = "El texto de búsqueda no puede estar vacío" });
+            var response = await _mediator.Send(query);
 
-            _logger.LogInformation("Búsqueda: {Texto}", request.TextoBusqueda);
+            if (!response.Exitoso)
+                return BadRequest(response);
 
-            var query = new BuscarEnManualesQuery
-            {
-                TextoBusqueda = request.TextoBusqueda,
-                Categoria = request.Categoria,
-                TopK = request.TopK > 0 ? Math.Min(request.TopK, 20) : 10 // Máximo 20
-            };
-
-            var resultado = await _mediator.Send(query);
-
-            if (resultado.Exitoso)
-            {
-                _logger.LogInformation("Búsqueda completada: {Count} resultados",
-                    resultado.Resultados?.Count ?? 0);
-                return Ok(resultado);
-            }
-
-            return BadRequest(resultado);
-        }
-
-        /// <summary>
-        /// Obtener estadísticas de uso de consultas
-        /// </summary>
-        [HttpGet("estadisticas")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        public IActionResult ObtenerEstadisticas()
-        {
-            // TODO: Implementar sistema de métricas
-            return Ok(new
-            {
-                Mensaje = "Estadísticas no implementadas aún",
-                TotalConsultas = 0,
-                PromedioRespuesta = 0
-            });
+            return Ok(response);
         }
     }
-    
+
 }

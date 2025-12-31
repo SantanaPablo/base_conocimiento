@@ -10,7 +10,6 @@ namespace BaseConocimiento.Application.UseCases.Manuales.Queries.ObtenerCategori
 {
     public class ObtenerCategoriasQuery : IRequest<ObtenerCategoriasResponse>
     {
-        // No necesita parámetros, obtiene todas las categorías
     }
 
     public class ObtenerCategoriasResponse
@@ -20,7 +19,10 @@ namespace BaseConocimiento.Application.UseCases.Manuales.Queries.ObtenerCategori
 
     public class CategoriaDto
     {
-        public string Categoria { get; set; }
+        public Guid Id { get; set; }
+        public string Nombre { get; set; }
+        public string? Color { get; set; }
+        public string? Icono { get; set; }
         public List<string> SubCategorias { get; set; }
         public int CantidadManuales { get; set; }
     }

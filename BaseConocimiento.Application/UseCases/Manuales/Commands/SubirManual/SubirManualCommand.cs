@@ -9,21 +9,22 @@ namespace BaseConocimiento.Application.UseCases.Manuales.Commands.SubirManual
 {
     public class SubirManualCommand : IRequest<SubirManualResponse>
     {
-        public Stream ArchivoStream { get; set; }
-        public string NombreOriginal { get; set; }
         public string Titulo { get; set; }
-        public string Categoria { get; set; }
-        public string SubCategoria { get; set; }
+        public Guid CategoriaId { get; set; }
         public string Version { get; set; }
-        public string Descripcion { get; set; }
-        public string UsuarioId { get; set; }
+        public string? Descripcion { get; set; }
+        public string NombreOriginal { get; set; }
+        public Guid UsuarioId { get; set; }
+        public Stream ArchivoStream { get; set; }
+
+        public long PesoArchivo { get; set; }
     }
 
     public class SubirManualResponse
     {
-        public Guid ManualId { get; set; }
         public bool Exitoso { get; set; }
-        public string Mensaje { get; set; }
+        public Guid ManualId { get; set; }
         public int ChunksProcesados { get; set; }
+        public string Mensaje { get; set; }
     }
 }

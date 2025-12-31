@@ -1,10 +1,5 @@
 ﻿using BaseConocimiento.Application.Interfaces.Persistence;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BaseConocimiento.Application.UseCases.Manuales.Commands.ActualizarManual
 {
@@ -17,45 +12,32 @@ namespace BaseConocimiento.Application.UseCases.Manuales.Commands.ActualizarManu
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<ActualizarManualResponse> Handle(
-            ActualizarManualCommand request,
-            CancellationToken cancellationToken)
+        public async Task<ActualizarManualResponse> Handle(ActualizarManualCommand request, CancellationToken ct)
         {
             try
             {
-                var manual = await _unitOfWork.Manuales.ObtenerPorIdAsync(request.ManualId, cancellationToken);
+                var manual = await _unitOfWork.Manuales.ObtenerPorIdAsync(request.ManualId, ct);
 
                 if (manual == null)
                 {
-                    return new ActualizarManualResponse
-                    {
-                        Exitoso = false,
-                        Mensaje = "Manual no encontrado"
-                    };
+                    return new ActualizarManualResponse { Exitoso = false, Mensaje = "Manual no encontrado." };
                 }
 
+                // Actualizar campos permitidos
                 if (!string.IsNullOrWhiteSpace(request.Version))
                     manual.ActualizarVersion(request.Version);
 
                 if (!string.IsNullOrWhiteSpace(request.Descripcion))
                     manual.ActualizarDescripcion(request.Descripcion);
 
-                await _unitOfWork.Manuales.ActualizarAsync(manual, cancellationToken);
-                await _unitOfWork.SaveChangesAsync(cancellationToken);
+                await _unitOfWork.Manuales.ActualizarAsync(manual, ct);
+                await _unitOfWork.SaveChangesAsync(ct);
 
-                return new ActualizarManualResponse
-                {
-                    Exitoso = true,
-                    Mensaje = "Manual actualizado exitosamente"
-                };
+                return new ActualizarManualResponse { Exitoso = true, Mensaje = "Manual actualizado correctamente." };
             }
             catch (Exception ex)
             {
-                return new ActualizarManualResponse
-                {
-                    Exitoso = false,
-                    Mensaje = $"Error al actualizar manual: {ex.Message}"
-                };
+                return new ActualizarManualResponse { Exitoso = false, Mensaje = $"Error: {ex.Message}" };
             }
         }
     }

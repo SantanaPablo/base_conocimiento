@@ -23,12 +23,14 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
         public List<FuenteConsultada> Fuentes { get; set; }
         public bool Exitoso { get; set; }
         public string Mensaje { get; set; }
+        public long TiempoRespuestaMs { get; set; }
     }
 
     public class FuenteConsultada
     {
         public Guid ManualId { get; set; }
         public string Titulo { get; set; }
+        public string Categoria { get; set; }
         public int NumeroPagina { get; set; }
         public double Relevancia { get; set; }
         public string TextoFragmento { get; set; }

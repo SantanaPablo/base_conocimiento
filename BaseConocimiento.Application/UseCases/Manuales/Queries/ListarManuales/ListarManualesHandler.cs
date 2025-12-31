@@ -1,58 +1,83 @@
 ﻿using BaseConocimiento.Application.Interfaces.Persistence;
+using BaseConocimiento.Application.UseCases.Manuales.Queries.ListarManuales;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace BaseConocimiento.Application.UseCases.Manuales.Queries.ListarManuales
 {
     public class ListarManualesHandler : IRequestHandler<ListarManualesQuery, ListarManualesResponse>
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly ILogger<ListarManualesHandler> _logger;
 
-        public ListarManualesHandler(IUnitOfWork unitOfWork)
+        public ListarManualesHandler(IUnitOfWork unitOfWork, ILogger<ListarManualesHandler> logger)
         {
             _unitOfWork = unitOfWork;
+            _logger = logger;
         }
 
-        public async Task<ListarManualesResponse> Handle(
-            ListarManualesQuery request,
-            CancellationToken cancellationToken)
+        public async Task<ListarManualesResponse> Handle(ListarManualesQuery request, CancellationToken ct)
         {
-            var (manuales, total) = await _unitOfWork.Manuales.ObtenerPaginadoAsync(
-                request.Pagina,
-                request.TamañoPagina,
-                request.Categoria,
-                request.SubCategoria,
-                request.Estado,
-                cancellationToken
-            );
-
-            var manualesDto = manuales.Select(m => new ManualDto
+            try
             {
-                Id = m.Id,
-                Titulo = m.Titulo,
-                Categoria = m.Categoria,
-                SubCategoria = m.SubCategoria,
-                Version = m.Version,
-                Descripcion = m.Descripcion,
-                NombreOriginal = m.NombreOriginal,
-                FechaSubida = m.FechaSubida,
-                PesoArchivoMB = Math.Round(m.PesoArchivo / 1024.0 / 1024.0, 2),
-                Estado = m.Estado,
-                UsuarioId = m.UsuarioId
-            }).ToList();
+                var (manuales, total) = await _unitOfWork.Manuales.ListarPaginadoAsync(
+                categoriaId: request.CategoriaId,
+                terminoBusqueda: request.TerminoBusqueda,
+                 pagina: request.Pagina,
+                 tamañoPagina: request.TamañoPagina,
+                ordenarPor: request.OrdenarPor.ToString(),
+    ct
+);
 
-            return new ListarManualesResponse
+                var manualesDto = manuales.Select(m => new ManualListadoDto
+                {
+                    Id = m.Id,
+                    Titulo = m.Titulo,
+                    Categoria = m.Categoria?.Nombre ?? "Sin categoría",
+                    SubCategoria = m.SubCategoria,
+                    Version = m.Version,
+                    FechaSubida = m.FechaSubida,
+                    SubidoPor = m.Usuario?.NombreCompleto ?? "Usuario desconocido",
+                    TamañoBytes = m.PesoArchivo,
+                    TamañoFormateado = FormatearTamaño(m.PesoArchivo),
+                    NumeroConsultas = m.NumeroConsultas,
+                    UltimaConsulta = m.UltimaConsulta,
+                    Estado = m.Estado.ToString()
+                }).ToList();
+
+                var totalPaginas = (int)Math.Ceiling(total / (double)request.TamañoPagina);
+
+                return new ListarManualesResponse
+                {
+                    Exitoso = true,
+                    Manuales = manualesDto,
+                    TotalRegistros = total,
+                    PaginaActual = request.Pagina,
+                    TotalPaginas = totalPaginas
+                };
+            }
+            catch (Exception ex)
             {
-                Manuales = manualesDto,
-                Total = total,
-                Pagina = request.Pagina,
-                TamañoPagina = request.TamañoPagina,
-                TotalPaginas = (int)Math.Ceiling(total / (double)request.TamañoPagina)
-            };
+                _logger.LogError(ex, "Error al listar manuales");
+                return new ListarManualesResponse
+                {
+                    Exitoso = false,
+                    Mensaje = $"Error: {ex.Message}"
+                };
+            }
+        }
+
+        private string FormatearTamaño(long bytes)
+        {
+            string[] sizes = { "B", "KB", "MB", "GB" };
+            double len = bytes;
+            int order = 0;
+            while (len >= 1024 && order < sizes.Length - 1)
+            {
+                order++;
+                len = len / 1024;
+            }
+            return $"{len:0.##} {sizes[order]}";
         }
     }
 }

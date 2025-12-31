@@ -5,78 +5,78 @@ namespace BaseConocimiento.Domain.Entities
     {
         public Guid Id { get; private set; }
         public string Titulo { get; private set; }
-        public string Categoria { get; private set; }
-        public string SubCategoria { get; private set; }
+        public Guid CategoriaId { get; private set; } 
+        public string? SubCategoria { get; private set; }
         public string Version { get; private set; }
         public string Descripcion { get; private set; }
-        public string RutaLocal { get; private set; }
+        public string RutaStorage { get; private set; }
         public string NombreOriginal { get; private set; }
-        public string UsuarioId { get; private set; }
+        public Guid UsuarioId { get; private set; }
         public DateTime FechaSubida { get; private set; }
         public long PesoArchivo { get; private set; }
         public EstadoManual Estado { get; private set; }
+        public int NumeroConsultas { get; private set; }
+        public DateTime? UltimaConsulta { get; private set; }
 
-        // Constructor para crear un nuevo manual
-        private Manual() { } // Para EF Core
+        // Navegación
+        public Categoria Categoria { get; private set; }
+        public Usuario Usuario { get; private set; }
+        public ICollection<ConsultaManual> ConsultasRelacionadas { get; private set; } = new List<ConsultaManual>();
+
+        private Manual() { }
 
         public static Manual Crear(
             string titulo,
-            string categoria,
-            string subCategoria,
+            Guid categoriaId,
             string version,
             string descripcion,
-            string rutaLocal,
+            string rutaStorage,
             string nombreOriginal,
-            string usuarioId,
+            Guid usuarioId,
             long pesoArchivo)
         {
-            // Validaciones de dominio
             if (string.IsNullOrWhiteSpace(titulo))
                 throw new ArgumentException("El título es obligatorio", nameof(titulo));
-
-            if (string.IsNullOrWhiteSpace(categoria))
-                throw new ArgumentException("La categoría es obligatoria", nameof(categoria));
-
+            if (categoriaId == Guid.Empty)
+                throw new ArgumentException("La categoría es obligatoria", nameof(categoriaId));
             if (pesoArchivo <= 0)
-                throw new ArgumentException("El peso del archivo debe ser mayor a 0", nameof(pesoArchivo));
+                throw new ArgumentException("El peso debe ser mayor a 0", nameof(pesoArchivo));
 
             return new Manual
             {
                 Id = Guid.NewGuid(),
                 Titulo = titulo,
-                Categoria = categoria,
-                SubCategoria = subCategoria ?? string.Empty,
+                CategoriaId = categoriaId,
                 Version = version ?? "v1.0",
                 Descripcion = descripcion ?? string.Empty,
-                RutaLocal = rutaLocal,
+                RutaStorage = rutaStorage,
                 NombreOriginal = nombreOriginal,
                 UsuarioId = usuarioId,
                 FechaSubida = DateTime.UtcNow,
                 PesoArchivo = pesoArchivo,
-                Estado = EstadoManual.Activo
+                Estado = EstadoManual.Activo,
+                NumeroConsultas = 0
             };
         }
 
-        // Métodos de dominio
-        public void ActualizarEstado(EstadoManual nuevoEstado)
+        public void RegistrarConsulta()
         {
-            Estado = nuevoEstado;
+            NumeroConsultas++;
+            UltimaConsulta = DateTime.UtcNow;
         }
 
+        public void ActualizarEstado(EstadoManual nuevoEstado) => Estado = nuevoEstado;
         public void ActualizarVersion(string nuevaVersion)
         {
             if (string.IsNullOrWhiteSpace(nuevaVersion))
-                throw new ArgumentException("La versión no puede estar vacía", nameof(nuevaVersion));
-
+                throw new ArgumentException("La versión no puede estar vacía");
             Version = nuevaVersion;
         }
+        public bool EstaActivo() => Estado == EstadoManual.Activo;
 
         public void ActualizarDescripcion(string nuevaDescripcion)
         {
             Descripcion = nuevaDescripcion ?? string.Empty;
         }
-
-        public bool EstaObsoleto() => Estado == EstadoManual.Obsoleto;
-        public bool EstaActivo() => Estado == EstadoManual.Activo;
     }
 }

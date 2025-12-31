@@ -22,7 +22,7 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
 
             _client = new QdrantClient(host, port);
 
-            _logger.LogInformation("Qdrant conectado: {Host}:{Port}, Colección: {Collection}",
+            _logger.LogInformation("Inuzaru-Qdrant conectado: {Host}:{Port}, Colección: {Collection}",
                 host, port, _collectionName);
 
             InicializarColeccionAsync().GetAwaiter().GetResult();
@@ -32,7 +32,6 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
         {
             try
             {
-          
                 bool existe = false;
                 try
                 {
@@ -41,7 +40,6 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
                 }
                 catch
                 {
-                
                     existe = false;
                 }
 
@@ -65,7 +63,7 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al inicializar colección Qdrant");
+                _logger.LogError(ex, "Error al inicializar la perrera de vectores (Qdrant)");
                 throw;
             }
         }
@@ -76,7 +74,7 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
             {
                 if (!chunks.Any())
                 {
-                    _logger.LogWarning("No hay chunks para almacenar para manual {ManualId}", manualId);
+                    _logger.LogWarning("Che, no hay chunks para guardar para el manual {ManualId}", manualId);
                     return;
                 }
 
@@ -92,7 +90,7 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
                         { "texto_original", chunk.TextoOriginal },
                         { "numero_pagina", chunk.NumeroPagina },
                         { "numero_chunk", chunk.NumeroChunk },
-                        { "categoria", chunk.Categoria ?? "" },
+                        { "categoria_id", chunk.Categoria },
                         { "titulo", chunk.Titulo ?? "" }
                     };
 
@@ -108,12 +106,12 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
 
                 await _client.UpsertAsync(_collectionName, points);
 
-                _logger.LogInformation("Vectores almacenados en Qdrant: {ManualId}, {Count} chunks",
+                _logger.LogInformation("Vectores clavaditos en Qdrant: {ManualId}, {Count} chunks",
                     manualId, chunks.Count);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al almacenar vectores en Qdrant para manual {ManualId}", manualId);
+                _logger.LogError(ex, "Error al darle masa a los vectores en Qdrant para manual {ManualId}", manualId);
                 throw;
             }
         }
@@ -139,12 +137,12 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
 
                 await _client.DeleteAsync(_collectionName, filter);
 
-                _logger.LogInformation("Vectores eliminados de Qdrant: {ManualId}", manualId);
+                _logger.LogInformation("Vectores borrados de la memoria: {ManualId}", manualId);
                 return true;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al eliminar vectores de Qdrant para manual {ManualId}", manualId);
+                _logger.LogError(ex, "Error al limpiar vectores de Qdrant para manual {ManualId}", manualId);
                 return false;
             }
         }
@@ -152,13 +150,13 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
         public async Task<List<ResultadoBusqueda>> BuscarSimilaresAsync(
             float[] embedding,
             int topK = 5,
-            string categoria = null)
+            string? categoriaId = null)
         {
             try
             {
                 Filter filter = null;
 
-                if (!string.IsNullOrEmpty(categoria))
+                if (!string.IsNullOrEmpty(categoriaId))
                 {
                     filter = new Filter
                     {
@@ -168,8 +166,8 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
                             {
                                 Field = new FieldCondition
                                 {
-                                    Key = "categoria",
-                                    Match = new Match { Keyword = categoria }
+                                    Key = "categoria_id",
+                                    Match = new Match { Keyword = categoriaId }
                                 }
                             }
                         }
@@ -187,20 +185,20 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
                 var resultados = searchResult.Select(r => new ResultadoBusqueda
                 {
                     ManualId = Guid.Parse(r.Payload["manual_id"].StringValue),
-                    Titulo = r.Payload.ContainsKey("titulo") ? r.Payload["titulo"].StringValue : "",
+                    Titulo = r.Payload.ContainsKey("titulo") ? r.Payload["titulo"].StringValue : "Desconocido",
                     TextoOriginal = r.Payload["texto_original"].StringValue,
                     NumeroPagina = (int)r.Payload["numero_pagina"].IntegerValue,
                     Score = r.Score
                 }).ToList();
 
-                _logger.LogInformation("Búsqueda en Qdrant: {ResultCount} resultados encontrados",
+                _logger.LogInformation("Olfateando Qdrant: {ResultCount} fragmentos encontrados",
                     resultados.Count);
 
                 return resultados;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al buscar similares en Qdrant");
+                _logger.LogError(ex, "Error al olfatear similares en Qdrant");
                 return new List<ResultadoBusqueda>();
             }
         }
@@ -234,7 +232,7 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al verificar vectores en Qdrant para manual {ManualId}", manualId);
+                _logger.LogError(ex, "Error al verificar la memoria de manual {ManualId}", manualId);
                 return false;
             }
         }

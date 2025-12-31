@@ -5,9 +5,7 @@ using BaseConocimiento.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BaseConocimiento.Infrastructure.Repositories
@@ -15,31 +13,39 @@ namespace BaseConocimiento.Infrastructure.Repositories
     public class UnitOfWork : IUnitOfWork
     {
         private readonly BaseConocimientoDbContext _context;
-        private IDbContextTransaction _transaction;
-        private IManualRepository _manuales;
+        private IDbContextTransaction? _transaction;
+
+        private IManualRepository? _manuales;
+        private IUsuarioRepository? _usuarios;
+        private ICategoriaRepository? _categorias;
+        private IConsultaRepository? _consultas;
 
         public UnitOfWork(BaseConocimientoDbContext context)
         {
             _context = context;
         }
 
-        public IManualRepository Manuales
-        {
-            get
-            {
-                _manuales ??= new ManualRepository(_context);
-                return _manuales;
-            }
-        }
+        public IManualRepository Manuales => _manuales ??= new ManualRepository(_context);
+        public IUsuarioRepository Usuarios => _usuarios ??= new UsuarioRepository(_context);
+        public ICategoriaRepository Categorias => _categorias ??= new CategoriaRepository(_context);
+        public IConsultaRepository Consultas => _consultas ??= new ConsultaRepository(_context);
 
+        // Guardado de cambios
         public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             return await _context.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task BeginTransactionAsync(CancellationToken cancellationToken = default)
+        public async Task ExecuteStrategyAsync(Func<Task> action)
+        {
+            var strategy = _context.Database.CreateExecutionStrategy();
+            await strategy.ExecuteAsync(action);
+        }
+
+        public async Task<IAsyncDisposable> BeginTransactionAsync(CancellationToken cancellationToken = default)
         {
             _transaction = await _context.Database.BeginTransactionAsync(cancellationToken);
+            return _transaction;
         }
 
         public async Task CommitTransactionAsync(CancellationToken cancellationToken = default)
@@ -47,7 +53,10 @@ namespace BaseConocimiento.Infrastructure.Repositories
             try
             {
                 await SaveChangesAsync(cancellationToken);
-                await _transaction?.CommitAsync(cancellationToken);
+                if (_transaction != null)
+                {
+                    await _transaction.CommitAsync(cancellationToken);
+                }
             }
             catch
             {
@@ -66,30 +75,19 @@ namespace BaseConocimiento.Infrastructure.Repositories
 
         public async Task RollbackTransactionAsync(CancellationToken cancellationToken = default)
         {
-            try
+            if (_transaction != null)
             {
-                await _transaction?.RollbackAsync(cancellationToken);
-            }
-            finally
-            {
-                if (_transaction != null)
-                {
-                    await _transaction.DisposeAsync();
-                    _transaction = null;
-                }
+                await _transaction.RollbackAsync(cancellationToken);
+                await _transaction.DisposeAsync();
+                _transaction = null;
             }
         }
 
         public void Dispose()
         {
             _transaction?.Dispose();
-            _context?.Dispose();
-        }
-
-        public async Task ExecuteStrategyAsync(Func<Task> action)
-        {
-            var strategy = _context.Database.CreateExecutionStrategy();
-            await strategy.ExecuteAsync(action);
+            _context.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

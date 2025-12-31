@@ -9,12 +9,12 @@ using BaseConocimiento.Application.UseCases.Manuales.Queries.ListarManuales;
 using BaseConocimiento.Application.UseCases.Manuales.Queries.ObtenerCategorias;
 using BaseConocimiento.Domain.Enums;
 using BaseConocimiento.API.DTOs.Manuales;
+using BaseConocimiento.Application.UseCases.Manuales.Queries.ObtenerManualPorId;
 
-namespace BaseConocimiento.WebApi.Controllers
+namespace BaseConocimiento.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Produces("application/json")]
     public class ManualesController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -27,172 +27,99 @@ namespace BaseConocimiento.WebApi.Controllers
         }
 
         /// <summary>
-        /// Subir un nuevo manual a la base de conocimiento
-        /// </summary>
-        /// <param name="request">Datos del manual y archivo PDF</param>
-        /// <returns>Información del manual creado</returns>
-        [HttpPost]
-        [RequestSizeLimit(104857600)] // 100 MB
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> SubirManual([FromForm] SubirManualRequest request)
-        {
-            _logger.LogInformation("Subiendo manual: {Titulo}", request.Titulo);
-
-            if (request.Archivo == null || request.Archivo.Length == 0)
-                return BadRequest(new { Mensaje = "Debe proporcionar un archivo PDF" });
-
-            if (!request.Archivo.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
-                return BadRequest(new { Mensaje = "Solo se permiten archivos PDF" });
-
-            using var stream = request.Archivo.OpenReadStream();
-
-            var command = new SubirManualCommand
-            {
-                ArchivoStream = stream,
-                NombreOriginal = request.Archivo.FileName,
-                Titulo = request.Titulo,
-                Categoria = request.Categoria,
-                SubCategoria = request.SubCategoria ?? string.Empty,
-                Version = request.Version ?? "v1.0",
-                Descripcion = request.Descripcion ?? string.Empty,
-                UsuarioId = User.Identity?.Name ?? "anonimo"
-            };
-
-            var resultado = await _mediator.Send(command);
-
-            if (resultado.Exitoso)
-            {
-                _logger.LogInformation("Manual subido exitosamente: {ManualId}", resultado.ManualId);
-                return Ok(resultado);
-            }
-
-            _logger.LogWarning("Error al subir manual: {Mensaje}", resultado.Mensaje);
-            return BadRequest(resultado);
-        }
-
-        /// <summary>
         /// Listar manuales con filtros y paginación
         /// </summary>
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> ListarManuales(
-            [FromQuery] string categoria = null,
-            [FromQuery] string subCategoria = null,
-            [FromQuery] EstadoManual? estado = null,
+            [FromQuery] Guid? categoriaId = null,
+            [FromQuery] string? terminoBusqueda = null,
             [FromQuery] int pagina = 1,
-            [FromQuery] int tamañoPagina = 20)
+            [FromQuery] int tamañoPagina = 10)
         {
             var query = new ListarManualesQuery
             {
-                Categoria = categoria,
-                SubCategoria = subCategoria,
-                Estado = estado,
+                CategoriaId = categoriaId,
+                TerminoBusqueda = terminoBusqueda,
                 Pagina = pagina,
-                TamañoPagina = Math.Min(tamañoPagina, 100) // Máximo 100 por página
+                TamañoPagina = tamañoPagina
             };
 
-            var resultado = await _mediator.Send(query);
-            return Ok(resultado);
+            var response = await _mediator.Send(query);
+
+            if (!response.Exitoso)
+                return BadRequest(response);
+
+            return Ok(response);
         }
 
         /// <summary>
-        /// Obtener detalles de un manual específico
+        /// Obtener detalle de un manual
         /// </summary>
-        /// <param name="id">ID del manual</param>
-        [HttpGet("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [HttpGet("{id:guid}")]
         public async Task<IActionResult> ObtenerManual(Guid id)
         {
-            var query = new ObtenerManualQuery { ManualId = id };
-            var resultado = await _mediator.Send(query);
+            var query = new ObtenerManualPorIdQuery { ManualId = id };
+            var response = await _mediator.Send(query);
 
-            if (resultado == null)
-                return NotFound(new { Mensaje = $"Manual {id} no encontrado" });
+            if (!response.Exitoso)
+                return NotFound(response);
 
-            return Ok(resultado);
+            return Ok(response);
+        }
+
+        [HttpPut("{id:guid}")]
+        public async Task<IActionResult> Actualizar(Guid id, [FromBody] ActualizarManualCommand command)
+        {
+            command.ManualId = id;
+            var response = await _mediator.Send(command);
+            return response.Exitoso ? Ok(response) : BadRequest(response);
+        }
+
+        [HttpPatch("{id:guid}/estado")]
+        public async Task<IActionResult> ActualizarEstado(Guid id, [FromBody] ActualizarEstadoManualCommand command)
+        {
+            command.ManualId = id;
+            var response = await _mediator.Send(command);
+            return response.Exitoso ? Ok(response) : BadRequest(response);
+        }
+
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> Eliminar(Guid id)
+        {
+            var response = await _mediator.Send(new EliminarManualCommand { ManualId = id });
+            return response.Exitoso ? Ok(response) : BadRequest(response);
         }
 
         /// <summary>
-        /// Eliminar un manual de la base de conocimiento
+        /// Subir nuevo manual
         /// </summary>
-        /// <param name="id">ID del manual a eliminar</param>
-        [HttpDelete("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> EliminarManual(Guid id)
+        [HttpPost]
+        [RequestSizeLimit(52428800)] // 50MB
+        public async Task<IActionResult> SubirManual([FromForm] SubirManualRequest request)
         {
-            _logger.LogInformation("Eliminando manual: {ManualId}", id);
+            if (request.Archivo == null || request.Archivo.Length == 0)
+                return BadRequest(new { mensaje = "No se recibió ningún archivo" });
 
-            var command = new EliminarManualCommand { ManualId = id };
-            var resultado = await _mediator.Send(command);
-
-            if (resultado.Exitoso)
+            var command = new SubirManualCommand
             {
-                _logger.LogInformation("Manual eliminado: {ManualId}", id);
-                return Ok(resultado);
-            }
-
-            _logger.LogWarning("Error al eliminar manual {ManualId}: {Mensaje}", id, resultado.Mensaje);
-            return BadRequest(resultado);
-        }
-
-        /// <summary>
-        /// Actualizar el estado de un manual (Activo/Obsoleto/EnRevision)
-        /// </summary>
-        [HttpPatch("{id}/estado")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> ActualizarEstado(Guid id, [FromBody] ActualizarEstadoRequest request)
-        {
-            var command = new ActualizarEstadoManualCommand
-            {
-                ManualId = id,
-                NuevoEstado = request.NuevoEstado
+                Titulo = request.Titulo,
+                CategoriaId = request.CategoriaId,
+                Version = request.Version ?? "v1.0",
+                Descripcion = request.Descripcion,
+                NombreOriginal = request.Archivo.FileName,
+                UsuarioId = request.UsuarioId,
+                ArchivoStream = request.Archivo.OpenReadStream(),
+                PesoArchivo = request.Archivo.Length
             };
 
-            var resultado = await _mediator.Send(command);
+            var response = await _mediator.Send(command);
 
-            if (resultado.Exitoso)
-                return Ok(resultado);
+            if (!response.Exitoso)
+                return BadRequest(response);
 
-            return BadRequest(resultado);
-        }
-
-        /// <summary>
-        /// Actualizar versión y descripción de un manual
-        /// </summary>
-        [HttpPatch("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> ActualizarManual(Guid id, [FromBody] ActualizarManualRequest request)
-        {
-            var command = new ActualizarManualCommand
-            {
-                ManualId = id,
-                Version = request.Version,
-                Descripcion = request.Descripcion
-            };
-
-            var resultado = await _mediator.Send(command);
-
-            if (resultado.Exitoso)
-                return Ok(resultado);
-
-            return BadRequest(resultado);
-        }
-
-        /// <summary>
-        /// Obtener lista de categorías y subcategorías disponibles
-        /// </summary>
-        [HttpGet("categorias")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> ObtenerCategorias()
-        {
-            var query = new ObtenerCategoriasQuery();
-            var resultado = await _mediator.Send(query);
-            return Ok(resultado);
+            return Ok(response);
         }
     }
+
+   
 }

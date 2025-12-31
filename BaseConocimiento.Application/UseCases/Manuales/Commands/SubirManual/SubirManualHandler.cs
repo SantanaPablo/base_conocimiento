@@ -41,28 +41,40 @@ namespace BaseConocimiento.Application.UseCases.Manuales.Commands.SubirManual
         {
             var response = new SubirManualResponse();
 
-            // ✅ USAR ExecuteStrategyAsync en lugar de BeginTransactionAsync
             await _unitOfWork.ExecuteStrategyAsync(async () =>
             {
-                // Ahora sí usar transacciones dentro del strategy
                 await _unitOfWork.BeginTransactionAsync(ct);
 
                 try
                 {
-                    // Validar tipo de archivo
+              
                     var extension = Path.GetExtension(request.NombreOriginal).ToLowerInvariant();
                     if (extension != ".pdf" && extension != ".txt")
                     {
                         throw new InvalidOperationException("Solo se permiten archivos PDF o TXT");
                     }
 
-                    _logger.LogInformation("Subiendo manual: {Titulo}, Tipo: {Extension}", request.Titulo, extension);
+                 
+                    var categoria = await _unitOfWork.Categorias.ObtenerPorIdAsync(request.CategoriaId, ct);
+                    if (categoria == null)
+                    {
+                        throw new InvalidOperationException("La categoría especificada no existe");
+                    }
 
-                    // 1. Crear entidad
+                   
+                    var usuario = await _unitOfWork.Usuarios.ObtenerPorIdAsync(request.UsuarioId, ct);
+                    if (usuario == null)
+                    {
+                        throw new InvalidOperationException("El usuario especificado no existe");
+                    }
+
+                    _logger.LogInformation("Subiendo manual: {Titulo}, Categoría: {Categoria}, Usuario: {Usuario}",
+                        request.Titulo, categoria.Nombre, usuario.NombreCompleto);
+
+                    //Crear entidad Manual
                     var manual = Manual.Crear(
                         request.Titulo,
-                        request.Categoria,
-                        request.SubCategoria,
+                        request.CategoriaId,
                         request.Version,
                         request.Descripcion,
                         "TEMP",
@@ -74,19 +86,22 @@ namespace BaseConocimiento.Application.UseCases.Manuales.Commands.SubirManual
                     await _unitOfWork.Manuales.AgregarAsync(manual, ct);
                     await _unitOfWork.SaveChangesAsync(ct);
 
-                    // 2. Guardar archivo físico
+                    //Guardar físico
                     request.ArchivoStream.Position = 0;
-                    var rutaFinal = await _fileStorage.GuardarArchivoAsync(
+                    var rutaStorage = await _fileStorage.GuardarArchivoAsync(
                         manual.Id,
                         request.ArchivoStream,
                         request.NombreOriginal
                     );
 
-                    var propRuta = typeof(Manual).GetProperty("RutaLocal");
-                    propRuta?.SetValue(manual, rutaFinal);
+                    //Actualizar ruta en la entidad
+                    var propRuta = typeof(Manual).GetProperty("RutaStorage");
+                    propRuta?.SetValue(manual, rutaStorage);
                     await _unitOfWork.SaveChangesAsync(ct);
 
-                    // 3. Procesar según el tipo de archivo
+                    _logger.LogInformation("Archivo guardado en: {Ruta}", rutaStorage);
+
+                    //Procesar según el tipo de archivo
                     request.ArchivoStream.Position = 0;
                     List<TextoExtraido> paginas;
 
@@ -103,7 +118,7 @@ namespace BaseConocimiento.Application.UseCases.Manuales.Commands.SubirManual
 
                     _logger.LogInformation("Texto extraído: {Count} fragmentos", paginas.Count);
 
-                    // 4. Generar embeddings
+                    //Generar embeddings
                     var chunks = new List<VectorChunk>();
                     int chunkNumber = 1;
 
@@ -121,13 +136,13 @@ namespace BaseConocimiento.Application.UseCases.Manuales.Commands.SubirManual
                                 TextoOriginal = pag.Texto,
                                 NumeroPagina = pag.NumeroPagina,
                                 NumeroChunk = chunkNumber,
-                                Categoria = manual.Categoria,
+                                Categoria = categoria.Nombre,
                                 Titulo = manual.Titulo
                             });
 
                             chunkNumber++;
 
-                            // Delay opcional cada 5 embeddings
+                            
                             if (chunkNumber % 5 == 0)
                             {
                                 _logger.LogDebug("Esperando 2s para evitar rate limit...");
@@ -142,7 +157,7 @@ namespace BaseConocimiento.Application.UseCases.Manuales.Commands.SubirManual
 
                     _logger.LogInformation("Embeddings generados: {Count} chunks", chunks.Count);
 
-                    // 5. Almacenar en Qdrant
+                    // 6. Almacenar en Qdrant
                     if (chunks.Any())
                     {
                         await _qdrantService.AlmacenarVectoresAsync(manual.Id, chunks);
@@ -153,18 +168,18 @@ namespace BaseConocimiento.Application.UseCases.Manuales.Commands.SubirManual
                     response.Exitoso = true;
                     response.ManualId = manual.Id;
                     response.ChunksProcesados = chunks.Count;
-                    response.Mensaje = $"Manual procesado correctamente. {chunks.Count} fragmentos indexados.";
+                    response.Mensaje = $"Manual '{manual.Titulo}' procesado correctamente. {chunks.Count} fragmentos indexados.";
 
-                    _logger.LogInformation("Manual subido exitosamente: {ManualId}", manual.Id);
+                    _logger.LogInformation("Manual subido exitosamente: {ManualId} - {Titulo}", manual.Id, manual.Titulo);
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, "Error al subir manual");
+                    _logger.LogError(ex, "Error al subir manual: {Titulo}", request.Titulo);
                     await _unitOfWork.RollbackTransactionAsync(ct);
 
                     response.Exitoso = false;
                     response.Mensaje = $"Error: {ex.Message}";
-                    throw; // Re-lanzar para que ExecuteStrategyAsync lo maneje
+                    throw;
                 }
             });
 

@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\controllers\\conversacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\conversacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\controllers\\consultascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\consultascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\dtos\\consultas\\preguntarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\dtos\\consultas\\preguntarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\consultas\\commands\\consultarconconversacion\\consultarconconversacionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,12 +23,76 @@
       "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\consultas\\commands\\consultarconconversacion\\consultarconconversacioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\dtos\\conversation\\crearconversacionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\dtos\\conversation\\crearconversacionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\consultas\\queries\\consultarbaseconocimiento\\consultarbaseconocimientoquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\consultas\\queries\\consultarbaseconocimiento\\consultarbaseconocimientoquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\controllers\\conversacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\conversacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\consultas\\queries\\consultarbaseconocimiento\\consultarbaseconocimientohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\consultas\\queries\\consultarbaseconocimiento\\consultarbaseconocimientohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\obtenerestadisticas\\obtenerestadisticashandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\obtenerestadisticas\\obtenerestadisticashandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\controllers\\manualescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\manualescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\controllers\\infraestructuracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\infraestructuracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\controllers\\estadisticascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\estadisticascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.domain\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|solutionrelative:baseconocimiento.domain\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\baseconocimiento.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\baseconocimiento.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\baseconocimiento.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\baseconocimiento.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.domain\\baseconocimiento.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|solutionrelative:baseconocimiento.domain\\baseconocimiento.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\commands\\subirmanual\\subirmanualcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\commands\\subirmanual\\subirmanualcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\commands\\subirmanual\\subirmanualhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\commands\\subirmanual\\subirmanualhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\dtos\\manuales\\subirmanualrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\dtos\\manuales\\subirmanualrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\queries\\listarmanuales\\listarmanualesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\queries\\listarmanuales\\listarmanualesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\dtos\\manuales\\actualizarestadorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,24 +103,276 @@
       "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\dtos\\manuales\\actualizarmanualrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\dtos\\manuales\\subirmanualrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\dtos\\manuales\\subirmanualrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\dtos\\conversation\\crearconversacionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\dtos\\conversation\\crearconversacionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamachatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamachatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\data\\configurations\\usuarioconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\data\\configurations\\usuarioconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\categorias\\queries\\obtenercategoriaporid\\obtenercategoriaporidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\categorias\\queries\\obtenercategoriaporid\\obtenercategoriaporidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\data\\configurations\\categoriaconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\data\\configurations\\categoriaconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\interfaces\\persistence\\icategoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\interfaces\\persistence\\icategoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\categorias\\queries\\listarcategorias\\listarcategoriashandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\categorias\\queries\\listarcategorias\\listarcategoriashandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\queries\\listarmanuales\\listarmanualeshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\queries\\listarmanuales\\listarmanualeshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\repositories\\manualrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\repositories\\manualrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\interfaces\\persistence\\imanualrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\interfaces\\persistence\\imanualrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\interfaces\\persistence\\iconsultarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\interfaces\\persistence\\iconsultarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\interfaces\\persistence\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\interfaces\\persistence\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\data\\configurations\\consultamanualconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\data\\configurations\\consultamanualconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\queries\\obtenermanualporid\\obtenermanualporidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\queries\\obtenermanualporid\\obtenermanualporidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\categorias\\commands\\crearcategoria\\crearcategoriahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\categorias\\commands\\crearcategoria\\crearcategoriahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\usuarios\\queries\\listarusuarios\\listarusuarioshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\usuarios\\queries\\listarusuarios\\listarusuarioshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\usuarios\\queries\\listarusuarios\\listarusuariosquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\usuarios\\queries\\listarusuarios\\listarusuariosquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\data\\configurations\\consultaconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\data\\configurations\\consultaconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\repositories\\consultarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\repositories\\consultarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\data\\configurations\\manualconfiguration .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\data\\configurations\\manualconfiguration .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\interfaces\\persistence\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\interfaces\\persistence\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\categorias\\queries\\obtenercategoriaporid\\obtenercategoriaporidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\categorias\\queries\\obtenercategoriaporid\\obtenercategoriaporidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\usuarios\\queries\\obtenerusuarioporid\\obtenerusuarioporidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\usuarios\\queries\\obtenerusuarioporid\\obtenerusuarioporidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\services\\vectorstore\\qdrantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\services\\vectorstore\\qdrantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\consultas\\queries\\obtenerhistorialconsultas\\obtenerhistorialconsultashandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\consultas\\queries\\obtenerhistorialconsultas\\obtenerhistorialconsultashandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\categorias\\commands\\actualizarcategoria\\actualizarcategoriacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\categorias\\commands\\actualizarcategoria\\actualizarcategoriacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\consultas\\queries\\obtenerhistorialconsultas\\obtenerhistorialconsultasquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\consultas\\queries\\obtenerhistorialconsultas\\obtenerhistorialconsultasquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\consultas\\queries\\buscarenmanuales\\buscarenmanualesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\consultas\\queries\\buscarenmanuales\\buscarenmanualesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\consultas\\queries\\buscarenmanuales\\buscarenmanualeshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\consultas\\queries\\buscarenmanuales\\buscarenmanualeshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\obtenerestadisticas\\obtenerestadisticasquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\obtenerestadisticas\\obtenerestadisticasquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\usuarios\\queries\\obtenerusuarioporid\\obtenerusuarioporidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\usuarios\\queries\\obtenerusuarioporid\\obtenerusuarioporidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\usuarios\\commands\\crearusuario\\crearusuariohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\usuarios\\commands\\crearusuario\\crearusuariohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\usuarios\\commands\\crearusuario\\crearusuariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\usuarios\\commands\\crearusuario\\crearusuariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\usuarios\\commands\\actualizarusuario\\actualizarusuariohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\usuarios\\commands\\actualizarusuario\\actualizarusuariohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\usuarios\\commands\\actualizarusuario\\actualizarusuariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\usuarios\\commands\\actualizarusuario\\actualizarusuariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\categorias\\commands\\actualizarcategoria\\actualizarcategoriahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\categorias\\commands\\actualizarcategoria\\actualizarcategoriahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\categorias\\queries\\listarcategorias\\listarcategoriasquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\categorias\\queries\\listarcategorias\\listarcategoriasquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\queries\\obtenermanualporid\\obtenermanualporidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\queries\\obtenermanualporid\\obtenermanualporidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\commands\\actualizarmanual\\actualizarmanualcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\commands\\actualizarmanual\\actualizarmanualcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\commands\\actualizarmanual\\actualizarmanualhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\commands\\actualizarmanual\\actualizarmanualhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\commands\\eliminarmanual\\eliminarmanualhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\commands\\eliminarmanual\\eliminarmanualhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\commands\\eliminarmanual\\eliminarmanualcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\commands\\eliminarmanual\\eliminarmanualcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\interfaces\\vectorstore\\iqdrantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\interfaces\\vectorstore\\iqdrantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.domain\\entities\\manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|solutionrelative:baseconocimiento.domain\\entities\\manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\categorias\\commands\\crearcategoria\\crearcategoriacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\categorias\\commands\\crearcategoria\\crearcategoriacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.domain\\entities\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|solutionrelative:baseconocimiento.domain\\entities\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.domain\\entities\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|solutionrelative:baseconocimiento.domain\\entities\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\dtos\\consultas\\preguntarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\dtos\\consultas\\preguntarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\interfaces\\conversation\\iconversationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\interfaces\\conversation\\iconversationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\queries\\obtenercategorias\\obtenercategoriashandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\queries\\obtenercategorias\\obtenercategoriashandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\queries\\obtenercategorias\\obtenercategoriasquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\queries\\obtenercategorias\\obtenercategoriasquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\commands\\actualizarestadomanual\\actualizarestadomanualhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\commands\\actualizarestadomanual\\actualizarestadomanualhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.application\\usecases\\manuales\\commands\\actualizarestadomanual\\actualizarestadomanualcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C19C0-3F13-4884-E095-2826A52B6849}|BaseConocimiento.Application\\BaseConocimiento.Application.csproj|solutionrelative:baseconocimiento.application\\usecases\\manuales\\commands\\actualizarestadomanual\\actualizarestadomanualcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\data\\baseconocimientodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\data\\baseconocimientodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\services\\conversation\\redisconversationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\services\\conversation\\redisconversationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.domain\\entities\\consultamanual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|solutionrelative:baseconocimiento.domain\\entities\\consultamanual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.domain\\entities\\mensajeconversacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|solutionrelative:baseconocimiento.domain\\entities\\mensajeconversacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.domain\\enums\\estadomanual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|solutionrelative:baseconocimiento.domain\\enums\\estadomanual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.domain\\entities\\conversacionmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07DFFD68-5FC4-1B73-F7E2-9AF9A0789651}|BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj|solutionrelative:baseconocimiento.domain\\entities\\conversacionmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamaembeddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamaembeddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamachatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamachatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\services\\storage\\filestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\services\\storage\\filestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\services\\ai\\ollama\\ollamaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.api\\controllers\\manualescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\manualescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|c:\\users\\usuario\\desktop\\base_conocimiento\\base_conocimiento\\baseconocimiento.infraestructure\\migrations\\20251229203747_initialrefactorv2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D106BDCF-7582-E356-7722-39A8FDF1E053}|BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj|solutionrelative:baseconocimiento.infraestructure\\migrations\\20251229203747_initialrefactorv2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,7 +382,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,104 +390,104 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ConsultarConConversacionHandler.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionHandler.cs",
-              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionHandler.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionHandler.cs",
-              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionHandler.cs",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAowJoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "ObtenerEstadisticasHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\ObtenerEstadisticas\\ObtenerEstadisticasHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\ObtenerEstadisticas\\ObtenerEstadisticasHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\ObtenerEstadisticas\\ObtenerEstadisticasHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\ObtenerEstadisticas\\ObtenerEstadisticasHandler.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAYwGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T12:06:17.366Z",
+              "WhenOpened": "2025-12-29T18:11:19.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConsultarBaseConocimientoHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ConsultarBaseConocimiento\\ConsultarBaseConocimientoHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ConsultarBaseConocimiento\\ConsultarBaseConocimientoHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ConsultarBaseConocimiento\\ConsultarBaseConocimientoHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ConsultarBaseConocimiento\\ConsultarBaseConocimientoHandler.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwFsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:51:05.749Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "PreguntaRequest.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Consultas\\PreguntaRequest.cs",
-              "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Consultas\\PreguntaRequest.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Consultas\\PreguntaRequest.cs",
-              "RelativeToolTip": "BaseConocimiento.API\\DTOs\\Consultas\\PreguntaRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Title": "ConsultarBaseConocimientoQuery.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ConsultarBaseConocimiento\\ConsultarBaseConocimientoQuery.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ConsultarBaseConocimiento\\ConsultarBaseConocimientoQuery.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ConsultarBaseConocimiento\\ConsultarBaseConocimientoQuery.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ConsultarBaseConocimiento\\ConsultarBaseConocimientoQuery.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA4wAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T14:19:57.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\DependencyInjection.cs",
-              "RelativeToolTip": "BaseConocimiento.Infraestructure\\DependencyInjection.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAlwI4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T11:33:14.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "docker-compose.yml",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\docker-compose.yml",
-              "RelativeDocumentMoniker": "docker-compose.yml",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\docker-compose.yml",
-              "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-12-28T11:32:34.005Z",
+              "WhenOpened": "2025-12-29T14:51:08.978Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "BaseConocimiento.API\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "BaseConocimiento.API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-28T15:20:28.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\appsettings.json",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\appsettings.json",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\appsettings.json",
               "RelativeToolTip": "BaseConocimiento.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-12-28T11:34:20.286Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Program.cs",
-              "RelativeDocumentMoniker": "BaseConocimiento.API\\Program.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Program.cs",
-              "RelativeToolTip": "BaseConocimiento.API\\Program.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwEsAAAAtAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ConsultasController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\ConsultasController.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\ConsultasController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\ConsultasController.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\ConsultasController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T11:34:02.389Z",
+              "WhenOpened": "2025-12-29T10:00:45.867Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "ConversacionesController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowGcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T21:04:39.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConsultarConConversacionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionHandler.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAqwJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T12:06:17.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ConsultarConConversacionCommand.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionCommand.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionCommand.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionCommand.cs",
               "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Consultas\\Commands\\ConsultarConConversacion\\ConsultarConConversacionCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-28T12:06:14.6Z",
               "EditorCaption": ""
@@ -191,32 +495,205 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "CrearConversacionRequest.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Conversation\\CrearConversacionRequest.cs",
-              "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Conversation\\CrearConversacionRequest.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Conversation\\CrearConversacionRequest.cs",
-              "RelativeToolTip": "BaseConocimiento.API\\DTOs\\Conversation\\CrearConversacionRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Title": "ManualesController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\ManualesController.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\ManualesController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\ManualesController.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\ManualesController.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAwGYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T14:09:38.752Z",
+              "WhenOpened": "2025-12-28T12:57:27.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EstadisticasController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\EstadisticasController.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\EstadisticasController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\EstadisticasController.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\EstadisticasController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowBEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T18:20:03.501Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ConversacionesController.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
-              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
-              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAQwHAAAAAAAAAAAAAAAA==",
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T12:57:23.267Z",
+              "WhenOpened": "2025-12-29T18:17:41.653Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "InfraestructuraController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\InfraestructuraController.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\InfraestructuraController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\InfraestructuraController.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\InfraestructuraController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:43:38.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CategoriasController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\CategoriasController.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\CategoriasController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\CategoriasController.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\CategoriasController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAcwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T18:17:07.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\Usuario.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Domain\\Entities\\Usuario.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\Usuario.cs",
+              "RelativeToolTip": "BaseConocimiento.Domain\\Entities\\Usuario.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:48:10.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "20251229203747_InitialRefactorV2.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Migrations\\20251229203747_InitialRefactorV2.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Migrations\\20251229203747_InitialRefactorV2.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Migrations\\20251229203747_InitialRefactorV2.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Migrations\\20251229203747_InitialRefactorV2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T20:37:47.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\DependencyInjection.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAmwI4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T11:33:14.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Program.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Program.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Program.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\Program.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAkwD4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T11:34:02.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SubirManualHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\SubirManual\\SubirManualHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\SubirManual\\SubirManualHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\SubirManual\\SubirManualHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\SubirManual\\SubirManualHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:05:57.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BaseConocimiento.Application.csproj",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\BaseConocimiento.Application.csproj",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj",
+              "RelativeToolTip": "BaseConocimiento.Application\\BaseConocimiento.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-29T20:35:15.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BaseConocimiento.Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj",
+              "RelativeDocumentMoniker": "BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj",
+              "RelativeToolTip": "BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-29T20:35:18.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BaseConocimiento.Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-29T10:53:15.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SubirManualCommand.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\SubirManual\\SubirManualCommand.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\SubirManual\\SubirManualCommand.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\SubirManual\\SubirManualCommand.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\SubirManual\\SubirManualCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T11:42:07.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SubirManualRequest.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Manuales\\SubirManualRequest.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Manuales\\SubirManualRequest.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Manuales\\SubirManualRequest.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\DTOs\\Manuales\\SubirManualRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T15:01:13.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ListarManualesQuery.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ListarManuales\\ListarManualesQuery.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ListarManuales\\ListarManualesQuery.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ListarManuales\\ListarManualesQuery.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ListarManuales\\ListarManualesQuery.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAmwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:23:59.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "ActualizarEstadoRequest.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Manuales\\ActualizarEstadoRequest.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Manuales\\ActualizarEstadoRequest.cs",
@@ -224,12 +701,11 @@
               "RelativeToolTip": "BaseConocimiento.API\\DTOs\\Manuales\\ActualizarEstadoRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T15:01:12.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T15:01:12.351Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 24,
               "Title": "ActualizarManualRequest.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Manuales\\ActualizarManualRequest.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Manuales\\ActualizarManualRequest.cs",
@@ -237,51 +713,803 @@
               "RelativeToolTip": "BaseConocimiento.API\\DTOs\\Manuales\\ActualizarManualRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T15:01:12.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T15:01:12.991Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SubirManualRequest.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Manuales\\SubirManualRequest.cs",
-              "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Manuales\\SubirManualRequest.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Manuales\\SubirManualRequest.cs",
-              "RelativeToolTip": "BaseConocimiento.API\\DTOs\\Manuales\\SubirManualRequest.cs",
+              "DocumentIndex": 25,
+              "Title": "CrearConversacionRequest.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Conversation\\CrearConversacionRequest.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Conversation\\CrearConversacionRequest.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Conversation\\CrearConversacionRequest.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\DTOs\\Conversation\\CrearConversacionRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T14:09:38.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UsuarioConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Data\\Configurations\\UsuarioConfiguration.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Data\\Configurations\\UsuarioConfiguration.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Data\\Configurations\\UsuarioConfiguration.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Data\\Configurations\\UsuarioConfiguration.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAowEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:58:14.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CategoriaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Repositories\\CategoriaRepository.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Repositories\\CategoriaRepository.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Repositories\\CategoriaRepository.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Repositories\\CategoriaRepository.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAmwEwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T11:26:08.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ObtenerCategoriaPorIdHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ObtenerCategoriaPorId\\ObtenerCategoriaPorIdHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ObtenerCategoriaPorId\\ObtenerCategoriaPorIdHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ObtenerCategoriaPorId\\ObtenerCategoriaPorIdHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ObtenerCategoriaPorId\\ObtenerCategoriaPorIdHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:20:16.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CategoriaConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Data\\Configurations\\CategoriaConfiguration.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Data\\Configurations\\CategoriaConfiguration.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Data\\Configurations\\CategoriaConfiguration.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Data\\Configurations\\CategoriaConfiguration.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwDAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:57:53.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ICategoriaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\Persistence\\ICategoriaRepository.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\Interfaces\\Persistence\\ICategoriaRepository.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\Persistence\\ICategoriaRepository.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\Interfaces\\Persistence\\ICategoriaRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswAwAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T11:25:29.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ListarCategoriasHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ListarCategorias\\ListarCategoriasHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ListarCategorias\\ListarCategoriasHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ListarCategorias\\ListarCategoriasHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ListarCategorias\\ListarCategoriasHandler.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwBwAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:19:15.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ListarManualesHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ListarManuales\\ListarManualesHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ListarManuales\\ListarManualesHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ListarManuales\\ListarManualesHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ListarManuales\\ListarManualesHandler.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:21:17.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ManualRepository.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Repositories\\ManualRepository.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Repositories\\ManualRepository.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Repositories\\ManualRepository.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Repositories\\ManualRepository.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAgwGUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:55:31.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IManualRepository.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\Persistence\\IManualRepository.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\Interfaces\\Persistence\\IManualRepository.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\Persistence\\IManualRepository.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\Interfaces\\Persistence\\IManualRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAkwA8AAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T11:08:07.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IConsultaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\Persistence\\IConsultaRepository.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\Interfaces\\Persistence\\IConsultaRepository.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\Persistence\\IConsultaRepository.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\Interfaces\\Persistence\\IConsultaRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T11:31:06.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\Persistence\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\Interfaces\\Persistence\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\Persistence\\IUnitOfWork.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\Interfaces\\Persistence\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T11:08:14.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ConsultaManualConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Data\\Configurations\\ConsultaManualConfiguration.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Data\\Configurations\\ConsultaManualConfiguration.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Data\\Configurations\\ConsultaManualConfiguration.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Data\\Configurations\\ConsultaManualConfiguration.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAowCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T11:00:42.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ObtenerManualPorIdHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerManualPorId\\ObtenerManualPorIdHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerManualPorId\\ObtenerManualPorIdHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerManualPorId\\ObtenerManualPorIdHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerManualPorId\\ObtenerManualPorIdHandler.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAASwBcAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:24:37.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "CrearCategoriaHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\CrearCategoria\\CrearCategoriaHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\CrearCategoria\\CrearCategoriaHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\CrearCategoria\\CrearCategoriaHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\CrearCategoria\\CrearCategoriaHandler.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAASwBwAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:14:05.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ListarUsuariosHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ListarUsuarios\\ListarUsuariosHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ListarUsuarios\\ListarUsuariosHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ListarUsuarios\\ListarUsuariosHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ListarUsuarios\\ListarUsuariosHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:26:11.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ListarUsuariosQuery.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ListarUsuarios\\ListarUsuariosQuery.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ListarUsuarios\\ListarUsuariosQuery.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ListarUsuarios\\ListarUsuariosQuery.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ListarUsuarios\\ListarUsuariosQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:26:18.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAYwFIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:55:42.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ConsultaConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Data\\Configurations\\ConsultaConfiguration.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Data\\Configurations\\ConsultaConfiguration.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Data\\Configurations\\ConsultaConfiguration.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Data\\Configurations\\ConsultaConfiguration.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T11:00:13.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ConsultaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Repositories\\ConsultaRepository.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Repositories\\ConsultaRepository.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Repositories\\ConsultaRepository.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Repositories\\ConsultaRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA1wDoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T11:27:12.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ManualConfiguration .cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Data\\Configurations\\ManualConfiguration .cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Data\\Configurations\\ManualConfiguration .cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Data\\Configurations\\ManualConfiguration .cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Data\\Configurations\\ManualConfiguration .cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAwwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:59:45.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Repositories\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Repositories\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Repositories\\UsuarioRepository.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Repositories\\UsuarioRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwEkAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T11:22:59.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "IUsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\Persistence\\IUsuarioRepository.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\Interfaces\\Persistence\\IUsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\Persistence\\IUsuarioRepository.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\Interfaces\\Persistence\\IUsuarioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T11:22:26.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ObtenerCategoriaPorIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ObtenerCategoriaPorId\\ObtenerCategoriaPorIdQuery.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ObtenerCategoriaPorId\\ObtenerCategoriaPorIdQuery.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ObtenerCategoriaPorId\\ObtenerCategoriaPorIdQuery.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ObtenerCategoriaPorId\\ObtenerCategoriaPorIdQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:19:58.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ObtenerUsuarioPorIdHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ObtenerUsuarioPorId\\ObtenerUsuarioPorIdHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ObtenerUsuarioPorId\\ObtenerUsuarioPorIdHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ObtenerUsuarioPorId\\ObtenerUsuarioPorIdHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ObtenerUsuarioPorId\\ObtenerUsuarioPorIdHandler.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAASwBUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:28:04.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "QdrantService.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Services\\VectorStore\\QdrantService.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\VectorStore\\QdrantService.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Services\\VectorStore\\QdrantService.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Services\\VectorStore\\QdrantService.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAIA9wFwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:34:28.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ObtenerHistorialConsultasHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ObtenerHistorialConsultas\\ObtenerHistorialConsultasHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ObtenerHistorialConsultas\\ObtenerHistorialConsultasHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ObtenerHistorialConsultas\\ObtenerHistorialConsultasHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ObtenerHistorialConsultas\\ObtenerHistorialConsultasHandler.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAASwBoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T18:15:05.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ActualizarCategoriaCommand.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\ActualizarCategoria\\ActualizarCategoriaCommand.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\ActualizarCategoria\\ActualizarCategoriaCommand.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\ActualizarCategoria\\ActualizarCategoriaCommand.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\ActualizarCategoria\\ActualizarCategoriaCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:16:03.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ObtenerHistorialConsultasQuery.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ObtenerHistorialConsultas\\ObtenerHistorialConsultasQuery.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ObtenerHistorialConsultas\\ObtenerHistorialConsultasQuery.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ObtenerHistorialConsultas\\ObtenerHistorialConsultasQuery.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\ObtenerHistorialConsultas\\ObtenerHistorialConsultasQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T18:14:07.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "BuscarEnManualesQuery.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\BuscarEnManuales\\BuscarEnManualesQuery.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\BuscarEnManuales\\BuscarEnManualesQuery.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\BuscarEnManuales\\BuscarEnManualesQuery.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\BuscarEnManuales\\BuscarEnManualesQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:30:02.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "BuscarEnManualesHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\BuscarEnManuales\\BuscarEnManualesHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\BuscarEnManuales\\BuscarEnManualesHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\BuscarEnManuales\\BuscarEnManualesHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Consultas\\Queries\\BuscarEnManuales\\BuscarEnManualesHandler.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowDUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:21:09.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "ObtenerEstadisticasQuery.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\ObtenerEstadisticas\\ObtenerEstadisticasQuery.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\ObtenerEstadisticas\\ObtenerEstadisticasQuery.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\ObtenerEstadisticas\\ObtenerEstadisticasQuery.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\ObtenerEstadisticas\\ObtenerEstadisticasQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T16:03:31.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ObtenerUsuarioPorIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ObtenerUsuarioPorId\\ObtenerUsuarioPorIdQuery.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ObtenerUsuarioPorId\\ObtenerUsuarioPorIdQuery.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ObtenerUsuarioPorId\\ObtenerUsuarioPorIdQuery.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Usuarios\\Queries\\ObtenerUsuarioPorId\\ObtenerUsuarioPorIdQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:27:29.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "CrearUsuarioHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\CrearUsuario\\CrearUsuarioHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\CrearUsuario\\CrearUsuarioHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\CrearUsuario\\CrearUsuarioHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\CrearUsuario\\CrearUsuarioHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:22:35.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "CrearUsuarioCommand.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\CrearUsuario\\CrearUsuarioCommand.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\CrearUsuario\\CrearUsuarioCommand.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\CrearUsuario\\CrearUsuarioCommand.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\CrearUsuario\\CrearUsuarioCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:22:36.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "ActualizarUsuarioHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\ActualizarUsuario\\ActualizarUsuarioHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\ActualizarUsuario\\ActualizarUsuarioHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\ActualizarUsuario\\ActualizarUsuarioHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\ActualizarUsuario\\ActualizarUsuarioHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:25:03.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "ActualizarUsuarioCommand.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\ActualizarUsuario\\ActualizarUsuarioCommand.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\ActualizarUsuario\\ActualizarUsuarioCommand.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\ActualizarUsuario\\ActualizarUsuarioCommand.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Usuarios\\Commands\\ActualizarUsuario\\ActualizarUsuarioCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:24:47.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "ActualizarCategoriaHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\ActualizarCategoria\\ActualizarCategoriaHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\ActualizarCategoria\\ActualizarCategoriaHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\ActualizarCategoria\\ActualizarCategoriaHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\ActualizarCategoria\\ActualizarCategoriaHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:16:15.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ListarCategoriasQuery.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ListarCategorias\\ListarCategoriasQuery.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ListarCategorias\\ListarCategoriasQuery.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ListarCategorias\\ListarCategoriasQuery.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Categorias\\Queries\\ListarCategorias\\ListarCategoriasQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:18:15.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "ObtenerManualPorIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerManualPorId\\ObtenerManualPorIdQuery.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerManualPorId\\ObtenerManualPorIdQuery.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerManualPorId\\ObtenerManualPorIdQuery.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerManualPorId\\ObtenerManualPorIdQuery.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA3wCkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:24:12.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "ActualizarManualCommand.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarManual\\ActualizarManualCommand.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarManual\\ActualizarManualCommand.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarManual\\ActualizarManualCommand.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarManual\\ActualizarManualCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:04:10.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "ActualizarManualHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarManual\\ActualizarManualHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarManual\\ActualizarManualHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarManual\\ActualizarManualHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarManual\\ActualizarManualHandler.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowBUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:07:31.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "EliminarManualHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\EliminarManual\\EliminarManualHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\EliminarManual\\EliminarManualHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\EliminarManual\\EliminarManualHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\EliminarManual\\EliminarManualHandler.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowBcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:08:41.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "EliminarManualCommand.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\EliminarManual\\EliminarManualCommand.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\EliminarManual\\EliminarManualCommand.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\EliminarManual\\EliminarManualCommand.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\EliminarManual\\EliminarManualCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T15:01:13.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-29T14:08:40.344Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "OllamaChatService.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaChatService.cs",
-              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaChatService.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaChatService.cs",
-              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaChatService.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAwwBQAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 69,
+              "Title": "IQdrantService.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\VectorStore\\IQdrantService.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\Interfaces\\VectorStore\\IQdrantService.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\VectorStore\\IQdrantService.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\Interfaces\\VectorStore\\IQdrantService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T11:49:31.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-29T11:06:50.156Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 70,
+              "Title": "Manual.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\Manual.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Domain\\Entities\\Manual.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\Manual.cs",
+              "RelativeToolTip": "BaseConocimiento.Domain\\Entities\\Manual.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:14:19.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "CrearCategoriaCommand.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\CrearCategoria\\CrearCategoriaCommand.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\CrearCategoria\\CrearCategoriaCommand.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\CrearCategoria\\CrearCategoriaCommand.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Categorias\\Commands\\CrearCategoria\\CrearCategoriaCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:13:44.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "Consulta.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\Consulta.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Domain\\Entities\\Consulta.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\Consulta.cs",
+              "RelativeToolTip": "BaseConocimiento.Domain\\Entities\\Consulta.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:50:45.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\Categoria.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Domain\\Entities\\Categoria.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\Categoria.cs",
+              "RelativeToolTip": "BaseConocimiento.Domain\\Entities\\Categoria.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:46:01.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "PreguntaRequest.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Consultas\\PreguntaRequest.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Consultas\\PreguntaRequest.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\DTOs\\Consultas\\PreguntaRequest.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\DTOs\\Consultas\\PreguntaRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T14:19:57.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "IConversationService.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\Conversation\\IConversationService.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\Interfaces\\Conversation\\IConversationService.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\Interfaces\\Conversation\\IConversationService.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\Interfaces\\Conversation\\IConversationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T11:08:53.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "ObtenerCategoriasHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerCategorias\\ObtenerCategoriasHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerCategorias\\ObtenerCategoriasHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerCategorias\\ObtenerCategoriasHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerCategorias\\ObtenerCategoriasHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:23:19.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "ObtenerCategoriasQuery.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerCategorias\\ObtenerCategoriasQuery.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerCategorias\\ObtenerCategoriasQuery.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerCategorias\\ObtenerCategoriasQuery.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerCategorias\\ObtenerCategoriasQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:23:21.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "ActualizarEstadoManualCommand.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarEstadoManual\\ActualizarEstadoManualCommand.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarEstadoManual\\ActualizarEstadoManualCommand.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarEstadoManual\\ActualizarEstadoManualCommand.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarEstadoManual\\ActualizarEstadoManualCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:19:55.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "ActualizarEstadoManualHandler.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarEstadoManual\\ActualizarEstadoManualHandler.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarEstadoManual\\ActualizarEstadoManualHandler.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarEstadoManual\\ActualizarEstadoManualHandler.cs",
+              "RelativeToolTip": "BaseConocimiento.Application\\UseCases\\Manuales\\Commands\\ActualizarEstadoManual\\ActualizarEstadoManualHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:17:50.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "BaseConocimientoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Data\\BaseConocimientoDbContext.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Data\\BaseConocimientoDbContext.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Data\\BaseConocimientoDbContext.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Data\\BaseConocimientoDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:29:33.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "RedisConversationService.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Services\\Conversation\\RedisConversationService.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\Conversation\\RedisConversationService.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Services\\Conversation\\RedisConversationService.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Services\\Conversation\\RedisConversationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T11:08:32.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "ConsultaManual.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\ConsultaManual.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Domain\\Entities\\ConsultaManual.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\ConsultaManual.cs",
+              "RelativeToolTip": "BaseConocimiento.Domain\\Entities\\ConsultaManual.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:51:48.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "MensajeConversacion.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\MensajeConversacion.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Domain\\Entities\\MensajeConversacion.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\MensajeConversacion.cs",
+              "RelativeToolTip": "BaseConocimiento.Domain\\Entities\\MensajeConversacion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:15:04.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "EstadoManual.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Enums\\EstadoManual.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Domain\\Enums\\EstadoManual.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Enums\\EstadoManual.cs",
+              "RelativeToolTip": "BaseConocimiento.Domain\\Enums\\EstadoManual.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:15:12.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "ConversacionMetadata.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\ConversacionMetadata.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Domain\\Entities\\ConversacionMetadata.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\Entities\\ConversacionMetadata.cs",
+              "RelativeToolTip": "BaseConocimiento.Domain\\Entities\\ConversacionMetadata.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T10:15:06.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
               "Title": "OllamaEmbeddingService.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaEmbeddingService.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaEmbeddingService.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaEmbeddingService.cs",
               "RelativeToolTip": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaEmbeddingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T11:58:58.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T11:58:58.257Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 87,
+              "Title": "OllamaChatService.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaChatService.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaChatService.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaChatService.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaChatService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwGYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T11:49:31.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "FileStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Services\\Storage\\FileStorageService.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\Storage\\FileStorageService.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Services\\Storage\\FileStorageService.cs",
+              "RelativeToolTip": "BaseConocimiento.Infraestructure\\Services\\Storage\\FileStorageService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T09:49:52.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "BaseConocimiento.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-28T15:20:28.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-12-28T11:32:34.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
               "Title": "OllamaResponse.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaResponse.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaResponse.cs",
@@ -289,20 +1517,7 @@
               "RelativeToolTip": "BaseConocimiento.Infraestructure\\Services\\AI\\Ollama\\OllamaResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T15:00:20.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ManualesController.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\ManualesController.cs",
-              "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\ManualesController.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\Controllers\\ManualesController.cs",
-              "RelativeToolTip": "BaseConocimiento.API\\Controllers\\ManualesController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAADwv4kAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T12:57:27.134Z"
+              "WhenOpened": "2025-12-28T15:00:20.653Z"
             }
           ]
         },

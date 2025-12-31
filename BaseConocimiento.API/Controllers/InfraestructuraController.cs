@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
-namespace BaseConocimiento.WebApi.Controllers
+namespace BaseConocimiento.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

@@ -1,16 +1,15 @@
 ﻿using MediatR;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BaseConocimiento.Application.UseCases.Consultas.Queries.BuscarEnManuales
 {
     public class BuscarEnManualesQuery : IRequest<BuscarEnManualesResponse>
     {
         public string TextoBusqueda { get; set; }
-        public string Categoria { get; set; }
+
+        public Guid? CategoriaId { get; set; }
+
         public int TopK { get; set; } = 10;
     }
 
@@ -25,7 +24,9 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Queries.BuscarEnManual
     {
         public Guid ManualId { get; set; }
         public string TituloManual { get; set; }
-        public string Categoria { get; set; }
+
+        public string CategoriaNombre { get; set; }
+
         public int NumeroPagina { get; set; }
         public string TextoFragmento { get; set; }
         public double ScoreSimilitud { get; set; }

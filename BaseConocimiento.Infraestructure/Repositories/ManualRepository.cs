@@ -3,11 +3,6 @@ using BaseConocimiento.Domain.Entities;
 using BaseConocimiento.Domain.Enums;
 using BaseConocimiento.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BaseConocimiento.Infrastructure.Repositories
 {
@@ -20,107 +15,111 @@ namespace BaseConocimiento.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task<Manual> ObtenerPorIdAsync(Guid id, CancellationToken cancellationToken = default)
+        public async Task<Manual> ObtenerPorIdAsync(Guid id, CancellationToken ct = default)
         {
             return await _context.Manuales
-                .FirstOrDefaultAsync(m => m.Id == id, cancellationToken);
+                .FirstOrDefaultAsync(m => m.Id == id, ct);
         }
 
-        public async Task<List<Manual>> ObtenerTodosAsync(CancellationToken cancellationToken = default)
+        public async Task<Manual> ObtenerConCategoriaAsync(Guid id, CancellationToken ct = default)
         {
+            // Cargamos la relación Categoria definida en ManualConfiguration
             return await _context.Manuales
-                .OrderByDescending(m => m.FechaSubida)
-                .ToListAsync(cancellationToken);
+                .Include(m => m.Categoria)
+                .Include(m => m.Usuario)
+                .FirstOrDefaultAsync(m => m.Id == id, ct);
         }
 
-        public async Task<List<Manual>> ObtenerPorCategoriaAsync(string categoria, CancellationToken cancellationToken = default)
-        {
-            return await _context.Manuales
-                .Where(m => m.Categoria == categoria)
-                .OrderByDescending(m => m.FechaSubida)
-                .ToListAsync(cancellationToken);
-        }
-
-        public async Task<List<Manual>> ObtenerPorEstadoAsync(EstadoManual estado, CancellationToken cancellationToken = default)
-        {
-            return await _context.Manuales
-                .Where(m => m.Estado == estado)
-                .OrderByDescending(m => m.FechaSubida)
-                .ToListAsync(cancellationToken);
-        }
-
-        public async Task<(List<Manual> Manuales, int Total)> ObtenerPaginadoAsync(
+        public async Task<(List<Manual> Manuales, int Total)> ListarPaginadoAsync(
+            Guid? categoriaId,
+            string terminoBusqueda,
             int pagina,
             int tamañoPagina,
-            string categoria = null,
-            string subCategoria = null,
-            EstadoManual? estado = null,
-            CancellationToken cancellationToken = default)
+            string ordenarPor,
+            CancellationToken ct = default)
         {
-            var query = _context.Manuales.AsQueryable();
+            var query = _context.Manuales
+                .Include(m => m.Categoria)
+                .Include(m => m.Usuario)
+                .AsQueryable();
 
-            if (!string.IsNullOrEmpty(categoria))
-                query = query.Where(m => m.Categoria == categoria);
+            // Filtro por categoria_id
+            if (categoriaId.HasValue)
+            {
+                query = query.Where(m => m.CategoriaId == categoriaId.Value);
+            }
 
-            if (!string.IsNullOrEmpty(subCategoria))
-                query = query.Where(m => m.SubCategoria == subCategoria);
+            // Búsqueda por título o descripción (usamos ILike para Postgres si está disponible o Contains)
+            if (!string.IsNullOrWhiteSpace(terminoBusqueda))
+            {
+                query = query.Where(m => EF.Functions.ILike(m.Titulo, $"%{terminoBusqueda}%") ||
+                                         EF.Functions.ILike(m.Descripcion, $"%{terminoBusqueda}%"));
+            }
 
-            if (estado.HasValue)
-                query = query.Where(m => m.Estado == estado.Value);
+            var total = await query.CountAsync(ct);
 
-            var total = await query.CountAsync(cancellationToken);
+            // Ordenamiento dinámico
+            query = ordenarPor?.ToLower() switch
+            {
+                "titulo" => query.OrderBy(m => m.Titulo),
+                "fecha" => query.OrderByDescending(m => m.FechaSubida),
+                "consultas" => query.OrderByDescending(m => m.NumeroConsultas),
+                _ => query.OrderByDescending(m => m.FechaSubida)
+            };
 
-            var manuales = await query
-                .OrderByDescending(m => m.FechaSubida)
+            var items = await query
                 .Skip((pagina - 1) * tamañoPagina)
                 .Take(tamañoPagina)
-                .ToListAsync(cancellationToken);
+                .ToListAsync(ct);
 
-            return (manuales, total);
+            return (items, total);
         }
 
-        public async Task<Manual> AgregarAsync(Manual manual, CancellationToken cancellationToken = default)
+        public async Task<List<Manual>> ObtenerMasConsultadosAsync(int top, CancellationToken ct = default)
         {
-            await _context.Manuales.AddAsync(manual, cancellationToken);
+            return await _context.Manuales
+                .Include(m => m.Categoria)
+                .OrderByDescending(m => m.NumeroConsultas)
+                .Take(top)
+                .ToListAsync(ct);
+        }
+
+        public async Task<int> ContarAsync(CancellationToken ct = default)
+        {
+            return await _context.Manuales.CountAsync(ct);
+        }
+
+        public async Task<int> ContarActivosAsync(CancellationToken ct = default)
+        {
+            // Estado se guarda como int según la configuración
+            return await _context.Manuales
+                .CountAsync(m => m.Estado == EstadoManual.Activo, ct);
+        }
+
+        public async Task<Manual?> ObtenerConDetallesAsync(Guid id, CancellationToken ct = default)
+        {
+            return await _context.Manuales
+                .Include(m => m.Categoria)
+                .Include(m => m.Usuario)
+                .FirstOrDefaultAsync(m => m.Id == id, ct);
+        }
+
+        public async Task<Manual> AgregarAsync(Manual manual, CancellationToken ct = default)
+        {
+            await _context.Manuales.AddAsync(manual, ct);
             return manual;
         }
 
-        public Task ActualizarAsync(Manual manual, CancellationToken cancellationToken = default)
+        public Task ActualizarAsync(Manual manual, CancellationToken ct = default)
         {
             _context.Manuales.Update(manual);
             return Task.CompletedTask;
         }
 
-        public Task EliminarAsync(Manual manual, CancellationToken cancellationToken = default)
+        public Task EliminarAsync(Manual manual, CancellationToken ct = default)
         {
             _context.Manuales.Remove(manual);
             return Task.CompletedTask;
-        }
-
-        public async Task<bool> ExisteAsync(Guid id, CancellationToken cancellationToken = default)
-        {
-            return await _context.Manuales
-                .AnyAsync(m => m.Id == id, cancellationToken);
-        }
-
-        public async Task<Dictionary<string, List<string>>> ObtenerCategoriasYSubcategoriasAsync(
-            CancellationToken cancellationToken = default)
-        {
-            var manuales = await _context.Manuales
-                .Where(m => m.Estado == EstadoManual.Activo)
-                .Select(m => new { m.Categoria, m.SubCategoria })
-                .Distinct()
-                .ToListAsync(cancellationToken);
-
-            return manuales
-                .GroupBy(m => m.Categoria)
-                .ToDictionary(
-                    g => g.Key,
-                    g => g.Select(x => x.SubCategoria)
-                          .Where(s => !string.IsNullOrEmpty(s))
-                          .Distinct()
-                          .ToList()
-                );
         }
     }
 }

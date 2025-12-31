@@ -10,7 +10,129 @@
     "version": "v1"
   },
   "paths": {
-    "/api/Consultas/preguntar": {
+    "/api/Categorias": {
+      "get": {
+        "tags": [
+          "Categorias"
+        ],
+        "parameters": [
+          {
+            "name": "soloActivas",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "incluirSubcategorias",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Categorias"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearCategoriaCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearCategoriaCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearCategoriaCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Categorias/{id}": {
+      "get": {
+        "tags": [
+          "Categorias"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Categorias"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarCategoriaCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarCategoriaCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarCategoriaCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Consultas/consultar-con-conversacion": {
       "post": {
         "tags": [
           "Consultas"
@@ -19,17 +141,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PreguntaRequest"
+                "$ref": "#/components/schemas/ConsultarConConversacionCommand"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PreguntaRequest"
+                "$ref": "#/components/schemas/ConsultarConConversacionCommand"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PreguntaRequest"
+                "$ref": "#/components/schemas/ConsultarConConversacionCommand"
               }
             }
           }
@@ -37,16 +159,37 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
+          }
+        }
+      }
+    },
+    "/api/Consultas/consultar": {
+      "post": {
+        "tags": [
+          "Consultas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarBaseConocimientoQuery"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarBaseConocimientoQuery"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarBaseConocimientoQuery"
               }
             }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -60,43 +203,21 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/BuscarRequest"
+                "$ref": "#/components/schemas/BuscarEnManualesQuery"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/BuscarRequest"
+                "$ref": "#/components/schemas/BuscarEnManualesQuery"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/BuscarRequest"
+                "$ref": "#/components/schemas/BuscarEnManualesQuery"
               }
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Consultas/estadisticas": {
-      "get": {
-        "tags": [
-          "Consultas"
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -124,37 +245,6 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/CrearConversacionRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Conversaciones/preguntar": {
-      "post": {
-        "tags": [
-          "Conversaciones"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PreguntarConversacionRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PreguntarConversacionRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PreguntarConversacionRequest"
               }
             }
           }
@@ -232,10 +322,28 @@
         }
       }
     },
-    "/api/Infraestructura/estado": {
+    "/api/Estadisticas/generales": {
       "get": {
         "tags": [
-          "Infraestructura"
+          "Estadisticas"
+        ],
+        "parameters": [
+          {
+            "name": "fechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "fechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -244,101 +352,18 @@
         }
       }
     },
-    "/api/Manuales": {
-      "post": {
-        "tags": [
-          "Manuales"
-        ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "Archivo": {
-                    "type": "string",
-                    "format": "binary"
-                  },
-                  "Titulo": {
-                    "type": "string"
-                  },
-                  "Categoria": {
-                    "type": "string"
-                  },
-                  "SubCategoria": {
-                    "type": "string"
-                  },
-                  "Version": {
-                    "type": "string"
-                  },
-                  "Descripcion": {
-                    "type": "string"
-                  }
-                }
-              },
-              "encoding": {
-                "Archivo": {
-                  "style": "form"
-                },
-                "Titulo": {
-                  "style": "form"
-                },
-                "Categoria": {
-                  "style": "form"
-                },
-                "SubCategoria": {
-                  "style": "form"
-                },
-                "Version": {
-                  "style": "form"
-                },
-                "Descripcion": {
-                  "style": "form"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      },
+    "/api/Estadisticas/historial": {
       "get": {
         "tags": [
-          "Manuales"
+          "Estadisticas"
         ],
         "parameters": [
           {
-            "name": "categoria",
+            "name": "usuarioId",
             "in": "query",
             "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "subCategoria",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "estado",
-            "in": "query",
-            "schema": {
-              "$ref": "#/components/schemas/EstadoManual"
+              "type": "string",
+              "format": "uuid"
             }
           },
           {
@@ -367,6 +392,127 @@
         }
       }
     },
+    "/api/Infraestructura/estado": {
+      "get": {
+        "tags": [
+          "Infraestructura"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Manuales": {
+      "get": {
+        "tags": [
+          "Manuales"
+        ],
+        "parameters": [
+          {
+            "name": "categoriaId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "terminoBusqueda",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "tamañoPagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Manuales"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Titulo": {
+                    "type": "string"
+                  },
+                  "CategoriaId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "Version": {
+                    "type": "string"
+                  },
+                  "Descripcion": {
+                    "type": "string"
+                  },
+                  "UsuarioId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "Archivo": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "Titulo": {
+                  "style": "form"
+                },
+                "CategoriaId": {
+                  "style": "form"
+                },
+                "Version": {
+                  "style": "form"
+                },
+                "Descripcion": {
+                  "style": "form"
+                },
+                "UsuarioId": {
+                  "style": "form"
+                },
+                "Archivo": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Manuales/{id}": {
       "get": {
         "tags": [
@@ -386,16 +532,46 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Manuales"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarManualCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarManualCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarManualCommand"
               }
             }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       },
@@ -417,66 +593,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Manuales"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ActualizarManualRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ActualizarManualRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ActualizarManualRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -501,17 +617,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ActualizarEstadoRequest"
+                "$ref": "#/components/schemas/ActualizarEstadoManualCommand"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ActualizarEstadoRequest"
+                "$ref": "#/components/schemas/ActualizarEstadoManualCommand"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ActualizarEstadoRequest"
+                "$ref": "#/components/schemas/ActualizarEstadoManualCommand"
               }
             }
           }
@@ -519,25 +635,124 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
     },
-    "/api/Manuales/categorias": {
+    "/api/Usuarios": {
       "get": {
         "tags": [
-          "Manuales"
+          "Usuarios"
         ],
+        "parameters": [
+          {
+            "name": "soloActivos",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "departamento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearUsuarioCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearUsuarioCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearUsuarioCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Usuarios/{id}": {
+      "get": {
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioCommand"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -548,18 +763,57 @@
   },
   "components": {
     "schemas": {
-      "ActualizarEstadoRequest": {
+      "ActualizarCategoriaCommand": {
         "type": "object",
         "properties": {
+          "categoriaId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "color": {
+            "type": "string",
+            "nullable": true
+          },
+          "icono": {
+            "type": "string",
+            "nullable": true
+          },
+          "orden": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ActualizarEstadoManualCommand": {
+        "type": "object",
+        "properties": {
+          "manualId": {
+            "type": "string",
+            "format": "uuid"
+          },
           "nuevoEstado": {
             "$ref": "#/components/schemas/EstadoManual"
           }
         },
         "additionalProperties": false
       },
-      "ActualizarManualRequest": {
+      "ActualizarManualCommand": {
         "type": "object",
         "properties": {
+          "manualId": {
+            "type": "string",
+            "format": "uuid"
+          },
           "version": {
             "type": "string",
             "nullable": true
@@ -571,15 +825,41 @@
         },
         "additionalProperties": false
       },
-      "BuscarRequest": {
+      "ActualizarUsuarioCommand": {
+        "type": "object",
+        "properties": {
+          "usuarioId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "nombreCompleto": {
+            "type": "string",
+            "nullable": true
+          },
+          "departamento": {
+            "type": "string",
+            "nullable": true
+          },
+          "rol": {
+            "$ref": "#/components/schemas/RolUsuario"
+          },
+          "esActivo": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BuscarEnManualesQuery": {
         "type": "object",
         "properties": {
           "textoBusqueda": {
             "type": "string",
             "nullable": true
           },
-          "categoria": {
+          "categoriaId": {
             "type": "string",
+            "format": "uuid",
             "nullable": true
           },
           "topK": {
@@ -589,34 +869,16 @@
         },
         "additionalProperties": false
       },
-      "CrearConversacionRequest": {
-        "type": "object",
-        "properties": {
-          "usuarioId": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "EstadoManual": {
-        "enum": [
-          1,
-          2,
-          3
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "PreguntaRequest": {
+      "ConsultarBaseConocimientoQuery": {
         "type": "object",
         "properties": {
           "pregunta": {
             "type": "string",
             "nullable": true
           },
-          "categoria": {
+          "categoriaId": {
             "type": "string",
+            "format": "uuid",
             "nullable": true
           },
           "topK": {
@@ -626,7 +888,7 @@
         },
         "additionalProperties": false
       },
-      "PreguntarConversacionRequest": {
+      "ConsultarConConversacionCommand": {
         "type": "object",
         "properties": {
           "pregunta": {
@@ -652,32 +914,85 @@
         },
         "additionalProperties": false
       },
-      "ProblemDetails": {
+      "CrearCategoriaCommand": {
         "type": "object",
         "properties": {
-          "type": {
+          "nombre": {
             "type": "string",
             "nullable": true
           },
-          "title": {
+          "descripcion": {
             "type": "string",
             "nullable": true
           },
-          "status": {
-            "type": "integer",
-            "format": "int32",
+          "categoriaPadreId": {
+            "type": "string",
+            "format": "uuid",
             "nullable": true
           },
-          "detail": {
+          "color": {
             "type": "string",
             "nullable": true
           },
-          "instance": {
+          "icono": {
             "type": "string",
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": false
+      },
+      "CrearConversacionRequest": {
+        "type": "object",
+        "properties": {
+          "usuarioId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CrearUsuarioCommand": {
+        "type": "object",
+        "properties": {
+          "nombreCompleto": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "departamento": {
+            "type": "string",
+            "nullable": true
+          },
+          "rol": {
+            "$ref": "#/components/schemas/RolUsuario"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstadoManual": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "RolUsuario": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
       }
     }
   }

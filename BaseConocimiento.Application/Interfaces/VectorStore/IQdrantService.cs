@@ -4,7 +4,7 @@
     {
         Task AlmacenarVectoresAsync(Guid manualId, List<VectorChunk> chunks);
         Task<bool> EliminarVectoresAsync(Guid manualId);
-        Task<List<ResultadoBusqueda>> BuscarSimilaresAsync(float[] embedding, int topK = 5, string categoria = null);
+        Task<List<ResultadoBusqueda>> BuscarSimilaresAsync(float[] embedding, int topK = 5, string categoriaId = null);
         Task<bool> ExistenVectoresAsync(Guid manualId);
     }
 

@@ -1,6 +1,80 @@
 [
   {
-    "ContainingType": "BaseConocimiento.WebApi.Controllers.ConsultasController",
+    "ContainingType": "BaseConocimiento.API.Controllers.CategoriasController",
+    "Method": "ListarCategorias",
+    "RelativePath": "api/Categorias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "soloActivas",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "incluirSubcategorias",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.CategoriasController",
+    "Method": "CrearCategoria",
+    "RelativePath": "api/Categorias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "BaseConocimiento.Application.UseCases.Categorias.Commands.CrearCategoria.CrearCategoriaCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.CategoriasController",
+    "Method": "ObtenerCategoria",
+    "RelativePath": "api/Categorias/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.CategoriasController",
+    "Method": "ActualizarCategoria",
+    "RelativePath": "api/Categorias/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "BaseConocimiento.Application.UseCases.Categorias.Commands.ActualizarCategoria.ActualizarCategoriaCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.ConsultasController",
     "Method": "BuscarEnManuales",
     "RelativePath": "api/Consultas/buscar",
     "HttpMethod": "POST",
@@ -8,70 +82,44 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "BaseConocimiento.API.DTOs.Consultas.BuscarRequest",
+        "Name": "query",
+        "Type": "BaseConocimiento.Application.UseCases.Consultas.Queries.BuscarEnManuales.BuscarEnManualesQuery",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 400
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "BaseConocimiento.WebApi.Controllers.ConsultasController",
-    "Method": "ObtenerEstadisticas",
-    "RelativePath": "api/Consultas/estadisticas",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "BaseConocimiento.WebApi.Controllers.ConsultasController",
-    "Method": "HacerPregunta",
-    "RelativePath": "api/Consultas/preguntar",
+    "ContainingType": "BaseConocimiento.API.Controllers.ConsultasController",
+    "Method": "Consultar",
+    "RelativePath": "api/Consultas/consultar",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "BaseConocimiento.API.DTOs.Consultas.PreguntaRequest",
+        "Name": "query",
+        "Type": "BaseConocimiento.Application.UseCases.Consultas.Queries.ConsultarBaseConocimiento.ConsultarBaseConocimientoQuery",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.ConsultasController",
+    "Method": "ConsultarConConversacion",
+    "RelativePath": "api/Consultas/consultar-con-conversacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 400
+        "Name": "command",
+        "Type": "BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConConversacion.ConsultarConConversacionCommand",
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "BaseConocimiento.API.Controllers.ConversacionesController",
@@ -138,23 +186,54 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BaseConocimiento.API.Controllers.ConversacionesController",
-    "Method": "PreguntarConConversacion",
-    "RelativePath": "api/Conversaciones/preguntar",
-    "HttpMethod": "POST",
+    "ContainingType": "BaseConocimiento.API.Controllers.EstadisticasController",
+    "Method": "ObtenerEstadisticasGenerales",
+    "RelativePath": "api/Estadisticas/generales",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "BaseConocimiento.API.DTOs.Conversation.PreguntarConversacionRequest",
-        "IsRequired": true
+        "Name": "fechaInicio",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaFin",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BaseConocimiento.WebApi.Controllers.InfraestructuraController",
+    "ContainingType": "BaseConocimiento.API.Controllers.EstadisticasController",
+    "Method": "ObtenerHistorialConsultas",
+    "RelativePath": "api/Estadisticas/historial",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "tama\u00F1oPagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.InfraestructuraController",
     "Method": "GetEstado",
     "RelativePath": "api/Infraestructura/estado",
     "HttpMethod": "GET",
@@ -164,61 +243,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BaseConocimiento.WebApi.Controllers.ManualesController",
-    "Method": "SubirManual",
-    "RelativePath": "api/Manuales",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Archivo",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "Titulo",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Categoria",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SubCategoria",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Version",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Descripcion",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 400
-      }
-    ]
-  },
-  {
-    "ContainingType": "BaseConocimiento.WebApi.Controllers.ManualesController",
+    "ContainingType": "BaseConocimiento.API.Controllers.ManualesController",
     "Method": "ListarManuales",
     "RelativePath": "api/Manuales",
     "HttpMethod": "GET",
@@ -226,17 +251,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "categoria",
-        "Type": "System.String",
+        "Name": "categoriaId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
-        "Name": "subCategoria",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "estado",
+        "Name": "terminoBusqueda",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -251,16 +271,51 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "BaseConocimiento.WebApi.Controllers.ManualesController",
+    "ContainingType": "BaseConocimiento.API.Controllers.ManualesController",
+    "Method": "SubirManual",
+    "RelativePath": "api/Manuales",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Titulo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoriaId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "Version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Descripcion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsuarioId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "Archivo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.ManualesController",
     "Method": "ObtenerManual",
     "RelativePath": "api/Manuales/{id}",
     "HttpMethod": "GET",
@@ -273,24 +328,32 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 404
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "BaseConocimiento.WebApi.Controllers.ManualesController",
-    "Method": "EliminarManual",
+    "ContainingType": "BaseConocimiento.API.Controllers.ManualesController",
+    "Method": "Actualizar",
+    "RelativePath": "api/Manuales/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "BaseConocimiento.Application.UseCases.Manuales.Commands.ActualizarManual.ActualizarManualCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.ManualesController",
+    "Method": "Eliminar",
     "RelativePath": "api/Manuales/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -302,57 +365,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 400
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "BaseConocimiento.WebApi.Controllers.ManualesController",
-    "Method": "ActualizarManual",
-    "RelativePath": "api/Manuales/{id}",
-    "HttpMethod": "PATCH",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "request",
-        "Type": "BaseConocimiento.API.DTOs.Manuales.ActualizarManualRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 400
-      }
-    ]
-  },
-  {
-    "ContainingType": "BaseConocimiento.WebApi.Controllers.ManualesController",
+    "ContainingType": "BaseConocimiento.API.Controllers.ManualesController",
     "Method": "ActualizarEstado",
     "RelativePath": "api/Manuales/{id}/estado",
     "HttpMethod": "PATCH",
@@ -365,40 +381,85 @@
         "IsRequired": true
       },
       {
-        "Name": "request",
-        "Type": "BaseConocimiento.API.DTOs.Manuales.ActualizarEstadoRequest",
+        "Name": "command",
+        "Type": "BaseConocimiento.Application.UseCases.Manuales.Commands.ActualizarEstadoManual.ActualizarEstadoManualCommand",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 400
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "BaseConocimiento.WebApi.Controllers.ManualesController",
-    "Method": "ObtenerCategorias",
-    "RelativePath": "api/Manuales/categorias",
+    "ContainingType": "BaseConocimiento.API.Controllers.UsuariosController",
+    "Method": "ListarUsuarios",
+    "RelativePath": "api/Usuarios",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
+        "Name": "soloActivos",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "departamento",
+        "Type": "System.String",
+        "IsRequired": false
       }
-    ]
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.UsuariosController",
+    "Method": "CrearUsuario",
+    "RelativePath": "api/Usuarios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "BaseConocimiento.Application.UseCases.Categorias.CrearCategoria.CrearUsuarioCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.UsuariosController",
+    "Method": "ObtenerUsuario",
+    "RelativePath": "api/Usuarios/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.UsuariosController",
+    "Method": "ActualizarUsuario",
+    "RelativePath": "api/Usuarios/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "BaseConocimiento.Application.UseCases.Categorias.ActualizarCategoria.ActualizarUsuarioCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
