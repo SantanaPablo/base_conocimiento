@@ -119,7 +119,5 @@ app.MapHealthChecks("/health", new HealthCheckOptions
 
 Console.WriteLine("?? Base de Conocimiento API");
 Console.WriteLine($"? Entorno: {app.Environment.EnvironmentName}");
-Console.WriteLine($"? URL: {builder.Configuration["ASPNETCORE_URLS"] ?? "http://localhost:5000"}");
-Console.WriteLine($"? Swagger: {(app.Environment.IsDevelopment() ? "http://localhost:5000" : "Deshabilitado")}");
 
 app.Run();

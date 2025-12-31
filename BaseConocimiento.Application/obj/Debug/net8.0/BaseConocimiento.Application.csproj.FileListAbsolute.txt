@@ -14,3 +14,19 @@ C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Ap
 C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Application\obj\Debug\net8.0\refint\BaseConocimiento.Application.dll
 C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Application\obj\Debug\net8.0\BaseConocimiento.Application.pdb
 C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.Application\obj\Debug\net8.0\ref\BaseConocimiento.Application.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\bin\Debug\net8.0\BaseConocimiento.Application.deps.json
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\bin\Debug\net8.0\BaseConocimiento.Application.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\bin\Debug\net8.0\BaseConocimiento.Application.pdb
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\bin\Debug\net8.0\BaseConocimiento.Domain.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\bin\Debug\net8.0\BaseConocimiento.Domain.pdb
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\BaseConocimiento.Application.csproj.AssemblyReference.cache
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\BaseConocimiento.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\BaseConocimiento.Application.AssemblyInfoInputs.cache
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\BaseConocimiento.Application.AssemblyInfo.cs
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\BaseConocimiento.Application.csproj.CoreCompileInputs.cache
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\BaseConocimiento.Application.sourcelink.json
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\BaseCono.EFF7CBD8.Up2Date
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\BaseConocimiento.Application.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\refint\BaseConocimiento.Application.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\BaseConocimiento.Application.pdb
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.Application\obj\Debug\net8.0\ref\BaseConocimiento.Application.dll

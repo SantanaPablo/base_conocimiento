@@ -1,0 +1,2 @@
+Add-Migration InitialRefactorV2 -Context BaseConocimientoDbContext -Project BaseConocimiento.Infrastructure -StartupProject BaseConocimiento.API
+Update-Database -Context BaseConocimientoDbContext -Project BaseConocimiento.Infrastructure -StartupProject BaseConocimiento.API

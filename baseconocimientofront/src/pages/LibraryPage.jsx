@@ -65,6 +65,48 @@ const LibraryPage = () => {
     setPage(1);
     fetchManuales();
   };
+ //Descargar Manual
+const handleDownload = async (manualId) => {
+  try {
+    const res = await fetch(`${API_BASE_URL}/Manuales/${manualId}/descargar`);
+
+    if (!res.ok) throw new Error('Error al descargar');
+
+    const blob = await res.blob();
+
+    //obtener nombre
+    const disposition = res.headers.get('content-disposition');
+let fileName = 'archivo';
+
+if (disposition) {
+  const utf8Match = disposition.match(/filename\*=(?:UTF-8'')?(.+)/i);
+  if (utf8Match && utf8Match[1]) {
+    fileName = decodeURIComponent(utf8Match[1]);
+  } else {
+    const asciiMatch = disposition.match(/filename="?([^"]+)"?/i);
+    if (asciiMatch && asciiMatch[1]) {
+      fileName = asciiMatch[1];
+    }
+  }
+}
+
+    const url = window.URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fileName;
+    document.body.appendChild(a);
+    a.click();
+
+    a.remove();
+    window.URL.revokeObjectURL(url);
+  } catch (err) {
+    console.error('Error descargando manual:', err);
+    alert('No se pudo descargar el archivo');
+  }
+};
+
+
 
   //Eliminar manual
   const handleDelete = async (id) => {
@@ -126,7 +168,7 @@ const LibraryPage = () => {
         ) : (
           <div className="grid grid-cols-1 gap-3">
             {manuales.map(m => (
-              <ManualListItem key={m.id} manual={m} onDelete={handleDelete} />
+              <ManualListItem key={m.id} manual={m} onDelete={handleDelete} onDownload={handleDownload}/>
             ))}
             
             {manuales.length === 0 && (
@@ -163,7 +205,7 @@ const LibraryPage = () => {
 };
 
 //FILA DE LA BIBLIOTECA
-const ManualListItem = ({ manual, onDelete }) => (
+const ManualListItem = ({ manual, onDelete, onDownload }) => (
   <div className="bg-[#1e293b] border border-slate-800 p-4 rounded-2xl hover:border-slate-700 transition-all group">
     <div className="flex items-center gap-6">
       <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-slate-400 group-hover:text-blue-400 transition-colors">
@@ -188,12 +230,16 @@ const ManualListItem = ({ manual, onDelete }) => (
       </div>
 
       <div className="flex items-center gap-2">
-        <button className="p-2.5 bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 rounded-xl transition-all" title="Descargar">
+        <button
+         onClick={() => onDownload(manual.id)}
+          className="p-2.5 bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 rounded-xl transition-all"
+          title="Descargar"
+        >
           <Download size={16} />
         </button>
-        <button className="p-2.5 bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 rounded-xl transition-all" title="Editar">
+        {/*<button className="p-2.5 bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 rounded-xl transition-all" title="Editar">
           <Edit3 size={16} />
-        </button>
+        </button>*/}
         <button 
           onClick={() => onDelete(manual.id)}
           className="p-2.5 bg-red-500/10 text-red-500/60 hover:text-red-500 hover:bg-red-500/20 rounded-xl transition-all" 

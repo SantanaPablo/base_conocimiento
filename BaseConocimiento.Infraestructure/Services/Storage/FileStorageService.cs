@@ -16,7 +16,7 @@ namespace BaseConocimiento.Infrastructure.Services.Storage
 
         public FileStorageService(IConfiguration configuration, ILogger<FileStorageService> logger)
         {
-            _rutaBase = configuration["FileStorage:BasePath"] ?? "C:/KnowledgeBase";
+            _rutaBase = configuration["FileStorage:LocalPath"] ?? "C:/KnowledgeBase";
             _logger = logger;
 
             if (!Directory.Exists(_rutaBase))

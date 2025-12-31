@@ -1,15 +1,16 @@
-using Microsoft.AspNetCore.Mvc;
-using MediatR;
-using BaseConocimiento.Application.UseCases.Manuales.Commands.SubirManual;
-using BaseConocimiento.Application.UseCases.Manuales.Commands.EliminarManual;
+using BaseConocimiento.API.DTOs.Manuales;
 using BaseConocimiento.Application.UseCases.Manuales.Commands.ActualizarEstadoManual;
 using BaseConocimiento.Application.UseCases.Manuales.Commands.ActualizarManual;
-using BaseConocimiento.Application.UseCases.Manuales.Queries.ObtenerManual;
+using BaseConocimiento.Application.UseCases.Manuales.Commands.EliminarManual;
+using BaseConocimiento.Application.UseCases.Manuales.Commands.SubirManual;
+using BaseConocimiento.Application.UseCases.Manuales.Queries.DescargarManual;
 using BaseConocimiento.Application.UseCases.Manuales.Queries.ListarManuales;
 using BaseConocimiento.Application.UseCases.Manuales.Queries.ObtenerCategorias;
-using BaseConocimiento.Domain.Enums;
-using BaseConocimiento.API.DTOs.Manuales;
+using BaseConocimiento.Application.UseCases.Manuales.Queries.ObtenerManual;
 using BaseConocimiento.Application.UseCases.Manuales.Queries.ObtenerManualPorId;
+using BaseConocimiento.Domain.Enums;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BaseConocimiento.API.Controllers
 {
@@ -119,7 +120,28 @@ namespace BaseConocimiento.API.Controllers
 
             return Ok(response);
         }
+
+        /// <summary>
+        /// Descargar manual
+        /// </summary>
+        [HttpGet("{id:guid}/descargar")]
+        public async Task<IActionResult> Descargar(Guid id)
+        {
+            var response = await _mediator.Send(new DescargarManualQuery { ManualId = id });
+
+            if (!response.Exitoso || response.ArchivoStream == null)
+                return NotFound(response.Mensaje);
+
+            return File(
+                response.ArchivoStream,
+                response.ContentType ?? "application/octet-stream",
+                response.NombreArchivo
+            );
+        }
+
     }
 
-   
+
+
+
 }

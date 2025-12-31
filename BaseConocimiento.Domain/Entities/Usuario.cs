@@ -52,8 +52,8 @@ namespace BaseConocimiento.Domain.Entities
 
     public enum RolUsuario
     {
-        Lector = 1,
+        Administrador = 1,
         Editor = 2,
-        Administrador = 3
+        Lector = 3
     }
 }

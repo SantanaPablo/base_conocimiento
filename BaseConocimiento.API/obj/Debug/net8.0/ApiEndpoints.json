@@ -369,6 +369,22 @@
   },
   {
     "ContainingType": "BaseConocimiento.API.Controllers.ManualesController",
+    "Method": "Descargar",
+    "RelativePath": "api/Manuales/{id}/descargar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaseConocimiento.API.Controllers.ManualesController",
     "Method": "ActualizarEstado",
     "RelativePath": "api/Manuales/{id}/estado",
     "HttpMethod": "PATCH",

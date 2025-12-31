@@ -4,35 +4,43 @@ import InuzaruAvatar from '../assets/inuzaru_avatar.png';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
+
 // props
 const ChatPage = ({ conversacionId, setConversacionId, messages, setMessages }) => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef(null);
+  const initialized = useRef(false);
 
   //Inicializar sesión en Redis
-  useEffect(() => {
-    if (conversacionId || initialized.current) return;
+ useEffect(() => {
+  if (conversacionId || initialized.current) return;
 
-    const initSession = async () => {
-      try {
-        initialized.current = true;
-        const res = await fetch(`${API_BASE_URL}/Conversaciones/crear`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ usuarioId: "00000000-0000-0000-0000-000000000000" })
-        });
-        const data = await res.json();
-        if (data.conversacionId) {
-          setConversacionId(data.conversacionId);
-        }
-      } catch (err) {
-        console.error("Error al iniciar sesión en Redis:", err);
-        initialized.current = false;
+  const initSession = async () => {
+    try {
+      initialized.current = true;
+
+      const res = await fetch(`${API_BASE_URL}/Conversaciones/crear`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          usuarioId: "00000000-0000-0000-0000-000000000000"
+        })
+      });
+
+      const data = await res.json();
+      if (data.conversacionId) {
+        setConversacionId(data.conversacionId);
       }
-    };
-    initSession();
-  }, [conversacionId, setConversacionId]);
+    } catch (err) {
+      console.error("Error al iniciar sesión en Redis:", err);
+      initialized.current = false;
+    }
+  };
+
+  initSession();
+}, [conversacionId, setConversacionId]);
+
 
   // Auto-scroll
   useEffect(() => {
