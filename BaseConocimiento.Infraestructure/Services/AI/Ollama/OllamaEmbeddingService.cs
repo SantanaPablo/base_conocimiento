@@ -1,4 +1,5 @@
 ﻿using BaseConocimiento.Application.Interfaces.AI;
+using Microsoft.Extensions.Configuration;
 using System.Net.Http.Json;
 
 namespace BaseConocimiento.Infrastructure.Services.AI.Ollama
@@ -6,19 +7,21 @@ namespace BaseConocimiento.Infrastructure.Services.AI.Ollama
     public class OllamaEmbeddingService : IEmbeddingService
     {
         private readonly HttpClient _httpClient;
-        private const string MODEL = "nomic-embed-text:latest";
+        private readonly string _modelName;
 
-        public OllamaEmbeddingService(HttpClient httpClient)
+        public OllamaEmbeddingService(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
             _httpClient.Timeout = TimeSpan.FromSeconds(100);
+            _modelName = configuration["AI:EmbeddingModelName"] ?? "nomic-embed-text";
         }
 
         public async Task<float[]> GenerarEmbeddingAsync(string texto)
         {
-            var request = new { model = MODEL, prompt = texto };
+            var request = new { model = _modelName, prompt = texto };
 
             var response = await _httpClient.PostAsJsonAsync("api/embeddings", request);
+
             response.EnsureSuccessStatusCode();
 
             var result = await response.Content.ReadFromJsonAsync<OllamaResponse>();
@@ -38,6 +41,5 @@ namespace BaseConocimiento.Infrastructure.Services.AI.Ollama
 
             return resultados;
         }
-
     }
 }

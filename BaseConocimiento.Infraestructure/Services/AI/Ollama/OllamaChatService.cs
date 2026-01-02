@@ -67,7 +67,7 @@ namespace BaseConocimiento.Infrastructure.Services.AI.Ollama
                         temperature = 0.3,  // Igual que en Modelfile
                         num_ctx = 4096,     // Igual que en Modelfile
                         num_predict = 512,
-                        num_gpu = 35,
+                        num_gpu = -1, //auto
                         num_thread = 8
                     }
                 };
@@ -81,7 +81,7 @@ namespace BaseConocimiento.Infrastructure.Services.AI.Ollama
                 {
                     var errorContent = await response.Content.ReadAsStringAsync();
                     _logger.LogError("Ollama error {Status}: {Content}", response.StatusCode, errorContent);
-                    return "Error: Ollama no está respondiendo correctamente.";
+                    throw new HttpRequestException($"Ollama no pudo procesar la solicitud: {response.StatusCode}");
                 }
 
                 var result = await response.Content.ReadFromJsonAsync<OllamaChatResponse>();
@@ -93,8 +93,8 @@ namespace BaseConocimiento.Infrastructure.Services.AI.Ollama
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error generando respuesta");
-                return $"Error: {ex.Message}";
+                _logger.LogError(ex, "Fallo crítico en el servicio de Chat Ollama");
+                throw;
             }
         }
 
