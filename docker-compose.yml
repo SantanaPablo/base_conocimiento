@@ -8,7 +8,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: amarazul77
-      POSTGRES_DB: base_conocimiento
+      POSTGRES_DB: base_conocimiento_2
     ports:
       - "5432:5432"
     volumes:

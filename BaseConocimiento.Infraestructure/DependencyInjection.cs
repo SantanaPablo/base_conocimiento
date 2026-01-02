@@ -1,4 +1,5 @@
 ﻿using BaseConocimiento.Application.Interfaces.AI;
+using BaseConocimiento.Application.Interfaces.Auth;
 using BaseConocimiento.Application.Interfaces.Conversation;
 using BaseConocimiento.Application.Interfaces.Persistence;
 using BaseConocimiento.Application.Interfaces.Processing;
@@ -8,6 +9,7 @@ using BaseConocimiento.Infrastructure.Data;
 using BaseConocimiento.Infrastructure.Repositories;
 using BaseConocimiento.Infrastructure.Services.AI.Gemini;
 using BaseConocimiento.Infrastructure.Services.AI.Ollama;
+using BaseConocimiento.Infrastructure.Services.Auth;
 using BaseConocimiento.Infrastructure.Services.Conversation;
 using BaseConocimiento.Infrastructure.Services.Processing;
 using BaseConocimiento.Infrastructure.Services.Storage;
@@ -44,6 +46,7 @@ public static class DependencyInjection
         services.AddScoped<IFileStorageService, FileStorageService>();
 
         //VECTOR STORE (QDRANT)
+        services.AddHostedService<QdrantInitializerHostedService>();
         services.AddSingleton<IQdrantService, QdrantService>();
 
         //REDIS
@@ -101,6 +104,11 @@ public static class DependencyInjection
                 throw new InvalidOperationException(
                     $"Proveedor de IA no soportado: {aiProvider}. Use 'gemini' o 'ollama'.");
         }
+
+        //LOGIN
+        services.AddScoped<IPasswordHasher, PasswordHasher>();
+        services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+
 
         return services;
     }

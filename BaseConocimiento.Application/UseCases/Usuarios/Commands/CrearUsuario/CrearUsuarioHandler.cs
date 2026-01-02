@@ -1,4 +1,5 @@
-﻿using BaseConocimiento.Application.Interfaces.Persistence;
+﻿using BaseConocimiento.Application.Interfaces.Auth;
+using BaseConocimiento.Application.Interfaces.Persistence;
 using BaseConocimiento.Domain.Entities;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -15,10 +16,12 @@ namespace BaseConocimiento.Application.UseCases.Categorias.CrearCategoria
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<CrearUsuarioHandler> _logger;
+        private readonly IPasswordHasher _passwordHasher;
 
-        public CrearUsuarioHandler(IUnitOfWork unitOfWork, ILogger<CrearUsuarioHandler> logger)
+        public CrearUsuarioHandler(IUnitOfWork unitOfWork, IPasswordHasher passwordHasher, ILogger<CrearUsuarioHandler> logger)
         {
             _unitOfWork = unitOfWork;
+            _passwordHasher = passwordHasher;
             _logger = logger;
         }
 
@@ -26,20 +29,15 @@ namespace BaseConocimiento.Application.UseCases.Categorias.CrearCategoria
         {
             try
             {
-                // Validar que el email no exista
                 var existente = await _unitOfWork.Usuarios.ObtenerPorEmailAsync(request.Email, ct);
                 if (existente != null)
                 {
-                    return new CrearUsuarioResponse
-                    {
-                        Exitoso = false,
-                        Mensaje = "Ya existe un usuario con ese email"
-                    };
+                    return new CrearUsuarioResponse { Exitoso = false, Mensaje = "Ya existe un usuario con ese email" };
                 }
 
                 var usuario = Usuario.Crear(request.NombreCompleto, request.Email, request.Rol);
 
-                var passwordHash = HashPassword(request.Password);
+                var passwordHash = _passwordHasher.HashPassword(request.Password);
                 usuario.AsignarPassword(passwordHash);
 
                 if (!string.IsNullOrEmpty(request.Departamento))
@@ -48,31 +46,16 @@ namespace BaseConocimiento.Application.UseCases.Categorias.CrearCategoria
                 await _unitOfWork.Usuarios.AgregarAsync(usuario, ct);
                 await _unitOfWork.SaveChangesAsync(ct);
 
-                _logger.LogInformation("Usuario creado: {UsuarioId} - {Email}", usuario.Id, usuario.Email);
+                _logger.LogInformation("Usuario creado: {UsuarioId}", usuario.Id);
 
-                return new CrearUsuarioResponse
-                {
-                    Exitoso = true,
-                    UsuarioId = usuario.Id,
-                    Mensaje = "Usuario creado exitosamente"
-                };
+                return new CrearUsuarioResponse { Exitoso = true, UsuarioId = usuario.Id, Mensaje = "Usuario creado exitosamente" };
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al crear usuario: {Email}", request.Email);
-                return new CrearUsuarioResponse
-                {
-                    Exitoso = false,
-                    Mensaje = $"Error: {ex.Message}"
-                };
+                return new CrearUsuarioResponse { Exitoso = false, Mensaje = $"Error: {ex.Message}" };
             }
-        }
-
-        private string HashPassword(string password)
-        {
-            using var sha256 = SHA256.Create();
-            var bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-            return Convert.ToBase64String(bytes);
         }
     }
 }
+

@@ -1,20 +1,28 @@
 import React, { useState, useEffect, memo } from 'react';
 import { 
   MessageSquare, UploadCloud, Library, FolderTree, 
-  LayoutDashboard, Settings, RefreshCcw, Activity,
-  Menu, X, ChevronRight
+  Settings, RefreshCcw, Activity, Menu, X, ChevronRight, LogOut 
 } from 'lucide-react';
 
+// Páginas e Integraciones
 import ChatPage from './pages/ChatPage';
 import UploadPage from './pages/UploadPage';
 import LibraryPage from './pages/LibraryPage';
 import CategoriesPage from './pages/CategoriesPage';
 import AdminCategoriasPage from './pages/AdminCategoriasPage';
+import Login from './pages/Login'; // Importamos el Login
 import InuzaruAvatar from './assets/inuzaru_avatar.png';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 const App = () => {
+  // --- LÓGICA DE AUTENTICACIÓN NUEVA ---
+  const [user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem('inuzaru_user');
+    const token = localStorage.getItem('inuzaru_token');
+    return (savedUser && token) ? JSON.parse(savedUser) : null;
+  });
+
   const [currentSection, setCurrentSection] = useState('chat');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
@@ -28,6 +36,7 @@ const App = () => {
     api: 'loading', qdrant: 'loading', database: 'loading', ollama: 'loading', redis: 'loading'
   });
 
+  // --- TU LÓGICA DE SALUD (LA QUE ANDA BIEN) ---
   const checkHealth = async () => {
     try {
       const response = await fetch(`${API_BASE_URL}/Infraestructura/estado`);
@@ -49,32 +58,47 @@ const App = () => {
   };
 
   useEffect(() => {
-    checkHealth();
-    const i = setInterval(checkHealth, 30000);
-    return () => clearInterval(i);
-  }, []);
+    if (user) { // Solo checkear salud si hay usuario logueado
+      checkHealth();
+      const i = setInterval(checkHealth, 30000);
+      return () => clearInterval(i);
+    }
+  }, [user]);
+
+  // --- ACCIÓN DE LOGOUT ---
+  const handleLogout = () => {
+    localStorage.removeItem('inuzaru_token');
+    localStorage.removeItem('inuzaru_user');
+    setUser(null);
+    setConversacionId(null);
+  };
 
   const navigateTo = (section) => {
     setCurrentSection(section);
     setIsMobileMenuOpen(false);
   };
 
+  // --- RENDER CONDICIONAL DE LOGIN ---
+  if (!user) {
+    return <Login onLoginSuccess={(userData) => setUser(userData)} />;
+  }
+
   const renderContent = () => {
     switch (currentSection) {
-      // props a chatpage
       case 'chat': return (
         <ChatPage 
+          user={user}
           conversacionId={conversacionId} 
           setConversacionId={setConversacionId}
           messages={messages}
           setMessages={setMessages}
         />
       );
-      case 'subir': return <UploadPage />;
-      case 'biblioteca': return <LibraryPage />;
-      case 'categorias': return <CategoriesPage />;
-      case 'admin-categorias': return <AdminCategoriasPage />;
-      default: return <ChatPage />;
+      case 'subir': return <UploadPage user={user} />;
+      case 'biblioteca': return <LibraryPage user={user} />;
+      case 'categorias': return <CategoriesPage user={user} />;
+      case 'admin-categorias': return <AdminCategoriasPage user={user} />;
+      default: return <ChatPage user={user} />;
     }
   };
 
@@ -97,16 +121,37 @@ const App = () => {
           <button className="lg:hidden text-slate-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}><X size={24} /></button>
         </div>
 
-        <nav className="flex-1 space-y-1">
+        <nav className="space-y-1">
           <MenuButton icon={<MessageSquare size={18} />} label="Chat Inteligente" active={currentSection === 'chat'} onClick={() => navigateTo('chat')} />
           <MenuButton icon={<FolderTree size={18} />} label="Explorador Ramas" active={currentSection === 'categorias'} onClick={() => navigateTo('categorias')} />
           <MenuButton icon={<Library size={18} />} label="Biblioteca Global" active={currentSection === 'biblioteca'} onClick={() => navigateTo('biblioteca')} />
           <MenuButton icon={<UploadCloud size={18} />} label="Cargar Manuales" active={currentSection === 'subir'} onClick={() => navigateTo('subir')} />
-          <MenuButton icon={<Settings size={18} />} label="Admin. Categorías" active={currentSection === 'admin-categorias'} onClick={() => navigateTo('admin-categorias')} />
+          
+          {/* Solo mostrar si es Admin (Rol 1 o texto Admin) */}
+          {(user.rol === 1 || user.rol === "Admin" || user.rol === "Administrador") && (
+            <MenuButton icon={<Settings size={18} />} label="Admin. Categorías" active={currentSection === 'admin-categorias'} onClick={() => navigateTo('admin-categorias')} />
+          )}
         </nav>
 
+        {/* LOGO DECORATIVO QUE TE GUSTA */}
         <div className="flex-1 flex items-center justify-center pointer-events-none my-4 relative overflow-hidden opacity-150">
           <img src={InuzaruAvatar} className="w-full h-full scale-150 object-contain" style={{ maskImage: 'radial-gradient(circle, black 30%, transparent 80%)', WebkitMaskImage: 'radial-gradient(circle, black 30%, transparent 80%)' }} />
+        </div>
+
+        {/* PANEL DE USUARIO Y LOGOUT */}
+        <div className="mt-4 pt-4 border-t border-slate-800">
+          <div className="flex items-center gap-3 mb-4 px-2">
+            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-black text-xs text-white">
+              {user.nombreCompleto?.charAt(0).toUpperCase()}
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-xs font-bold text-white truncate">{user.nombreCompleto}</p>
+              <p className="text-[9px] text-slate-500 uppercase font-black">{user.rol}</p>
+            </div>
+            <button onClick={handleLogout} className="text-slate-500 hover:text-red-400 transition-colors">
+              <LogOut size={16} />
+            </button>
+          </div>
         </div>
 
         <HealthPanel servicesStatus={servicesStatus} onRefresh={checkHealth} />
@@ -130,7 +175,8 @@ const App = () => {
   );
 };
 
-//MenuButton y HealthPanel
+// --- SUBCOMPONENTES ---
+
 const MenuButton = ({ icon, label, active, onClick }) => (
   <button onClick={onClick} className={`w-full flex items-center justify-between p-3.5 rounded-2xl transition-all ${active ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20 font-bold' : 'text-slate-400 hover:bg-slate-800'}`}>
     <div className="flex items-center gap-3">

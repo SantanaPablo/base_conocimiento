@@ -1,14 +1,40 @@
-// WebApi/Program.cs
 using BaseConocimiento.Infrastructure;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
+using System.Text;
 
-
+AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.ValidateConfiguration(builder.Configuration);
 
 builder.Services.AddInfrastructure(builder.Configuration);
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? throw new InvalidOperationException("JWT Key not configured"))
+        ),
+        ClockSkew = TimeSpan.Zero
+    };
+});
+
+builder.Services.AddAuthorization();
 
 builder.Services.AddMediatR(cfg =>
 {
@@ -65,11 +91,21 @@ builder.WebHost.ConfigureKestrel(options =>
     options.Limits.MaxRequestBodySize = 104857600;
 });
 
+
+var qdrantHost = builder.Configuration["Qdrant:Host"];
+var qdrantPort = builder.Configuration["Qdrant:RestPort"] ?? "6333";
+
 builder.Services.AddHealthChecks()
     .AddNpgSql(builder.Configuration.GetConnectionString("PostgreSQL"), name: "PostgreSQL")
-    .AddRedis(builder.Configuration["Redis:ConnectionString"] ?? "localhost:6379", name: "Redis")
-    .AddUrlGroup(new Uri("http://localhost:6333/metrics"), name: "Qdrant")
-    .AddUrlGroup(new Uri($"{builder.Configuration["AI:OllamaBaseUrl"]}/api/tags"), name: "Ollama");
+    .AddRedis(builder.Configuration["Redis:ConnectionString"], name: "Redis")
+    .AddUrlGroup(
+        new Uri($"http://{qdrantHost}:{qdrantPort}/metrics"),
+        name: "Qdrant"
+    )
+    .AddUrlGroup(
+        new Uri($"{builder.Configuration["AI:OllamaBaseUrl"]}/api/tags"),
+        name: "Ollama"
+    );
 
 var app = builder.Build();
 
@@ -91,6 +127,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCors("AllowFrontend");
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

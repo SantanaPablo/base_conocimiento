@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\BaseConocimiento.API.csproj": {}
+    "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\BaseConocimiento.API.csproj": {}
   },
   "projects": {
-    "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\BaseConocimiento.API.csproj": {
+    "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\BaseConocimiento.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\BaseConocimiento.API.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\BaseConocimiento.API.csproj",
         "projectName": "BaseConocimiento.API",
-        "projectPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\BaseConocimiento.API.csproj",
-        "packagesPath": "C:\\Users\\Pablo Santana\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\obj\\",
+        "projectPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\BaseConocimiento.API.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Pablo Santana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj": {
-                "projectPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj"
+              "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj"
               }
             }
           }
@@ -48,7 +48,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -65,6 +65,10 @@
             "AspNetCore.HealthChecks.Uris": {
               "target": "Package",
               "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.22, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -96,24 +100,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj": {
+    "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj",
         "projectName": "BaseConocimiento.Application",
-        "projectPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj",
-        "packagesPath": "C:\\Users\\Pablo Santana\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\obj\\",
+        "projectPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Pablo Santana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -128,8 +132,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj": {
-                "projectPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj"
+              "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj": {
+                "projectPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj"
               }
             }
           }
@@ -144,7 +148,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -175,24 +179,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj": {
+    "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj",
         "projectName": "BaseConocimiento.Domain",
-        "projectPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj",
-        "packagesPath": "C:\\Users\\Pablo Santana\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\obj\\",
+        "projectPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Pablo Santana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -219,7 +223,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -240,24 +244,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj": {
+    "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj",
         "projectName": "BaseConocimiento.Infrastructure",
-        "projectPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Pablo Santana\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\obj\\",
+        "projectPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\BaseConocimiento.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Infraestructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Pablo Santana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -272,11 +276,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj": {
-                "projectPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj"
+              "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj": {
+                "projectPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Application\\BaseConocimiento.Application.csproj"
               },
-              "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj": {
-                "projectPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj"
+              "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj": {
+                "projectPath": "C:\\Users\\USUARIO\\Desktop\\base_conocimiento\\base_conocimiento\\BaseConocimiento.Domain\\BaseConocimiento.Domain.csproj"
               }
             }
           }
@@ -291,7 +295,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -313,6 +317,10 @@
               "target": "Package",
               "version": "[8.0.11, )"
             },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.14.0, )"
+            },
             "Polly": {
               "target": "Package",
               "version": "[8.6.5, )"
@@ -324,6 +332,10 @@
             "StackExchange.Redis": {
               "target": "Package",
               "version": "[2.10.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.15.0, )"
             },
             "itext": {
               "target": "Package",
@@ -346,7 +358,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
