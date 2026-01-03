@@ -28,21 +28,21 @@ namespace BaseConocimiento.API.Controllers
         }
 
         /// <summary>
-        /// Listar manuales con filtros y paginación
+        /// Listar manuales con filtros y paginaciÃ³n
         /// </summary>
         [HttpGet]
         public async Task<IActionResult> ListarManuales(
             [FromQuery] Guid? categoriaId = null,
             [FromQuery] string? terminoBusqueda = null,
             [FromQuery] int pagina = 1,
-            [FromQuery] int tamañoPagina = 10)
+            [FromQuery] int tamaÃ±oPagina = 10)
         {
             var query = new ListarManualesQuery
             {
                 CategoriaId = categoriaId,
                 TerminoBusqueda = terminoBusqueda,
                 Pagina = pagina,
-                TamañoPagina = tamañoPagina
+                TamaÃ±oPagina = tamaÃ±oPagina
             };
 
             var response = await _mediator.Send(query);
@@ -99,7 +99,7 @@ namespace BaseConocimiento.API.Controllers
         public async Task<IActionResult> SubirManual([FromForm] SubirManualRequest request)
         {
             if (request.Archivo == null || request.Archivo.Length == 0)
-                return BadRequest(new { mensaje = "No se recibió ningún archivo" });
+                return BadRequest(new { mensaje = "No se recibiÃ³ ningÃºn archivo" });
 
             var command = new SubirManualCommand
             {
