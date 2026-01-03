@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Elementos de la solución/">
     <File Path="docker-compose.yml" />
+    <File Path="Dockerfile" />
   </Folder>
   <Project Path="BaseConocimiento.API/BaseConocimiento.API.csproj" />
   <Project Path="BaseConocimiento.Application/BaseConocimiento.Application.csproj" />

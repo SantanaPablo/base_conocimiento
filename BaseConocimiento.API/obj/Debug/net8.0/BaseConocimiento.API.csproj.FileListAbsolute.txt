@@ -335,3 +335,11 @@ C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.AP
 C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.API\bin\Debug\net8.0\OpenTelemetry.Api.dll
 C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.API\bin\Debug\net8.0\OpenTelemetry.Api.ProviderBuilderExtensions.dll
 C:\Users\USUARIO\Desktop\base_conocimiento\base_conocimiento\BaseConocimiento.API\bin\Debug\net8.0\OpenTelemetry.Extensions.Hosting.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\OpenTelemetry.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\OpenTelemetry.Api.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\OpenTelemetry.Api.ProviderBuilderExtensions.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\OpenTelemetry.Extensions.Hosting.dll
+D:\Users\Pablo Santana\source\repos\BaseConocimiento\BaseConocimiento.API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
