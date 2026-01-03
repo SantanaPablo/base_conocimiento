@@ -1,0 +1,27 @@
+name: Deploy INUZARU Front
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'baseconocimientofront/**'
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build and Run Front
+        run: |
+          cd baseconocimientofront
+          docker build -t inuzaru-front .
+          docker stop inuzaru-front || true
+          docker rm inuzaru-front || true
+          
+          docker run -d \
+            --name inuzaru-front \
+            --restart always \
+            -p 3000:80 \
+            inuzaru-front
