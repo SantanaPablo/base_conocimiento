@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -95,10 +99,6 @@
       "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\dtos\\manuales\\actualizarestadorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|d:\\users\\pablo santana\\source\\repos\\baseconocimiento\\baseconocimiento.api\\controllers\\estadisticascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78712520-085C-E153-EC05-80AC4ED00F61}|BaseConocimiento.API\\BaseConocimiento.API.csproj|solutionrelative:baseconocimiento.api\\controllers\\estadisticascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -178,7 +178,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 279,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -186,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ManualesController.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\ManualesController.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\ManualesController.cs",
@@ -198,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UsuariosController.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\UsuariosController.cs",
@@ -210,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ConversacionesController.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\ConversacionesController.cs",
@@ -222,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CategoriasController.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\CategoriasController.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\CategoriasController.cs",
@@ -235,7 +235,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Program.cs",
+              "RelativeDocumentMoniker": "BaseConocimiento.API\\Program.cs",
+              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Program.cs",
+              "RelativeToolTip": "BaseConocimiento.API\\Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAswDQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:09:25.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "InfraestructuraController.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Controllers\\InfraestructuraController.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\Controllers\\InfraestructuraController.cs",
@@ -247,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\appsettings.json",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\appsettings.json",
@@ -259,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "BaseConocimiento.API.csproj",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\BaseConocimiento.API.csproj",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\BaseConocimiento.API.csproj",
@@ -271,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
@@ -283,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "FileStorageService.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\Services\\Storage\\FileStorageService.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\Storage\\FileStorageService.cs",
@@ -295,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "DescargarManualQuery.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\DescargarManual\\DescargarManualQuery.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\DescargarManual\\DescargarManualQuery.cs",
@@ -307,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "QdrantInitializerHostedService.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\Services\\VectorStore\\QdrantInitializerHostedService.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\VectorStore\\QdrantInitializerHostedService.cs",
@@ -319,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "DescargarManualHandler.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\DescargarManual\\DescargarManualHandler.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\DescargarManual\\DescargarManualHandler.cs",
@@ -331,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Manual.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\Entities\\Manual.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Domain\\Entities\\Manual.cs",
@@ -343,7 +356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ObtenerManualPorIdHandler.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerManualPorId\\ObtenerManualPorIdHandler.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\Manuales\\Queries\\ObtenerManualPorId\\ObtenerManualPorIdHandler.cs",
@@ -355,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Usuario.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\Entities\\Usuario.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Domain\\Entities\\Usuario.cs",
@@ -367,7 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "QdrantService.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\Services\\VectorStore\\QdrantService.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\VectorStore\\QdrantService.cs",
@@ -379,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "RedisConversationService.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Infraestructure\\Services\\Conversation\\RedisConversationService.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Infraestructure\\Services\\Conversation\\RedisConversationService.cs",
@@ -391,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "IFileStorageService.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\Interfaces\\Storage\\IFileStorageService.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Application\\Interfaces\\Storage\\IFileStorageService.cs",
@@ -403,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "EstadoManual.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Domain\\Enums\\EstadoManual.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Domain\\Enums\\EstadoManual.cs",
@@ -415,7 +428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "ObtenerEstadisticasQuery.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\UseCases\\ObtenerEstadisticas\\ObtenerEstadisticasQuery.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\ObtenerEstadisticas\\ObtenerEstadisticasQuery.cs",
@@ -427,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "BaseConocimiento.API.http",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\BaseConocimiento.API.http",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\BaseConocimiento.API.http",
@@ -439,7 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "ObtenerEstadisticasHandler.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.Application\\UseCases\\ObtenerEstadisticas\\ObtenerEstadisticasHandler.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.Application\\UseCases\\ObtenerEstadisticas\\ObtenerEstadisticasHandler.cs",
@@ -464,18 +477,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Program.cs",
-              "RelativeDocumentMoniker": "BaseConocimiento.API\\Program.cs",
-              "ToolTip": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\Program.cs",
-              "RelativeToolTip": "BaseConocimiento.API\\Program.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAowHUAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T17:09:25.536Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
               "Title": "ActualizarEstadoRequest.cs",
               "DocumentMoniker": "D:\\Users\\Pablo Santana\\source\\repos\\BaseConocimiento\\BaseConocimiento.API\\DTOs\\Manuales\\ActualizarEstadoRequest.cs",
               "RelativeDocumentMoniker": "BaseConocimiento.API\\DTOs\\Manuales\\ActualizarEstadoRequest.cs",

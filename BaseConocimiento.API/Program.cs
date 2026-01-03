@@ -50,6 +50,11 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
                 "http://localhost:3000",
+                "http://192.168.0.246:3000",
+                "http://localhost:3000",
+                "http://192.168.0.246:3000",
+                "https://inuzaru.taild221a4.ts.net",
+                "http://inuzaru.taild221a4.ts.net",
                 "http://localhost:5173",
                 "http://localhost:5174"
             )
