@@ -2,6 +2,7 @@
 using BaseConocimiento.Application.Interfaces.Conversation;
 using BaseConocimiento.Application.Interfaces.Persistence;
 using BaseConocimiento.Application.Interfaces.VectorStore;
+using BaseConocimiento.Domain.Entities;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
@@ -50,84 +51,84 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
                     !await _conversationService.ExisteConversacionAsync(conversacionId))
                 {
                     conversacionId = await _conversationService.CrearConversacionAsync(request.UsuarioId);
-                    _logger.LogInformation("Nueva conversación: {ConversacionId}", conversacionId);
+                    _logger.LogInformation("🆕 Nueva conversación: {ConversacionId}", conversacionId);
                 }
 
-                //Obtener historial
-                var historial = await _conversationService.ObtenerUltimosMensajesAsync(conversacionId, 5);
-                _logger.LogInformation("Historial: {Count} mensajes", historial.Count);
+                // GENERAR EMBEDDING DE LA PREGUNTA ACTUAL
+                _logger.LogDebug("🔍 Generando embedding para: {Pregunta}", request.Pregunta);
+                var embeddingActual = await _embeddingService.GenerarEmbeddingAsync(request.Pregunta);
 
-                //Generar embedding y buscar
-                var embedding = await _embeddingService.GenerarEmbeddingAsync(request.Pregunta);
+                // Buscar en Qdrant
                 var resultados = await _qdrantService.BuscarSimilaresAsync(
-                    embedding,
+                    embeddingActual,
                     request.TopK,
                     string.IsNullOrEmpty(request.Categoria) ? null : request.Categoria
                 );
 
                 if (!resultados.Any())
                 {
+                    await _conversationService.AgregarMensajeAsync(conversacionId, "user", request.Pregunta);
+                    await _conversationService.AgregarMensajeAsync(conversacionId, "assistant",
+                        "Che, no encontré info relevante. ¿Podés reformular la pregunta?");
+
                     return new ConsultarConConversacionResponse
                     {
                         Exitoso = true,
                         ConversacionId = conversacionId,
-                        Respuesta = "No encontré información relevante.",
+                        Respuesta = "Che, no encontré info relevante. ¿Podés reformular la pregunta?",
                         Fuentes = new List<FuenteConsultada>()
                     };
                 }
 
+                // DETECTAR CAMBIO DE TEMA
+                var historial = await _conversationService.ObtenerUltimosMensajesAsync(conversacionId, 5);
+                bool esCambioTema = await DetectarCambioTemaAsync(historial, embeddingActual);
+
+                if (esCambioTema)
+                {
+                    _logger.LogWarning("🔄 CAMBIO DE TEMA DETECTADO - Limpiando historial");
+                    historial = new List<MensajeConversacion>(); // 🔥 LIMPIAR HISTORIAL COMPLETO
+                }
+                else
+                {
+                    _logger.LogDebug("➡️ Mismo tema - Historial: {Count} mensajes", historial.Count);
+                }
+
+                // Obtener info de manuales
                 var manualIds = resultados.Select(r => r.ManualId).Distinct();
-                var manuales = new Dictionary<Guid, string>();
+                var manuales = new Dictionary<Guid, ManualInfo>();
+
                 foreach (var id in manualIds)
                 {
                     var manual = await _unitOfWork.Manuales.ObtenerPorIdAsync(id, cancellationToken);
-                    manuales[id] = manual?.Titulo ?? "Desconocido";
+                    if (manual != null)
+                    {
+                        manuales[id] = new ManualInfo
+                        {
+                            Titulo = manual.Titulo,
+                            Categoria = manual.Categoria?.Nombre ?? "Sin categoría"
+                        };
+                    }
                 }
-                var contexto = string.Join("\n\n", resultados.Select((r, i) =>
-                {
-                    var titulo = manuales.GetValueOrDefault(r.ManualId) ?? "Manual no encontrado";
-                    return $"[Fuente {i + 1} - {titulo}, Pág. {r.NumeroPagina}]\n{r.TextoOriginal}";
-                }));
-                var instrucciones = new StringBuilder();
-                instrucciones.AppendLine("Sos Inuzaru, técnico nivel 2 de IT. Tu única fuente de verdad es la DOCUMENTACIÓN TÉCNICA.");
-                if (historial != null && historial.Any()) {
-    instrucciones.AppendLine("- Estás en una charla activa. Si el usuario cambió de tema, avisale y priorizá el nuevo manual.");
-} else {
-    instrucciones.AppendLine("- Esta es una consulta nueva. No menciones conversaciones anteriores porque no existen.");
-}
 
-instrucciones.AppendLine("- Si la info no está en el manual, admitilo. No inventes archivos .exe.");
+                // Construir contexto enriquecido
+                var contexto = ConstruirContexto(resultados, manuales);
 
-                var prompt = $@"### INSTRUCCIÓN DE SISTEMA: PRIORIDAD DE DATOS
-Sos Inuzaru. Tu prioridad absoluta es la 'DOCUMENTACIÓN TÉCNICA' que sigue abajo. 
-Si la pregunta actual cambia de tema respecto a lo que veníamos hablando antes, descartá el historial de inmediato. 
-Prohibido mezclar pasos de diferentes sistemas.
+                // Construir prompt
+                var prompt = ConstruirPrompt(contexto, request.Pregunta, esCambioTema, manuales);
 
-### DOCUMENTACIÓN TÉCNICA (Información Real de Qdrant):
-{contexto}
-
-### PREGUNTA ACTUAL DEL COMPAÑERO:
-{request.Pregunta}
-
-### REGLAS DE RESPUESTA:
-1. Respondé en español rioplatense (voseo).
-2. Si la solución no está en la 'DOCUMENTACIÓN TÉCNICA', no inventes nada.
-3. Usá el historial de mensajes SOLO si la pregunta es de seguimiento (ej: '¿y qué versión?', '¿quién es el dueño?'). Si es un tema nuevo, ignoralo.
-
-RESPUESTA:";
-
-                //Generar respuesta con historial
+                // Generar respuesta CON historial
                 var respuesta = await _chatService.GenerarRespuestaConHistorialAsync(prompt, historial);
 
-                //Guardar en historial
+                // Guardar en Redis
                 await _conversationService.AgregarMensajeAsync(conversacionId, "user", request.Pregunta);
                 await _conversationService.AgregarMensajeAsync(conversacionId, "assistant", respuesta);
 
-                //Preparar fuentes
+                // Preparar fuentes
                 var fuentes = resultados.Select(r => new FuenteConsultada
                 {
                     ManualId = r.ManualId,
-                    Titulo = manuales[r.ManualId],
+                    Titulo = manuales.ContainsKey(r.ManualId) ? manuales[r.ManualId].Titulo : "Desconocido",
                     NumeroPagina = r.NumeroPagina,
                     Relevancia = Math.Round(r.Score * 100, 2),
                     TextoFragmento = r.TextoOriginal.Length > 200
@@ -136,7 +137,7 @@ RESPUESTA:";
                 }).ToList();
 
                 sw.Stop();
-                _logger.LogInformation("Consulta con conversación completada en {Ms}ms", sw.ElapsedMilliseconds);
+                _logger.LogInformation("✅ Consulta completada en {Ms}ms", sw.ElapsedMilliseconds);
 
                 return new ConsultarConConversacionResponse
                 {
@@ -148,7 +149,7 @@ RESPUESTA:";
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error en consulta con conversación");
+                _logger.LogError(ex, "❌ Error en consulta");
                 return new ConsultarConConversacionResponse
                 {
                     Exitoso = false,
@@ -156,6 +157,152 @@ RESPUESTA:";
                     Fuentes = new List<FuenteConsultada>()
                 };
             }
+        }
+
+        private async Task<bool> DetectarCambioTemaAsync(
+            List<MensajeConversacion> historial,
+            float[] embeddingActual)
+        {
+            if (!historial.Any())
+            {
+                _logger.LogDebug("📭 Sin historial - Primera consulta");
+                return false;
+            }
+
+            // Obtener último mensaje del usuario
+            var ultimoMensaje = historial
+                .Where(m => m.Rol == "user")
+                .OrderByDescending(m => m.Timestamp)
+                .FirstOrDefault();
+
+            if (ultimoMensaje == null)
+            {
+                _logger.LogDebug("🤷 No hay mensajes de usuario");
+                return false;
+            }
+
+            try
+            {
+                // Generar embedding del mensaje anterior
+                var embeddingAnterior = await _embeddingService.GenerarEmbeddingAsync(ultimoMensaje.Contenido);
+
+                // Calcular similitud coseno
+                var similitud = CalcularSimilitudCoseno(embeddingAnterior, embeddingActual);
+
+                _logger.LogInformation("📊 Similitud: {Similitud:F3} | Anterior: '{Anterior}' | Actual: '{Actual}'",
+                    similitud,
+                    ultimoMensaje.Contenido.Substring(0, Math.Min(50, ultimoMensaje.Contenido.Length)),
+                    "pregunta actual");
+
+                // cambio de tema
+                return similitud < 0.5f;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "⚠️ Error al detectar cambio - Asumiendo mismo tema");
+                return false;
+            }
+        }
+
+        private float CalcularSimilitudCoseno(float[] a, float[] b)
+        {
+            if (a.Length != b.Length)
+            {
+                _logger.LogError("❌ Vectores diferentes: {A} vs {B}", a.Length, b.Length);
+                return 0f;
+            }
+
+            float dotProduct = 0f;
+            float magA = 0f;
+            float magB = 0f;
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                dotProduct += a[i] * b[i];
+                magA += a[i] * a[i];
+                magB += b[i] * b[i];
+            }
+
+            magA = (float)Math.Sqrt(magA);
+            magB = (float)Math.Sqrt(magB);
+
+            if (magA == 0 || magB == 0) return 0f;
+
+            return dotProduct / (magA * magB);
+        }
+
+        private string ConstruirContexto(List<ResultadoBusqueda> resultados, Dictionary<Guid, ManualInfo> manuales)
+        {
+            var sb = new StringBuilder();
+            foreach (var (r, i) in resultados.Select((r, i) => (r, i)))
+            {
+                var manual = manuales.GetValueOrDefault(r.ManualId);
+                sb.AppendLine($"[Fuente {i + 1}]");
+                sb.AppendLine($"Manual: {manual?.Titulo ?? "Desconocido"}");
+                sb.AppendLine($"Categoría: {manual?.Categoria ?? "N/A"}");
+                sb.AppendLine($"Página: {r.NumeroPagina}");
+                sb.AppendLine($"Score: {r.Score:F3}");
+                sb.AppendLine("---");
+                sb.AppendLine(r.TextoOriginal);
+                sb.AppendLine();
+            }
+            return sb.ToString();
+        }
+
+        private string ConstruirPrompt(string contexto, string pregunta, bool esCambioTema, Dictionary<Guid, ManualInfo> manuales)
+        {
+            var instrucciones = new StringBuilder();
+            instrucciones.AppendLine("Sos Inuzaru, técnico nivel 2 de IT. Tu única fuente es la DOCUMENTACIÓN TÉCNICA.");
+            instrucciones.AppendLine();
+
+            if (esCambioTema)
+            {
+                instrucciones.AppendLine(" CAMBIO DE TEMA DETECTADO:");
+                instrucciones.AppendLine(" Olvidate del contexto anterior.");
+                instrucciones.AppendLine(" Enfocate SOLO en la documentación actual.");
+            }
+            else
+            {
+                instrucciones.AppendLine(" CONTEXTO CONTINUO:");
+                instrucciones.AppendLine(" Usá el historial para dar continuidad.");
+                instrucciones.AppendLine(" Pero la documentación siempre manda.");
+            }
+
+            instrucciones.AppendLine();
+            instrucciones.AppendLine("REGLAS:");
+            instrucciones.AppendLine("1. Si no está en la doc, admitilo.");
+            instrucciones.AppendLine("2. No inventes .exe, rutas o IPs.");
+            instrucciones.AppendLine("3. No mezcles temas diferentes.");
+            instrucciones.AppendLine("4. Hablá en argentino (voseo).");
+
+            if (manuales.Any())
+            {
+                instrucciones.AppendLine();
+                instrucciones.AppendLine(" MANUALES CONSULTADOS:");
+                foreach (var m in manuales.Values.DistinctBy(x => x.Titulo))
+                    instrucciones.AppendLine($"  • {m.Titulo} ({m.Categoria})");
+            }
+
+            return $@"
+{instrucciones}
+
+═══════════════════════════════════════
+DOCUMENTACIÓN TÉCNICA:
+═══════════════════════════════════════
+{contexto}
+
+═══════════════════════════════════════
+PREGUNTA:
+═══════════════════════════════════════
+{pregunta}
+
+RESPUESTA:";
+        }
+
+        private class ManualInfo
+        {
+            public string Titulo { get; set; }
+            public string Categoria { get; set; }
         }
     }
 }
