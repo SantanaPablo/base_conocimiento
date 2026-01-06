@@ -4,12 +4,8 @@ using BaseConocimiento.Application.Interfaces.Persistence;
 using BaseConocimiento.Application.Interfaces.VectorStore;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConConversacion
 {
@@ -58,7 +54,7 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
                 }
 
                 //Obtener historial
-                var historial = await _conversationService.ObtenerUltimosMensajesAsync(conversacionId, 10);
+                var historial = await _conversationService.ObtenerUltimosMensajesAsync(conversacionId, 5);
                 _logger.LogInformation("Historial: {Count} mensajes", historial.Count);
 
                 //Generar embedding y buscar
@@ -92,20 +88,31 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
                     var titulo = manuales.GetValueOrDefault(r.ManualId) ?? "Manual no encontrado";
                     return $"[Fuente {i + 1} - {titulo}, Pág. {r.NumeroPagina}]\n{r.TextoOriginal}";
                 }));
+                var instrucciones = new StringBuilder();
+                instrucciones.AppendLine("Sos Inuzaru, técnico nivel 2 de IT. Tu única fuente de verdad es la DOCUMENTACIÓN TÉCNICA.");
+                if (historial != null && historial.Any()) {
+    instrucciones.AppendLine("- Estás en una charla activa. Si el usuario cambió de tema, avisale y priorizá el nuevo manual.");
+} else {
+    instrucciones.AppendLine("- Esta es una consulta nueva. No menciones conversaciones anteriores porque no existen.");
+}
 
-                var prompt = $@"Eres un asistente técnico que responde basándose ÚNICAMENTE en el contexto proporcionado.
+instrucciones.AppendLine("- Si la info no está en el manual, admitilo. No inventes archivos .exe.");
 
-CONTEXTO DE LOS MANUALES:
+                var prompt = $@"### INSTRUCCIÓN DE SISTEMA: PRIORIDAD DE DATOS
+Sos Inuzaru. Tu prioridad absoluta es la 'DOCUMENTACIÓN TÉCNICA' que sigue abajo. 
+Si la pregunta actual cambia de tema respecto a lo que veníamos hablando antes, descartá el historial de inmediato. 
+Prohibido mezclar pasos de diferentes sistemas.
+
+### DOCUMENTACIÓN TÉCNICA (Información Real de Qdrant):
 {contexto}
 
-PREGUNTA ACTUAL:
+### PREGUNTA ACTUAL DEL COMPAÑERO:
 {request.Pregunta}
 
-INSTRUCCIONES:
-- Responde SOLO con información del contexto
-- Si mencionas algo del historial, hazlo brevemente
-- Sé claro y profesional
-- Cita las fuentes cuando sea relevante
+### REGLAS DE RESPUESTA:
+1. Respondé en español rioplatense (voseo).
+2. Si la solución no está en la 'DOCUMENTACIÓN TÉCNICA', no inventes nada.
+3. Usá el historial de mensajes SOLO si la pregunta es de seguimiento (ej: '¿y qué versión?', '¿quién es el dueño?'). Si es un tema nuevo, ignoralo.
 
 RESPUESTA:";
 

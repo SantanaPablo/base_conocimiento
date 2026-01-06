@@ -64,8 +64,8 @@ namespace BaseConocimiento.Infrastructure.Services.AI.Ollama
                     stream = false,
                     options = new
                     {
-                        temperature = 0.3,  // Igual que en Modelfile
-                        num_ctx = 4096,     // Igual que en Modelfile
+                        temperature = 0.2,  
+                        num_ctx = 4096,    
                         num_predict = 512,
                         num_gpu = -1, //auto
                         num_thread = 8

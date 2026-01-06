@@ -25,6 +25,7 @@ const App = () => {
   const [currentSection, setCurrentSection] = useState('chat');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
+  // 🔥 FIX: No inicializar conversacionId del localStorage
   const [conversacionId, setConversacionId] = useState(null);
   const [messages, setMessages] = useState([
     { role: 'bot', content: 'Mi olfato digital está al 100%. ¿Qué duda técnica tenés hoy?' }
@@ -33,6 +34,17 @@ const App = () => {
   const [servicesStatus, setServicesStatus] = useState({
     api: 'loading', qdrant: 'loading', database: 'loading', ollama: 'loading', redis: 'loading'
   });
+
+  // 🔥 FIX: Limpiar conversación al montar la app
+  useEffect(() => {
+    if (user) {
+      // Forzar nueva conversación al cargar
+      setConversacionId(null);
+      setMessages([
+        { role: 'bot', content: 'Mi olfato digital está al 100%. ¿Qué duda técnica tenés hoy?' }
+      ]);
+    }
+  }, []); // Solo al montar, no depende de 'user'
 
   const checkHealth = async () => {
     try {
@@ -67,6 +79,9 @@ const App = () => {
     localStorage.removeItem('inuzaru_user');
     setUser(null);
     setConversacionId(null);
+    setMessages([
+      { role: 'bot', content: 'Mi olfato digital está al 100%. ¿Qué duda técnica tenés hoy?' }
+    ]);
   };
 
   const navigateTo = (section) => {
