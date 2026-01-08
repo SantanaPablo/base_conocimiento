@@ -51,11 +51,11 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
                     !await _conversationService.ExisteConversacionAsync(conversacionId))
                 {
                     conversacionId = await _conversationService.CrearConversacionAsync(request.UsuarioId);
-                    _logger.LogInformation("🆕 Nueva conversación: {ConversacionId}", conversacionId);
+                    _logger.LogInformation("Nueva conversación: {ConversacionId}", conversacionId);
                 }
 
                 // GENERAR EMBEDDING DE LA PREGUNTA ACTUAL
-                _logger.LogDebug("🔍 Generando embedding para: {Pregunta}", request.Pregunta);
+                _logger.LogDebug("Generando embedding para: {Pregunta}", request.Pregunta);
                 var embeddingActual = await _embeddingService.GenerarEmbeddingAsync(request.Pregunta);
 
                 // Buscar en Qdrant
@@ -69,13 +69,13 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
                 {
                     await _conversationService.AgregarMensajeAsync(conversacionId, "user", request.Pregunta);
                     await _conversationService.AgregarMensajeAsync(conversacionId, "assistant",
-                        "Che, no encontré info relevante. ¿Podés reformular la pregunta?");
+                        "No encontré info relevante. ¿Podés reformular la pregunta?");
 
                     return new ConsultarConConversacionResponse
                     {
                         Exitoso = true,
                         ConversacionId = conversacionId,
-                        Respuesta = "Che, no encontré info relevante. ¿Podés reformular la pregunta?",
+                        Respuesta = "No encontré info relevante. ¿Podés reformular la pregunta?",
                         Fuentes = new List<FuenteConsultada>()
                     };
                 }
@@ -86,12 +86,12 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
 
                 if (esCambioTema)
                 {
-                    _logger.LogWarning("🔄 CAMBIO DE TEMA DETECTADO - Limpiando historial");
-                    historial = new List<MensajeConversacion>(); // 🔥 LIMPIAR HISTORIAL COMPLETO
+                    _logger.LogWarning("CAMBIO DE TEMA DETECTADO - Limpiando historial");
+                    historial = new List<MensajeConversacion>();
                 }
                 else
                 {
-                    _logger.LogDebug("➡️ Mismo tema - Historial: {Count} mensajes", historial.Count);
+                    _logger.LogDebug("Mismo tema - Historial: {Count} mensajes", historial.Count);
                 }
 
                 // Obtener info de manuales
@@ -137,7 +137,7 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
                 }).ToList();
 
                 sw.Stop();
-                _logger.LogInformation("✅ Consulta completada en {Ms}ms", sw.ElapsedMilliseconds);
+                _logger.LogInformation("Consulta completada en {Ms}ms", sw.ElapsedMilliseconds);
 
                 return new ConsultarConConversacionResponse
                 {
@@ -149,7 +149,7 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "❌ Error en consulta");
+                _logger.LogError(ex, "Error en consulta");
                 return new ConsultarConConversacionResponse
                 {
                     Exitoso = false,
@@ -165,7 +165,7 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
         {
             if (!historial.Any())
             {
-                _logger.LogDebug("📭 Sin historial - Primera consulta");
+                _logger.LogDebug("Sin historial - Primera consulta");
                 return false;
             }
 
@@ -177,7 +177,7 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
 
             if (ultimoMensaje == null)
             {
-                _logger.LogDebug("🤷 No hay mensajes de usuario");
+                _logger.LogDebug("No hay mensajes de usuario");
                 return false;
             }
 
@@ -189,7 +189,7 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
                 // Calcular similitud coseno
                 var similitud = CalcularSimilitudCoseno(embeddingAnterior, embeddingActual);
 
-                _logger.LogInformation("📊 Similitud: {Similitud:F3} | Anterior: '{Anterior}' | Actual: '{Actual}'",
+                _logger.LogInformation("Similitud: {Similitud:F3} | Anterior: '{Anterior}' | Actual: '{Actual}'",
                     similitud,
                     ultimoMensaje.Contenido.Substring(0, Math.Min(50, ultimoMensaje.Contenido.Length)),
                     "pregunta actual");
@@ -199,7 +199,7 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
             }
             catch (Exception ex)
             {
-                _logger.LogWarning(ex, "⚠️ Error al detectar cambio - Asumiendo mismo tema");
+                _logger.LogWarning(ex, "Error al detectar cambio - Asumiendo mismo tema");
                 return false;
             }
         }
@@ -208,7 +208,7 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
         {
             if (a.Length != b.Length)
             {
-                _logger.LogError("❌ Vectores diferentes: {A} vs {B}", a.Length, b.Length);
+                _logger.LogError("Vectores diferentes: {A} vs {B}", a.Length, b.Length);
                 return 0f;
             }
 

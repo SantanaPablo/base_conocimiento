@@ -43,7 +43,7 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
 
                 if (!existe)
                 {
-                    _logger.LogInformation("🚀 Creando nueva colección: {CollectionName}...", _collectionName);
+                    _logger.LogInformation("Creando nueva colección: {CollectionName}...", _collectionName);
 
                     await _client.CreateCollectionAsync(
                         _collectionName,
@@ -54,16 +54,16 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
                         }
                     );
 
-                    _logger.LogInformation("✅ Colección Qdrant creada exitosamente.");
+                    _logger.LogInformation("Colección Qdrant creada exitosamente.");
                 }
                 else
                 {
-                    _logger.LogInformation("♻️ Usando colección existente: {CollectionName}", _collectionName);
+                    _logger.LogInformation("Usando colección existente: {CollectionName}", _collectionName);
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "❌ Error crítico al inicializar Qdrant. Verifique que VectorSize coincida con la colección existente.");
+                _logger.LogError(ex, "Error crítico al inicializar Qdrant. Verifique que VectorSize coincida con la colección existente.");
                 throw;
             }
         }
@@ -97,11 +97,11 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
                 }
 
                 await _client.UpsertAsync(_collectionName, points);
-                _logger.LogInformation("✅ {Count} vectores indexados para el manual {Id}", chunks.Count, manualId);
+                _logger.LogInformation("{Count} vectores indexados para el manual {Id}", chunks.Count, manualId);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "❌ Error al insertar vectores en Qdrant");
+                _logger.LogError(ex, "Error al insertar vectores en Qdrant");
                 throw;
             }
         }
@@ -147,14 +147,14 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
                     .Take(topK)
                     .ToList();
 
-                _logger.LogInformation("🔍 Búsqueda realizada: {Count} candidatos encontrados sobre el umbral {T}",
+                _logger.LogInformation("Búsqueda realizada: {Count} candidatos encontrados sobre el umbral {T}",
                     resultados.Count, thresholdBge);
 
                 return resultados;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "❌ Error en la búsqueda de similitud");
+                _logger.LogError(ex, "Error en la búsqueda de similitud");
                 return new List<ResultadoBusqueda>();
             }
         }
@@ -169,12 +169,12 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
                 };
 
                 await _client.DeleteAsync(_collectionName, filter);
-                _logger.LogInformation("🗑️ Vectores eliminados para manual: {ManualId}", manualId);
+                _logger.LogInformation("Vectores eliminados para manual: {ManualId}", manualId);
                 return true;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "❌ Error al eliminar vectores");
+                _logger.LogError(ex, "Error al eliminar vectores");
                 return false;
             }
         }
@@ -193,7 +193,7 @@ namespace BaseConocimiento.Infrastructure.Services.VectorStore
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "❌ Error al verificar existencia de vectores");
+                _logger.LogError(ex, "Error al verificar existencia de vectores");
                 return false;
             }
         }
