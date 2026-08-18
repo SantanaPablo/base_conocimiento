@@ -1,6 +1,5 @@
 qdrant_storage/
 postgres_data/
-storage/
 .env
 .vs/
 [Bb]in/
