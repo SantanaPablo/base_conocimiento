@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConConversacion
 {
     public class ConsultarConConversacionHandler
-       : IRequestHandler<ConsultarConConversacionCommand, ConsultarConConversacionResponse>
+    : IRequestHandler<ConsultarConConversacionCommand, ConsultarConConversacionResponse>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IEmbeddingService _embeddingService;
@@ -95,19 +95,19 @@ namespace BaseConocimiento.Application.UseCases.Consultas.Commands.ConsultarConC
 
                 var prompt = $@"Eres un asistente técnico que responde basándose ÚNICAMENTE en el contexto proporcionado.
 
-CONTEXTO DE LOS MANUALES:
-{contexto}
+                CONTEXTO DE LOS MANUALES:
+                {contexto}
 
-PREGUNTA ACTUAL:
-{request.Pregunta}
+                PREGUNTA ACTUAL:
+                {request.Pregunta}
 
-INSTRUCCIONES:
-- Responde SOLO con información del contexto
-- Si mencionas algo del historial, hazlo brevemente
-- Sé claro y profesional
-- Cita las fuentes cuando sea relevante
+                INSTRUCCIONES:
+                - Responde SOLO con información del contexto
+                - Si mencionas algo del historial, hazlo brevemente
+                - Sé claro y profesional
+                - Cita las fuentes cuando sea relevante
 
-RESPUESTA:";
+                RESPUESTA:";
 
                 //Generar respuesta con historial
                 var respuesta = await _chatService.GenerarRespuestaConHistorialAsync(prompt, historial);
@@ -123,9 +123,9 @@ RESPUESTA:";
                     Titulo = manuales[r.ManualId],
                     NumeroPagina = r.NumeroPagina,
                     Relevancia = Math.Round(r.Score * 100, 2),
-                    TextoFragmento = r.TextoOriginal.Length > 200
-                        ? r.TextoOriginal.Substring(0, 200) + "..."
-                        : r.TextoOriginal
+                                                TextoFragmento = r.TextoOriginal.Length > 200
+                                                ? r.TextoOriginal.Substring(0, 200) + "..."
+                                                : r.TextoOriginal
                 }).ToList();
 
                 sw.Stop();

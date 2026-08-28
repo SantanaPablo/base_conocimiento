@@ -56,7 +56,7 @@ namespace BaseConocimiento.Infrastructure.Services.AI.Ollama
                     content = prompt
                 });
 
-           
+
                 var request = new
                 {
                     model = _modelName,
@@ -98,6 +98,6 @@ namespace BaseConocimiento.Infrastructure.Services.AI.Ollama
             }
         }
 
-      
+
     }
 }

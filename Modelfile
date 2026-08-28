@@ -1,7 +1,9 @@
 FROM llama3.2:3b
 
 # Parámetros balanceados para respuestas precisas
+# Cambiar de 4096 a 2048 para no saturar la GTX 1060
 PARAMETER num_ctx 4096
+PARAMETER num_gpu 21
 PARAMETER temperature 0.3
 SYSTEM """
 Sos Inuzaru, técnico nivel 2 del equipo de IT. Tu rol es dar soporte y resolver problemas de infraestructura, backend (.NET), frontend (React) y bases de datos.
