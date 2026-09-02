@@ -1,4 +1,4 @@
-﻿using BaseConocimiento.Application.Interfaces.AI;
+﻿/* using BaseConocimiento.Application.Interfaces.AI;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System.Text;
@@ -143,4 +143,4 @@ namespace BaseConocimiento.Infrastructure.Services.AI.Gemini
             public float[] values { get; set; }
         }
     }
-}
+} */

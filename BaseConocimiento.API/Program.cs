@@ -56,7 +56,9 @@ builder.Services.AddCors(options =>
                 "https://inuzaru.taild221a4.ts.net",
                 "http://inuzaru.taild221a4.ts.net",
                 "http://localhost:5173",
-                "http://localhost:5174"
+                "http://localhost:5174",
+                "http://100.95.229.117",
+                "http://100.95.229.117:8080"
             )
             .AllowAnyHeader()
             .AllowAnyMethod()

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FolderTree, Folder, FileText, ChevronRight, ChevronDown, BookOpen, Database } from 'lucide-react';
+import { FolderTree, Folder, FileText, ChevronRight, ChevronDown, BookOpen, Database, Menu, X } from 'lucide-react';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -8,14 +8,16 @@ const CategoriesPage = () => {
   const [selectedCat, setSelectedCat] = useState(null);
   const [manuales, setManuales] = useState([]);
   const [loadingManuales, setLoadingManuales] = useState(false);
+  
+  // Nuevo estado para controlar el menú lateral en móviles
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  //arbol de categorías
+  // Árbol de categorías
   useEffect(() => {
     const fetchTree = async () => {
       try {
         const res = await fetch(`${API_BASE_URL}/Categorias?soloActivas=true&incluirSubcategorias=true`);
         const data = await res.json();
-        // El backend devuelve la jerarquía completa
         setCategorias(data.categorias || []);
       } catch (err) {
         console.error("Error al cargar el árbol de conocimiento:", err);
@@ -24,14 +26,14 @@ const CategoriesPage = () => {
     fetchTree();
   }, []);
 
-  //manuales pertenecientes a la rama seleccionada
+  // Manuales pertenecientes a la rama seleccionada
   const handleSelectCategory = async (catId) => {
     setSelectedCat(catId);
+    setIsSidebarOpen(false); // Cerramos el menú lateral en celulares al elegir una rama
     setLoadingManuales(true);
     try {
       const res = await fetch(`${API_BASE_URL}/Manuales?categoriaId=${catId}`);
       const data = await res.json();
-      // Filtramos manuales por el ID de la categoría elegida
       setManuales(data.manuales || []);
     } catch (err) {
       console.error("Error al obtener manuales de la rama:", err);
@@ -40,17 +42,55 @@ const CategoriesPage = () => {
     }
   };
 
-
   return (
-    <div className="flex h-full bg-[#0f172a] overflow-hidden">
+    <div className="flex flex-col md:flex-row h-full bg-[#0f172a] overflow-hidden relative">
       
-      {/* EXPLORADOR DE RAMAS */}
-      <aside className="w-80 border-r border-slate-800 p-6 overflow-y-auto bg-[#1e293b]/20">
-        <div className="flex items-center gap-3 mb-8">
-          <div className="p-2 bg-blue-600/10 rounded-lg text-blue-400">
-            <FolderTree size={20} />
+      {/* HEADER MÓVIL (Solo visible en celulares) */}
+      <div className="md:hidden flex items-center justify-between p-4 border-b border-slate-800 bg-[#1e293b]/50">
+        <div className="flex items-center gap-3">
+          <button 
+            onClick={() => setIsSidebarOpen(true)}
+            className="p-2 bg-slate-800 rounded-lg text-slate-300 hover:text-white transition-colors"
+          >
+            <Menu size={20} />
+          </button>
+          <h1 className="font-bold text-slate-100 truncate">
+            {selectedCat ? "Explorador de Archivos" : "Seleccionar Rama"}
+          </h1>
+        </div>
+      </div>
+
+      {/* OVERLAY OSCURO PARA MÓVILES */}
+      {isSidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-black/60 z-40 md:hidden backdrop-blur-sm transition-opacity"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
+      {/* EXPLORADOR DE RAMAS (Sidebar) */}
+      <aside className={`
+        fixed md:static inset-y-0 left-0 z-50
+        w-[85%] max-w-[320px] md:w-80 
+        transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0
+        transition-transform duration-300 ease-in-out
+        border-r border-slate-800 p-6 overflow-y-auto bg-[#1e293b] md:bg-[#1e293b]/20 shadow-2xl md:shadow-none
+      `}>
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-blue-600/10 rounded-lg text-blue-400">
+              <FolderTree size={20} />
+            </div>
+            <h2 className="font-black uppercase italic tracking-tighter text-slate-100">Ramas Técnicas</h2>
           </div>
-          <h2 className="font-black uppercase italic tracking-tighter text-slate-100">Ramas Técnicas</h2>
+          
+          {/* Botón de cerrar solo en móvil */}
+          <button 
+            className="md:hidden p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+            onClick={() => setIsSidebarOpen(false)}
+          >
+            <X size={20} />
+          </button>
         </div>
         
         <div className="space-y-1">
@@ -69,15 +109,15 @@ const CategoriesPage = () => {
       </aside>
 
       {/* VISUALIZADOR DE ARCHIVOS */}
-      <main className="flex-1 p-8 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-800">
+      <main className="flex-1 p-4 md:p-8 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-800">
         {selectedCat ? (
-          <div className="max-w-5xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-300">
-            <header className="flex justify-between items-end border-b border-slate-800 pb-6">
+          <div className="max-w-5xl mx-auto space-y-6 md:space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-300">
+            <header className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 border-b border-slate-800 pb-6">
               <div>
                 <p className="text-[10px] text-blue-500 font-black uppercase tracking-[0.2em] mb-1">Explorando Contenido</p>
-                <h3 className="text-3xl font-bold text-white tracking-tight">Archivos en esta Rama</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight">Archivos en esta Rama</h3>
               </div>
-              <div className="text-right">
+              <div className="text-left md:text-right">
                 <span className="text-xs font-mono text-slate-500 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
                   {manuales.length} OBJETOS INDEXADOS
                 </span>
@@ -95,7 +135,7 @@ const CategoriesPage = () => {
                   <ManualFileCard key={m.id} manual={m} />
                 ))}
                 {manuales.length === 0 && (
-                  <div className="col-span-full py-24 text-center border-2 border-dashed border-slate-800 rounded-[2rem] bg-slate-900/10">
+                  <div className="col-span-full py-16 md:py-24 text-center border-2 border-dashed border-slate-800 rounded-[2rem] bg-slate-900/10 px-4">
                     <BookOpen size={48} className="mx-auto mb-4 text-slate-700" />
                     <p className="text-slate-500 font-medium">Esta rama todavía no tiene conocimiento inyectado.</p>
                   </div>
@@ -104,11 +144,18 @@ const CategoriesPage = () => {
             )}
           </div>
         ) : (
-          <div className="h-full flex flex-col items-center justify-center text-slate-600 space-y-4 opacity-40">
+          <div className="h-full flex flex-col items-center justify-center text-slate-600 space-y-4 opacity-40 px-4 text-center">
             <div className="p-8 rounded-full bg-slate-800/30 border border-slate-800">
-              <FolderTree size={64} />
+              <FolderTree size={48} className="md:w-16 md:h-16" />
             </div>
-            <p className="text-lg font-bold uppercase tracking-tighter">Seleccioná una rama para ver sus manuales</p>
+            <p className="text-base md:text-lg font-bold uppercase tracking-tighter">Seleccioná una rama para ver sus manuales</p>
+            {/* Botón de acceso rápido para móvil si no hay rama seleccionada */}
+            <button 
+              className="md:hidden mt-4 px-6 py-2 bg-slate-800 text-slate-200 rounded-full font-semibold text-sm border border-slate-700"
+              onClick={() => setIsSidebarOpen(true)}
+            >
+              Abrir Ramas
+            </button>
           </div>
         )}
       </main>

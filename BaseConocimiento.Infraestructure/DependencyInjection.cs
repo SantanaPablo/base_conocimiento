@@ -7,7 +7,7 @@ using BaseConocimiento.Application.Interfaces.Storage;
 using BaseConocimiento.Application.Interfaces.VectorStore;
 using BaseConocimiento.Infrastructure.Data;
 using BaseConocimiento.Infrastructure.Repositories;
-using BaseConocimiento.Infrastructure.Services.AI.Gemini;
+//using BaseConocimiento.Infrastructure.Services.AI.Gemini;
 using BaseConocimiento.Infrastructure.Services.AI.Ollama;
 using BaseConocimiento.Infrastructure.Services.Auth;
 using BaseConocimiento.Infrastructure.Services.Conversation;
@@ -72,16 +72,16 @@ public static class DependencyInjection
         services.AddScoped<ITextProcessingService, TextProcessingService>();
 
         //AI SERVICES
-        var aiProvider = configuration["AI:Provider"]?.ToLower() ?? "gemini";
+        var aiProvider = configuration["AI:Provider"]?.ToLower() ?? "ollama";
 
         switch (aiProvider)
         {
-            case "gemini":
+            /* case "gemini":
                 services.AddHttpClient<GeminiEmbeddingService>();
                 services.AddHttpClient<GeminiChatCompletionService>();
                 services.AddScoped<IEmbeddingService, GeminiEmbeddingService>();
                 services.AddScoped<IChatCompletionService, GeminiChatCompletionService>();
-                break;
+                break; */
 
             case "ollama":
                 var ollamaUrl = configuration["AI:OllamaBaseUrl"];
@@ -102,7 +102,7 @@ public static class DependencyInjection
 
             default:
                 throw new InvalidOperationException(
-                    $"Proveedor de IA no soportado: {aiProvider}. Use 'gemini' o 'ollama'.");
+                    $"Proveedor de IA no soportado: {aiProvider}. Use 'ollama' o 'ollama'.");
         }
 
         //LOGIN
